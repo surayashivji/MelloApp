@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56B87063BCCE8293279BCA95 /* Pods_MelloAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */; };
+		634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D5021FED0FC00C665A7 /* AppDelegate.swift */; };
+		634F6D5321FED0FC00C665A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D5221FED0FC00C665A7 /* ViewController.swift */; };
+		634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5421FED0FC00C665A7 /* Main.storyboard */; };
+		634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5721FED0FC00C665A7 /* Assets.xcassets */; };
+		634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */; };
+		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
+		634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */; };
+		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
+		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		634F6D6221FED0FC00C665A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 634F6D4521FED0FC00C665A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 634F6D4C21FED0FC00C665A7;
+			remoteInfo = MelloApp;
+		};
+		634F6D6D21FED0FD00C665A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 634F6D4521FED0FC00C665A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 634F6D4C21FED0FC00C665A7;
+			remoteInfo = MelloApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FB36549886C1D17AD84C6C2 /* Pods-MelloApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.release.xcconfig"; sourceTree = "<group>"; };
+		334ACFBD35D65D4579682BC6 /* Pods-MelloAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		634F6D4D21FED0FC00C665A7 /* MelloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		634F6D5021FED0FC00C665A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		634F6D5221FED0FC00C665A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		634F6D5521FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		634F6D5721FED0FC00C665A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		634F6D5A21FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		634F6D5C21FED0FC00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		634F6D6121FED0FC00C665A7 /* MelloAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelloAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelloAppTests.swift; sourceTree = "<group>"; };
+		634F6D6721FED0FD00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		634F6D6C21FED0FD00C665A7 /* MelloAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelloAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelloAppUITests.swift; sourceTree = "<group>"; };
+		634F6D7221FED0FD00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A5C89323A68CE81AE66E1D /* Pods-MelloAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		810CC030611815222760D61D /* Pods_MelloAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.debug.xcconfig"; sourceTree = "<group>"; };
+		992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6DF8E544605BFEA41D53B02 /* Pods-MelloAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		634F6D4A21FED0FC00C665A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634F6D5E21FED0FC00C665A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634F6D6921FED0FD00C665A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B87063BCCE8293279BCA95 /* Pods_MelloAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		634F6D4421FED0FC00C665A7 = {
+			isa = PBXGroup;
+			children = (
+				634F6D4F21FED0FC00C665A7 /* MelloApp */,
+				634F6D6421FED0FD00C665A7 /* MelloAppTests */,
+				634F6D6F21FED0FD00C665A7 /* MelloAppUITests */,
+				634F6D4E21FED0FC00C665A7 /* Products */,
+				957105727EE7E60245382258 /* Pods */,
+				664C000DB91C99A8AA6D2108 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		634F6D4E21FED0FC00C665A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				634F6D4D21FED0FC00C665A7 /* MelloApp.app */,
+				634F6D6121FED0FC00C665A7 /* MelloAppTests.xctest */,
+				634F6D6C21FED0FD00C665A7 /* MelloAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
+			isa = PBXGroup;
+			children = (
+				634F6D5021FED0FC00C665A7 /* AppDelegate.swift */,
+				634F6D5221FED0FC00C665A7 /* ViewController.swift */,
+				634F6D5421FED0FC00C665A7 /* Main.storyboard */,
+				634F6D5721FED0FC00C665A7 /* Assets.xcassets */,
+				634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */,
+				634F6D5C21FED0FC00C665A7 /* Info.plist */,
+			);
+			path = MelloApp;
+			sourceTree = "<group>";
+		};
+		634F6D6421FED0FD00C665A7 /* MelloAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */,
+				634F6D6721FED0FD00C665A7 /* Info.plist */,
+			);
+			path = MelloAppTests;
+			sourceTree = "<group>";
+		};
+		634F6D6F21FED0FD00C665A7 /* MelloAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */,
+				634F6D7221FED0FD00C665A7 /* Info.plist */,
+			);
+			path = MelloAppUITests;
+			sourceTree = "<group>";
+		};
+		664C000DB91C99A8AA6D2108 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */,
+				810CC030611815222760D61D /* Pods_MelloAppTests.framework */,
+				CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		957105727EE7E60245382258 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */,
+				1FB36549886C1D17AD84C6C2 /* Pods-MelloApp.release.xcconfig */,
+				67A5C89323A68CE81AE66E1D /* Pods-MelloAppTests.debug.xcconfig */,
+				E6DF8E544605BFEA41D53B02 /* Pods-MelloAppTests.release.xcconfig */,
+				334ACFBD35D65D4579682BC6 /* Pods-MelloAppUITests.debug.xcconfig */,
+				992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		634F6D4C21FED0FC00C665A7 /* MelloApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 634F6D7521FED0FD00C665A7 /* Build configuration list for PBXNativeTarget "MelloApp" */;
+			buildPhases = (
+				C6BF2536D59F338249BB1250 /* [CP] Check Pods Manifest.lock */,
+				634F6D4921FED0FC00C665A7 /* Sources */,
+				634F6D4A21FED0FC00C665A7 /* Frameworks */,
+				634F6D4B21FED0FC00C665A7 /* Resources */,
+				F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */,
+				B42203EECC0BA4F82F4DD89F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MelloApp;
+			productName = MelloApp;
+			productReference = 634F6D4D21FED0FC00C665A7 /* MelloApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		634F6D6021FED0FC00C665A7 /* MelloAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 634F6D7821FED0FD00C665A7 /* Build configuration list for PBXNativeTarget "MelloAppTests" */;
+			buildPhases = (
+				2E40596A4E04101A7DF26009 /* [CP] Check Pods Manifest.lock */,
+				634F6D5D21FED0FC00C665A7 /* Sources */,
+				634F6D5E21FED0FC00C665A7 /* Frameworks */,
+				634F6D5F21FED0FC00C665A7 /* Resources */,
+				27694C1C14B4C96E9A4E15E3 /* [CP] Embed Pods Frameworks */,
+				0F584EE0998EEF032B5786BB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				634F6D6321FED0FC00C665A7 /* PBXTargetDependency */,
+			);
+			name = MelloAppTests;
+			productName = MelloAppTests;
+			productReference = 634F6D6121FED0FC00C665A7 /* MelloAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		634F6D6B21FED0FD00C665A7 /* MelloAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 634F6D7B21FED0FD00C665A7 /* Build configuration list for PBXNativeTarget "MelloAppUITests" */;
+			buildPhases = (
+				AD291728C01CA876EAE89532 /* [CP] Check Pods Manifest.lock */,
+				634F6D6821FED0FD00C665A7 /* Sources */,
+				634F6D6921FED0FD00C665A7 /* Frameworks */,
+				634F6D6A21FED0FD00C665A7 /* Resources */,
+				6042682003AF4E80FFBAC43E /* [CP] Embed Pods Frameworks */,
+				30A753E28B17BA7525C052BC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				634F6D6E21FED0FD00C665A7 /* PBXTargetDependency */,
+			);
+			name = MelloAppUITests;
+			productName = MelloAppUITests;
+			productReference = 634F6D6C21FED0FD00C665A7 /* MelloAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		634F6D4521FED0FC00C665A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Suraya Shivji";
+				TargetAttributes = {
+					634F6D4C21FED0FC00C665A7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					634F6D6021FED0FC00C665A7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 634F6D4C21FED0FC00C665A7;
+					};
+					634F6D6B21FED0FD00C665A7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 634F6D4C21FED0FC00C665A7;
+					};
+				};
+			};
+			buildConfigurationList = 634F6D4821FED0FC00C665A7 /* Build configuration list for PBXProject "MelloApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 634F6D4421FED0FC00C665A7;
+			productRefGroup = 634F6D4E21FED0FC00C665A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				634F6D4C21FED0FC00C665A7 /* MelloApp */,
+				634F6D6021FED0FC00C665A7 /* MelloAppTests */,
+				634F6D6B21FED0FD00C665A7 /* MelloAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		634F6D4B21FED0FC00C665A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
+				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
+				634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634F6D5F21FED0FC00C665A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634F6D6A21FED0FD00C665A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F584EE0998EEF032B5786BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27694C1C14B4C96E9A4E15E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E40596A4E04101A7DF26009 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MelloAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30A753E28B17BA7525C052BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6042682003AF4E80FFBAC43E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD291728C01CA876EAE89532 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MelloAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B42203EECC0BA4F82F4DD89F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6BF2536D59F338249BB1250 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MelloApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		634F6D4921FED0FC00C665A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634F6D5321FED0FC00C665A7 /* ViewController.swift in Sources */,
+				634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634F6D5D21FED0FC00C665A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634F6D6821FED0FD00C665A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		634F6D6321FED0FC00C665A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 634F6D4C21FED0FC00C665A7 /* MelloApp */;
+			targetProxy = 634F6D6221FED0FC00C665A7 /* PBXContainerItemProxy */;
+		};
+		634F6D6E21FED0FD00C665A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 634F6D4C21FED0FC00C665A7 /* MelloApp */;
+			targetProxy = 634F6D6D21FED0FD00C665A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		634F6D5421FED0FC00C665A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				634F6D5521FED0FC00C665A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				634F6D5A21FED0FC00C665A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		634F6D7321FED0FD00C665A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		634F6D7421FED0FD00C665A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		634F6D7621FED0FD00C665A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				INFOPLIST_FILE = MelloApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		634F6D7721FED0FD00C665A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB36549886C1D17AD84C6C2 /* Pods-MelloApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				INFOPLIST_FILE = MelloApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		634F6D7921FED0FD00C665A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A5C89323A68CE81AE66E1D /* Pods-MelloAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				INFOPLIST_FILE = MelloAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MelloApp.app/MelloApp";
+			};
+			name = Debug;
+		};
+		634F6D7A21FED0FD00C665A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DF8E544605BFEA41D53B02 /* Pods-MelloAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				INFOPLIST_FILE = MelloAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MelloApp.app/MelloApp";
+			};
+			name = Release;
+		};
+		634F6D7C21FED0FD00C665A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334ACFBD35D65D4579682BC6 /* Pods-MelloAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				INFOPLIST_FILE = MelloAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MelloApp;
+			};
+			name = Debug;
+		};
+		634F6D7D21FED0FD00C665A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				INFOPLIST_FILE = MelloAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MelloApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		634F6D4821FED0FC00C665A7 /* Build configuration list for PBXProject "MelloApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634F6D7321FED0FD00C665A7 /* Debug */,
+				634F6D7421FED0FD00C665A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		634F6D7521FED0FD00C665A7 /* Build configuration list for PBXNativeTarget "MelloApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634F6D7621FED0FD00C665A7 /* Debug */,
+				634F6D7721FED0FD00C665A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		634F6D7821FED0FD00C665A7 /* Build configuration list for PBXNativeTarget "MelloAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634F6D7921FED0FD00C665A7 /* Debug */,
+				634F6D7A21FED0FD00C665A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		634F6D7B21FED0FD00C665A7 /* Build configuration list for PBXNativeTarget "MelloAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634F6D7C21FED0FD00C665A7 /* Debug */,
+				634F6D7D21FED0FD00C665A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 634F6D4521FED0FC00C665A7 /* Project object */;
+}
