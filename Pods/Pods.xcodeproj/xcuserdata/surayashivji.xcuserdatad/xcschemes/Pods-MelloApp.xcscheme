@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FE664B30C98B556220F8694E6FF5969F'
+               BlueprintIdentifier = '90C6588F53A81B866AF503838F25D197'
                BlueprintName = 'Pods-MelloApp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-MelloApp.framework'>
