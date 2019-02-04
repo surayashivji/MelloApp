@@ -17,6 +17,7 @@
 		634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */; };
 		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
 		634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */; };
+		63A9E4132208FA700073AC30 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 633201072208C7F9009038BA /* test.gif */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		1FB36549886C1D17AD84C6C2 /* Pods-MelloApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.release.xcconfig"; sourceTree = "<group>"; };
 		334ACFBD35D65D4579682BC6 /* Pods-MelloAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		633201072208C7F9009038BA /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 		6343D05C220827F600B790E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6343D05F22082B0900B790E0 /* LongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
 		6343D06122082B3700B790E0 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
 			isa = PBXGroup;
 			children = (
+				633201072208C7F9009038BA /* test.gif */,
 				6343D05E22082AF100B790E0 /* Views */,
 				6343D05B220827C700B790E0 /* Models */,
 				6343D05A2208274E00B790E0 /* Controllers */,
@@ -319,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A9E4132208FA700073AC30 /* test.gif in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
 				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
 				634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */,
@@ -478,12 +482,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
