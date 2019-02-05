@@ -21,13 +21,11 @@ class HomeViewController: UIViewController {
         animateGif()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true;
+    }
+    
     // MARK: Actions
-    @IBAction func getStartedDidTouch(_ sender: Any) {
-    }
-    
-    
-    @IBAction func loginDidTouch(_ sender: Any) {
-    }
     
     func animateGif() {
         if let path = Bundle.main.path(forResource: "test", ofType: "gif") {
