@@ -36,7 +36,7 @@ class SignUpViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func signUpTapped(_ sender: Any) {
-        if let (email, password) = validateSignUpText() {
+        if let (name, email, password) = validateSignUpText() {
             manager.createUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
                 if let error = error {
                     self?.manager.handle(error: error)
@@ -45,6 +45,7 @@ class SignUpViewController: UIViewController {
                 print("user: \(user)")
                 // success!
                 // create user in database: name, email, date
+                self?.manager.addUserToDB(uid: user.uid, name: name, email: email)
                 // segue to onboarding
             })
         }
@@ -53,7 +54,7 @@ class SignUpViewController: UIViewController {
     
     // MARK: Private Functions
     
-    private func validateSignUpText() -> (emailText: String, passwordText: String)? {
+    private func validateSignUpText() -> (nameText: String, emailText: String, passwordText: String)? {
         guard let name = nameTextField.text else {
             print("Name is nil")
             alertUserOf(title: "Enter Your Name", message: "Please enter your name.")
@@ -94,7 +95,12 @@ class SignUpViewController: UIViewController {
             alertUserOf(title: "Passwords Do Not Match", message: "Please re-type password.")
             return nil
         }
-        return (email, password)
+        if password.count <= 6 {
+            print("Password is too short")
+            alertUserOf(title: "Password is Weak", message: "Password should be longer than 6 characters.")
+            return nil
+        }
+        return (name, email, password)
     }
     
     private func alertUserOf(title: String, message: String) {

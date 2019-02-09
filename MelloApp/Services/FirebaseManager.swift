@@ -24,9 +24,13 @@ class FirebaseManager {
         }
     }
     
+    var reference: DatabaseReference {
+        return Database.database().reference()
+    }
+    
     static let instance = FirebaseManager()
     
-    // MARK: Functions
+    // MARK: Authentication
     
     // Creates an account with email
     func createUser(withEmail email: String, password: String, completion: @escaping (User?, Error?) -> Void) {
@@ -36,6 +40,20 @@ class FirebaseManager {
     // Logs user in with email
     func loginUser(withEmail email: String, password: String, completion: @escaping(User?, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: completion)
+    }
+    
+    // MARK: User Database
+    
+    // Add authenticated user to the database
+    func addUserToDB(uid: String, name: String, email: String) {
+        let timestamp = Int(Date().timeIntervalSince1970)
+        let userRef = reference.child("users").child(uid)
+        let userData: [String:Any] = ["email": email,
+                                      "name": name,
+                                      "timestamp": timestamp]
+        userRef.setValue(userData)
+        print("Successfully added user to Database")
+        // TODO: Error Handling if it doesn't work
     }
     
     // Signs user out
