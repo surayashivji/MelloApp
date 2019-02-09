@@ -13,6 +13,9 @@ struct ColorPalette {
     static let black = UIColor.fromRGB(r: 0, g: 0, b: 0)
     static let lilac = UIColor.fromRGB(r: 228, g: 236, b: 255)
     static let muted = UIColor.fromRGB(r: 94, g: 97, b: 129)
+    static let blue = UIColor.fromRGB(r: 42, g: 116, b: 255)
+    static let purple = UIColor.fromRGB(r: 124, g: 2, b: 245)
+    static let green = UIColor.fromRGB(r: 12, g: 204, b: 196)
 }
 
 // RGB to UIColor
