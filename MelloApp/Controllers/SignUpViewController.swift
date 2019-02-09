@@ -41,7 +41,10 @@ class SignUpViewController: UIViewController {
                 if let error = error {
                     self?.manager.handle(error: error)
                 }
-                guard let user = user else { return }
+                guard let user = user else { return } // FIRUser
+                print("user: \(user)")
+                // success!
+                // create user in database: name, email, date
                 // segue to onboarding
             })
         }
