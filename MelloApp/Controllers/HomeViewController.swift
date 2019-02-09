@@ -43,6 +43,7 @@ class HomeViewController: UIViewController {
             blobImageView.animatedImage = imageData
         } else {
             // Gif not found
+            // TODO: Error Handling
         }
     }
     

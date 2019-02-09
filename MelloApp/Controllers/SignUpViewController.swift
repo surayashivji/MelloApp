@@ -50,10 +50,8 @@ class SignUpViewController: UIViewController {
             })
         }
     }
-
     
     // MARK: Private Functions
-    
     private func validateSignUpText() -> (nameText: String, emailText: String, passwordText: String)? {
         guard let name = nameTextField.text else {
             print("Name is nil")
@@ -101,13 +99,6 @@ class SignUpViewController: UIViewController {
             return nil
         }
         return (name, email, password)
-    }
-    
-    private func alertUserOf(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
-        self.present(alertController, animated: true, completion: nil)
     }
 
 }

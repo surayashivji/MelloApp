@@ -53,7 +53,7 @@ class FirebaseManager {
                                       "timestamp": timestamp]
         userRef.setValue(userData)
         print("Successfully added user to Database")
-        // TODO: Error Handling if it doesn't work
+        // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
     // Signs user out
@@ -70,27 +70,4 @@ class FirebaseManager {
     func resetPasswordWithEmail(email: String, completion: @escaping (Error?) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email, completion: completion)
     }
-    
-    func handle(error: Error) {
-        let nsError = error as NSError
-        if let errorCode = AuthErrorCode(rawValue: nsError.code) {
-            switch errorCode {
-            case .emailAlreadyInUse:
-                print("Email in use already.")
-            case .invalidEmail:
-                print("Email is invalid.")
-            case .weakPassword:
-                print("Password too weak \(nsError.userInfo["NSLocalizedFailureReasonErrorKey"]!)")
-            case .wrongPassword:
-                print("Wrong password")
-            case .tooManyRequests:
-                print("Too many request. Timed out.")
-            case .userNotFound:
-                print("User not found.")
-            default:
-                print("Some error.")
-            }
-        }
-    }
-    
 }
