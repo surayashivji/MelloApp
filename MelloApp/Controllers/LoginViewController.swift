@@ -18,6 +18,12 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        let logo = UIImage(named: "logo_temp.png")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFit // set imageview's content mode
+        self.navigationController?.navigationItem.titleView = imageView
+//        self.navigationController?.navigationBar.topItem?.titleView?.tintColor = UIColor.green
     }
     
     override func viewDidAppear(_ animated: Bool) {

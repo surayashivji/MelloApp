@@ -9,6 +9,7 @@ target 'MelloApp' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'FLAnimatedImage'
+  pod 'SwiftyJSON'
 
   # Pods for MelloApp
 

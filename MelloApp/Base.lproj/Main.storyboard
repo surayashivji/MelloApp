@@ -256,10 +256,43 @@
                                     </view>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAd-8B-PJB" customClass="LongButton" customModule="MelloApp" customModuleProvider="target">
+                                <rect key="frame" x="48" y="578" width="278" height="39"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.92549019610000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="278" id="PJP-D1-c0F"/>
+                                    <constraint firstAttribute="height" constant="39" id="wH2-5Z-9xs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <state key="normal" title="sign up">
+                                    <color key="titleColor" red="0.18039215689999999" green="0.19215686269999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="UXY-yJ-tXH" eventType="touchUpInside" id="dQY-PT-asC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5eB-k9-mxd" firstAttribute="bottom" secondItem="lAd-8B-PJB" secondAttribute="bottom" constant="50" id="MBa-5T-9Vo"/>
+                            <constraint firstItem="lAd-8B-PJB" firstAttribute="centerX" secondItem="2W1-Zi-dzS" secondAttribute="centerX" id="drN-Ju-yrm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5eB-k9-mxd"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="bc5-5O-Jfr" id="LnE-aY-FgM"/>
+                        <outlet property="emailTextField" destination="Hac-MY-KdG" id="azs-uf-tax"/>
+                        <outlet property="nameTextField" destination="m1l-8T-onR" id="EeE-ib-2Iz"/>
+                        <outlet property="passwordTextField" destination="x4Q-1W-1fZ" id="Z77-pd-MWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBf-W2-HsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
