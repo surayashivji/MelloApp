@@ -17,8 +17,3 @@ extension UIViewController {
     }
 }
 
-
-//func createUser(withEmail email: String, password: String, completion: @escaping (User?, Error?) -> Void) {
-//    Auth.auth().createUser(withEmail: email, password: password, completion: completion)
-//}
-

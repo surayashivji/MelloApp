@@ -20,7 +20,6 @@ class ResetPasswordViewController: UIViewController {
         super.viewDidLoad()
         
         // Make navigation bar transparent
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -36,10 +35,8 @@ class ResetPasswordViewController: UIViewController {
                     print("fail to reset")
                 } else {
                     // success - email sent
-                    print("success to reset")
                     self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.", completion: { (alert) in
                         // segue back to login
-                        print("here!")
                         self?.navigationController?.popViewController(animated: true)
                     })
                 }
@@ -66,23 +63,5 @@ class ResetPasswordViewController: UIViewController {
         }
         return email
     }
-    
-    
-    
-    
-//    manager.createUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
-//        if let error = error {
-//            self?.manager.handle(error: error)
-//        }
-//        guard let user = user else { return } // FIRUser
-//        print("user: \(user)")
-//        // success!
-//        // create user in database: name, email, date
-//        self?.manager.addUserToDB(uid: user.uid, name: name, email: email)
-//        // segue to onboarding
-//    })
-    
-    
-    
     
 }
