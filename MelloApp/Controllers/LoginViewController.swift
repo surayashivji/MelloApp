@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        // Remove "back" title from navigation bar for next segue
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,7 +69,6 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: Private Functions
-    
     private func validateLoginText() -> (emailText: String, passwordText: String)? {
         guard let email = emailTextField.text else {
             print("Email is nil")

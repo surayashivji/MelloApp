@@ -11,8 +11,6 @@ import FLAnimatedImage
 
 class HomeViewController: UIViewController {
     
-    // MARK: Constants
-    
     // MARK: Outlets
     @IBOutlet weak var blobImageView: FLAnimatedImageView!
     

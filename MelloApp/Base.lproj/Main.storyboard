@@ -118,7 +118,7 @@
                                     <color key="titleColor" red="0.36862745098039218" green="0.38039215686274508" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="forgotTapped:" destination="Pxz-ax-ZHk" eventType="touchUpInside" id="yV0-8A-Ivu"/>
+                                    <segue destination="ss9-7Y-pWS" kind="show" id="yjY-6Z-rEO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0K-CL-OCg" userLabel="Password Text Field">
@@ -178,6 +178,72 @@
             </objects>
             <point key="canvasLocation" x="1205.5999999999999" y="31.934032983508249"/>
         </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="ond-xa-blo">
+            <objects>
+                <viewController id="ss9-7Y-pWS" customClass="ResetPasswordViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ds9-fi-Wzs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txp-3w-zz1" userLabel="Email Text Field">
+                                <rect key="frame" x="50" y="142" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dl4-LG-9BN" userLabel="Email Text Field" customClass="CustomTextField" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="275" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-f7-Lrp">
+                                        <rect key="frame" x="0.0" y="33" width="275" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.3803921569" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kD0-wF-jKy" customClass="LongButton" customModule="MelloApp" customModuleProvider="target">
+                                <rect key="frame" x="48" y="578" width="278" height="39"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.92549019610000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="g8M-ZO-hdx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="278" id="qXo-01-tmn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <state key="normal" title="reset password">
+                                    <color key="titleColor" red="0.18039215689999999" green="0.19215686269999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTapped:" destination="Pxz-ax-ZHk" eventType="touchUpInside" id="t60-Gv-K2i"/>
+                                    <action selector="resetPasswordTapped:" destination="ss9-7Y-pWS" eventType="touchUpInside" id="BFS-Ng-Cz0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xLm-Lj-iIm" firstAttribute="bottom" secondItem="kD0-wF-jKy" secondAttribute="bottom" constant="50" id="jrr-dH-Tig"/>
+                            <constraint firstItem="kD0-wF-jKy" firstAttribute="centerX" secondItem="ds9-fi-Wzs" secondAttribute="centerX" id="l1T-ev-tsV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xLm-Lj-iIm"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="dl4-LG-9BN" id="shd-gK-nZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbC-jg-cEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="32"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="GTN-6X-A6K">
             <objects>
@@ -192,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXh-Cp-ma3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110" y="1024"/>
+            <point key="canvasLocation" x="3110" y="1385"/>
         </scene>
         <!--Discover-->
         <scene sceneID="tbD-80-ngh">
@@ -208,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMp-D0-bun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110" y="312"/>
+            <point key="canvasLocation" x="3110" y="666"/>
         </scene>
         <!--Home-->
         <scene sceneID="kza-IM-qpx">
@@ -224,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zO6-H2-2vU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="1448"/>
+            <point key="canvasLocation" x="2062" y="1611"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZDM-zJ-g7H">
@@ -243,7 +309,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mi9-UJ-W64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="648"/>
+            <point key="canvasLocation" x="2062" y="828"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="3jf-aW-S7B">
@@ -296,6 +362,9 @@
                                 <state key="normal" title="Have an account? Login.">
                                     <color key="titleColor" red="0.36862745099999999" green="0.3803921569" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Pxz-ax-ZHk" kind="show" id="H9v-Kx-HdX"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQx-Lz-FLp" userLabel="Confirm Password Text Field">
                                 <rect key="frame" x="50" y="371" width="275" height="34"/>
@@ -395,4 +464,7 @@
             <point key="canvasLocation" x="-481" y="32"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="H9v-Kx-HdX"/>
+    </inferredMetricsTieBreakers>
 </document>
