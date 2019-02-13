@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
                     // success
                     // email sent
                     print("success to reset")
-                    self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.")
+                    self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.", completion: {_ in })
                 }
             })
         }
@@ -72,22 +72,22 @@ class LoginViewController: UIViewController {
     private func validateLoginText() -> (emailText: String, passwordText: String)? {
         guard let email = emailTextField.text else {
             print("Email is nil")
-            alertUserOf(title: "Enter Email", message: "Please enter an email address.")
+            alertUserOf(title: "Enter Email", message: "Please enter an email address.", completion: {_ in })
             return nil
         }
         guard !email.isEmpty else {
             print("Email is nil")
-            alertUserOf(title: "Enter Email", message: "Please enter an email address.")
+            alertUserOf(title: "Enter Email", message: "Please enter an email address.", completion: {_ in })
             return nil
         }
         guard let password = passwordTextField.text else {
             print("Password is nil")
-            alertUserOf(title: "Enter Password", message: "Please enter a password.")
+            alertUserOf(title: "Enter Password", message: "Please enter a password.", completion: {_ in })
             return nil
         }
         guard !password.isEmpty else {
             print("Password is nil")
-            alertUserOf(title: "Enter Password", message: "Please enter a password.")
+            alertUserOf(title: "Enter Password", message: "Please enter a password.", completion: {_ in })
             return nil
         }
         return (email, password)

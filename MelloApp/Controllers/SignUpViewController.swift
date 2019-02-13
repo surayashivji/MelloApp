@@ -58,47 +58,47 @@ class SignUpViewController: UIViewController {
     private func validateSignUpText() -> (nameText: String, emailText: String, passwordText: String)? {
         guard let name = nameTextField.text else {
             print("Name is nil")
-            alertUserOf(title: "Enter Your Name", message: "Please enter your name.")
+            alertUserOf(title: "Enter Your Name", message: "Please enter your name.", completion: {_ in })
             return nil
         }
         guard !name.isEmpty else {
             print("Name is nil")
-            alertUserOf(title: "Enter Your Name", message: "Please enter your name.")
+            alertUserOf(title: "Enter Your Name", message: "Please enter your name.", completion: {_ in })
             return nil
         }
         guard let email = emailTextField.text else {
             print("Email is nil")
-            alertUserOf(title: "Enter Email", message: "Please enter an email address.")
+            alertUserOf(title: "Enter Email", message: "Please enter an email address.", completion: {_ in })
             return nil
         }
         guard !email.isEmpty else {
             print("Email is nil")
-            alertUserOf(title: "Enter Email", message: "Please enter an email address.")
+            alertUserOf(title: "Enter Email", message: "Please enter an email address.", completion: {_ in })
             return nil
         }
         guard let password = passwordTextField.text else {
             print("Password is nil")
-            alertUserOf(title: "Enter Password", message: "Please enter a password.")
+            alertUserOf(title: "Enter Password", message: "Please enter a password.", completion: {_ in })
             return nil
         }
         guard !password.isEmpty else {
             print("Password is nil")
-            alertUserOf(title: "Enter Password", message: "Please enter a password.")
+            alertUserOf(title: "Enter Password", message: "Please enter a password.", completion: {_ in })
             return nil
         }
         guard let confirmedPassword = confirmPasswordTextField.text else {
             print("Password is nil")
-            alertUserOf(title: "Enter Password", message: "Please confirm your password.")
+            alertUserOf(title: "Enter Password", message: "Please confirm your password.", completion: {_ in })
             return nil
         }
         if password != confirmedPassword {
             print("Password is nil")
-            alertUserOf(title: "Passwords Do Not Match", message: "Please re-type password.")
+            alertUserOf(title: "Passwords Do Not Match", message: "Please re-type password.", completion: {_ in })
             return nil
         }
         if password.count <= 6 {
             print("Password is too short")
-            alertUserOf(title: "Password is Weak", message: "Password should be longer than 6 characters.")
+            alertUserOf(title: "Password is Weak", message: "Password should be longer than 6 characters.", completion: {_ in })
             return nil
         }
         return (name, email, password)

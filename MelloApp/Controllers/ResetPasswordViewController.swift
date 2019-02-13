@@ -37,8 +37,11 @@ class ResetPasswordViewController: UIViewController {
                 } else {
                     // success - email sent
                     print("success to reset")
-                    self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.")
-                    // segue back to login on "ok"
+                    self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.", completion: { (alert) in
+                        // segue back to login
+                        print("here!")
+                        self?.navigationController?.popViewController(animated: true)
+                    })
                 }
             })
         }
@@ -53,15 +56,33 @@ class ResetPasswordViewController: UIViewController {
     private func validateResetText() -> String? {
         guard let email = emailTextField.text else {
             print("Email is nil")
-            alertUserOf(title: "Enter Email", message: "Please enter an email address.")
+            alertUserOf(title: "Enter Email", message: "Please enter an email address.", completion:{_ in })
             return nil
         }
         guard !email.isEmpty else {
             print("Email is nil")
-            alertUserOf(title: "Enter Email", message: "Please enter an email address.")
+            alertUserOf(title: "Enter Email", message: "Please enter an email address.", completion: {_ in })
             return nil
         }
         return email
     }
-
+    
+    
+    
+    
+//    manager.createUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
+//        if let error = error {
+//            self?.manager.handle(error: error)
+//        }
+//        guard let user = user else { return } // FIRUser
+//        print("user: \(user)")
+//        // success!
+//        // create user in database: name, email, date
+//        self?.manager.addUserToDB(uid: user.uid, name: name, email: email)
+//        // segue to onboarding
+//    })
+    
+    
+    
+    
 }
