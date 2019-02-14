@@ -40,30 +40,15 @@ class LoginViewController: UIViewController {
         if let (email, password) = validateLoginText() {
             manager.loginUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
                 if let error = error {
-                    self?.manager.handle(error: error)
-                    // TODO: error handling for login cases in manager
+                    self?.manager.handle(error: error, completion: { (title, description) in
+                        guard let title = title, let description = description else { return }
+                        self?.alertUserOf(title: title, message: description, completion: {_ in })
+                    })
                 }
                 // Login Success
                 guard let user = user else { return } // FIRUser
                 print("\(user.email?.description): signed in.")
                 // TODO: segue home
-            })
-        }
-    }
-    
-    @IBAction func forgotTapped(_ sender: Any) {
-        if let (email, _) = validateLoginText() {
-            manager.resetPasswordWithEmail(email: email, completion: { [weak self] (error) in
-                if let error = error {
-                    self?.manager.handle(error: error)
-                    // TODO: error handling for forgot password cases in firebase manager - failed to reset?
-                    print("fail to reset")
-                } else {
-                    // success
-                    // email sent
-                    print("success to reset")
-                    self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.", completion: {_ in })
-                }
             })
         }
     }

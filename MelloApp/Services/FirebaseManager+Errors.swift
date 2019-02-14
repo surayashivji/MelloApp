@@ -10,25 +10,34 @@ import UIKit
 import Firebase
 
 extension FirebaseManager {
-    func handle(error: Error) {
+    func handle(error: Error, completion: @escaping (String?, String?) -> Void) {
         let nsError = error as NSError
+        var errorStringTitle = ""
+        var errorStringInstructions = ""
         if let errorCode = AuthErrorCode(rawValue: nsError.code) {
             switch errorCode {
             case .emailAlreadyInUse:
-                print("Email in use already.")
+                errorStringTitle = "Email in use already."
+                errorStringInstructions = "This email is in use, please log in!"
             case .invalidEmail:
-                print("Email is invalid.")
+                errorStringTitle = "Email is invalid."
+                errorStringInstructions = "Please enter a valid email address"
             case .weakPassword:
-                print("Password too weak \(nsError.userInfo["NSLocalizedFailureReasonErrorKey"]!)")
+                errorStringTitle = "Password too weak \(nsError.userInfo["NSLocalizedFailureReasonErrorKey"]!)"
+                errorStringInstructions = "Your password should have at least 6 characters"
             case .wrongPassword:
-                print("Wrong password")
+                errorStringTitle = "Wrong password"
+                errorStringInstructions = "Please enter the correct password."
             case .tooManyRequests:
-                print("Too many request. Timed out.")
+                errorStringTitle = "Too many request. Timed out."
+                errorStringInstructions = "Our servers are overloaded. Please come back in a few minutes!"
             case .userNotFound:
-                print("User not found.")
+                errorStringTitle = "User not found"
+                errorStringInstructions = "We can't find this account. Please sign up!"
             default:
-                print("Some error.")
+                print("Some other error.")
             }
+            completion(errorStringTitle, errorStringInstructions)
         }
     }
 }

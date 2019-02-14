@@ -30,9 +30,10 @@ class ResetPasswordViewController: UIViewController {
         if let email = validateResetText() {
             manager.resetPasswordWithEmail(email: email, completion: { [weak self] (error) in
                 if let error = error {
-                    self?.manager.handle(error: error)
-                    // TODO: error handling for forgot password cases in firebase manager - failed to reset?
-                    print("fail to reset")
+                    self?.manager.handle(error: error, completion: { (title, description) in
+                        guard let title = title, let description = description else { return }
+                        self?.alertUserOf(title: title, message: description, completion: {_ in })
+                    })
                 } else {
                     // success - email sent
                     self?.alertUserOf(title: "Password Request Sent", message: "Check your email for the link to reset your password.", completion: { (alert) in

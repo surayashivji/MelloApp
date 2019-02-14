@@ -42,14 +42,16 @@ class SignUpViewController: UIViewController {
         if let (name, email, password) = validateSignUpText() {
             manager.createUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
                 if let error = error {
-                    self?.manager.handle(error: error)
+                    self?.manager.handle(error: error, completion: { (title, description) in
+                        guard let title = title, let description = description else { return }
+                        self?.alertUserOf(title: title, message: description, completion: {_ in })
+                    })
                 }
                 guard let user = user else { return } // FIRUser
                 print("user: \(user)")
-                // success!
-                // create user in database: name, email, date
+                // success - create user in database: name, email, date
                 self?.manager.addUserToDB(uid: user.uid, name: name, email: email)
-                // segue to onboarding
+                // TODO segue to onboarding
             })
         }
     }
