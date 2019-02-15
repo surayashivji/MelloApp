@@ -28,6 +28,9 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         
         self.hideKeyboardWhenTappedAround()
+        
+        let logo = UIImage(named: "logo_temp.png")
+        self.navigationItem.titleView = UIImageView(image: logo)
     }
     
     // MARK: Actions

@@ -33,6 +33,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         
         self.hideKeyboardWhenTappedAround()
+        
+        let logo = UIImage(named: "logo_temp.png")
+        self.navigationItem.titleView = UIImageView(image: logo)
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,7 +61,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
                 // Login Success
                 guard let user = user else { return } // FIRUser
-                print("\(user.email?.description): signed in.")
                 // TODO: segue home
             })
         }

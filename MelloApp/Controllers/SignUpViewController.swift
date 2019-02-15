@@ -29,14 +29,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.view.backgroundColor = UIColor.clear
         
         // Remove "back" title from navigation bar for next segue
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         nameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
         
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        
+        let logo = UIImage(named: "logo_temp.png")
+        self.navigationItem.titleView = UIImageView(image: logo)
     }
 
     override func didReceiveMemoryWarning() {
