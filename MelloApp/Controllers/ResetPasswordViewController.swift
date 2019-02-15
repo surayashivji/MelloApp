@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
+class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Setup
     let manager = FirebaseManager()
@@ -24,8 +24,13 @@ class ResetPasswordViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        emailTextField.delegate = self
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
+    // MARK: Actions
     @IBAction func resetPasswordTapped(_ sender: Any) {
         if let email = validateResetText() {
             manager.resetPasswordWithEmail(email: email, completion: { [weak self] (error) in
@@ -48,6 +53,12 @@ class ResetPasswordViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Text Field Delegate
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     // MARK: Private Functions
