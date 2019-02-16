@@ -29,7 +29,7 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         
         self.hideKeyboardWhenTappedAround()
         
-        let logo = UIImage(named: "logo_temp.png")
+        let logo = UIImage(named: "navlogo.png")
         self.navigationItem.titleView = UIImageView(image: logo)
     }
     

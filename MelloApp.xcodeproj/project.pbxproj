@@ -23,12 +23,14 @@
 		634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */; };
 		63A8D6DC22098E08009F7196 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8D6DB22098E08009F7196 /* LoginViewController.swift */; };
 		63A9E4132208FA700073AC30 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 633201072208C7F9009038BA /* test.gif */; };
+		63B0DFC72217B4510031BE51 /* blob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC62217B44D0031BE51 /* blob.gif */; };
+		63B0DFCA2217B46D0031BE51 /* homelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC92217B46A0031BE51 /* homelogo.png */; };
+		63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC82217B4690031BE51 /* navlogo.png */; };
 		63D8E6E3220A3957008E1480 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E6E2220A3957008E1480 /* CustomTextField.swift */; };
 		63D8E6E5220A92F9008E1480 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E6E4220A92F9008E1480 /* SignUpViewController.swift */; };
 		63F1243F22137AC4009D240D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1243E22137AC4009D240D /* ResetPasswordViewController.swift */; };
 		63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244322167132009D240D /* ViewController+Keyboard.swift */; };
 		63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244622169C0F009D240D /* Date+Conversions.swift */; };
-		63F124482216A1ED009D240D /* logo_temp.png in Resources */ = {isa = PBXBuildFile; fileRef = 632AC36F220A9A55006E67F2 /* logo_temp.png */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +59,6 @@
 		63033553220EA5B000256800 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		63033558220F527300256800 /* FirebaseManager+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseManager+Errors.swift"; sourceTree = "<group>"; };
 		6303355A220F540900256800 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
-		632AC36F220A9A55006E67F2 /* logo_temp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_temp.png; sourceTree = "<group>"; };
 		633201072208C7F9009038BA /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 		6343D05C220827F600B790E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6343D05F22082B0900B790E0 /* LongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
@@ -75,6 +76,9 @@
 		634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelloAppUITests.swift; sourceTree = "<group>"; };
 		634F6D7221FED0FD00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63A8D6DB22098E08009F7196 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		63B0DFC62217B44D0031BE51 /* blob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blob.gif; sourceTree = "<group>"; };
+		63B0DFC82217B4690031BE51 /* navlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navlogo.png; sourceTree = "<group>"; };
+		63B0DFC92217B46A0031BE51 /* homelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelogo.png; sourceTree = "<group>"; };
 		63D8E6E2220A3957008E1480 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		63D8E6E4220A92F9008E1480 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		63F1243E22137AC4009D240D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -187,8 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				63033551220E998300256800 /* GoogleService-Info.plist */,
-				632AC36F220A9A55006E67F2 /* logo_temp.png */,
 				633201072208C7F9009038BA /* test.gif */,
+				63B0DFC92217B46A0031BE51 /* homelogo.png */,
+				63B0DFC82217B4690031BE51 /* navlogo.png */,
+				63B0DFC62217B44D0031BE51 /* blob.gif */,
 				63F1244522169BE3009D240D /* Extensions */,
 				63033555220EBA2700256800 /* Services */,
 				6343D05B220827C700B790E0 /* Models */,
@@ -372,9 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A9E4132208FA700073AC30 /* test.gif in Resources */,
+				63B0DFCA2217B46D0031BE51 /* homelogo.png in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
-				63F124482216A1ED009D240D /* logo_temp.png in Resources */,
 				63033552220E9BCB00256800 /* GoogleService-Info.plist in Resources */,
+				63B0DFC72217B4510031BE51 /* blob.gif in Resources */,
+				63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */,
 				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
 				634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */,
 			);
