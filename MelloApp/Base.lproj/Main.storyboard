@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxK-HZ-DKg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZT-P6-PKR">
                                 <rect key="frame" x="283" y="22" width="68" height="30"/>
                                 <constraints>
@@ -54,12 +58,12 @@
                                     <segue destination="UXY-yJ-tXH" kind="show" id="0EP-ni-Ihe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-WU-8JQ" customClass="FLAnimatedImageView">
-                                <rect key="frame" x="71" y="206" width="232" height="255"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homelogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="XJU-pO-LWD">
+                                <rect key="frame" x="116" y="397" width="140" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJU-pO-LWD">
-                                <rect key="frame" x="95" y="475" width="200" height="78"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-WU-8JQ" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="0.0" y="146" width="376" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -512,7 +516,11 @@
             <point key="canvasLocation" x="-481" y="32"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.png" width="375" height="667"/>
+        <image name="homelogo.png" width="138" height="41"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H9v-Kx-HdX"/>
+        <segue reference="oNO-km-ErW"/>
     </inferredMetricsTieBreakers>
 </document>

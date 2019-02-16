@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     // MARK: Actions
     
     func animateGif() {
-        if let path = Bundle.main.path(forResource: "test", ofType: "gif") {
+        if let path = Bundle.main.path(forResource: "blob", ofType: "gif") {
             let url = URL(fileURLWithPath: path)
             let gifData = try? Data(contentsOf: url)
             let imageData = FLAnimatedImage(animatedGIFData: gifData)
