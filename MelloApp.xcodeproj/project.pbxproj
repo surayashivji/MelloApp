@@ -22,7 +22,6 @@
 		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
 		634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */; };
 		63A8D6DC22098E08009F7196 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8D6DB22098E08009F7196 /* LoginViewController.swift */; };
-		63A9E4132208FA700073AC30 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 633201072208C7F9009038BA /* test.gif */; };
 		63B0DFC72217B4510031BE51 /* blob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC62217B44D0031BE51 /* blob.gif */; };
 		63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC82217B4690031BE51 /* navlogo.png */; };
 		63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFCD2217B6080031BE51 /* homelogo.png */; };
@@ -59,7 +58,6 @@
 		63033553220EA5B000256800 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		63033558220F527300256800 /* FirebaseManager+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseManager+Errors.swift"; sourceTree = "<group>"; };
 		6303355A220F540900256800 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
-		633201072208C7F9009038BA /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 		6343D05C220827F600B790E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6343D05F22082B0900B790E0 /* LongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
 		6343D06122082B3700B790E0 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		63A8D6DB22098E08009F7196 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63B0DFC62217B44D0031BE51 /* blob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blob.gif; sourceTree = "<group>"; };
 		63B0DFC82217B4690031BE51 /* navlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navlogo.png; sourceTree = "<group>"; };
-		63B0DFCC2217B51A0031BE51 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		63B0DFCD2217B6080031BE51 /* homelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelogo.png; sourceTree = "<group>"; };
 		63D8E6E2220A3957008E1480 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		63D8E6E4220A92F9008E1480 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -191,12 +188,11 @@
 		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
 			isa = PBXGroup;
 			children = (
+				63B3E2832218B563002059BC /* Assets */,
 				63033551220E998300256800 /* GoogleService-Info.plist */,
-				633201072208C7F9009038BA /* test.gif */,
 				63B0DFC82217B4690031BE51 /* navlogo.png */,
 				63B0DFCD2217B6080031BE51 /* homelogo.png */,
 				63B0DFC62217B44D0031BE51 /* blob.gif */,
-				63B0DFCC2217B51A0031BE51 /* 1.png */,
 				63F1244522169BE3009D240D /* Extensions */,
 				63033555220EBA2700256800 /* Services */,
 				6343D05B220827C700B790E0 /* Models */,
@@ -227,6 +223,21 @@
 				634F6D7221FED0FD00C665A7 /* Info.plist */,
 			);
 			path = MelloAppUITests;
+			sourceTree = "<group>";
+		};
+		63B3E2832218B563002059BC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				63B3E2842218B56C002059BC /* TabBar */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		63B3E2842218B56C002059BC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		63F1244522169BE3009D240D /* Extensions */ = {
@@ -379,7 +390,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63A9E4132208FA700073AC30 /* test.gif in Resources */,
 				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
 				63033552220E9BCB00256800 /* GoogleService-Info.plist in Resources */,
