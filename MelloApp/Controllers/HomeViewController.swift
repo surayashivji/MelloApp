@@ -53,5 +53,12 @@ class HomeViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startOnboarding", let vc = segue.destination as? MLOSelectableOptionViewController {
+            vc.view.layoutIfNeeded()
+            vc.type = .goal
+        }
+    }
 
 }

@@ -63,6 +63,14 @@
                                 <rect key="frame" x="0.0" y="146" width="376" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jo9-26-WyC">
+                                <rect key="frame" x="96" y="508" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="delete me shortcut to onboarding"/>
+                                <connections>
+                                    <segue destination="pGx-qZ-34H" kind="show" identifier="startOnboarding" id="deb-20-ne0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -196,6 +204,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovb-I4-CuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1206" y="32"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="3Fl-aP-79F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="pGx-qZ-34H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfW-9m-M51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1287" y="448"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="ond-xa-blo">
@@ -420,6 +436,7 @@
                         <outlet property="emailTextField" destination="Hac-MY-KdG" id="azs-uf-tax"/>
                         <outlet property="nameTextField" destination="m1l-8T-onR" id="EeE-ib-2Iz"/>
                         <outlet property="passwordTextField" destination="x4Q-1W-1fZ" id="Z77-pd-MWA"/>
+                        <segue destination="pGx-qZ-34H" kind="show" identifier="startOnboarding" id="crm-ES-BWq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBf-W2-HsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,6 +467,7 @@
         <image name="homelogo.png" width="138" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H9v-Kx-HdX"/>
+        <segue reference="deb-20-ne0"/>
+        <segue reference="oNO-km-ErW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,14 +9,21 @@
 import UIKit
 
 class MLOOptionTableViewCell: UITableViewCell {
+    /// button to select the option. not using cell selection
+    /// so taps outside of bounds don't register
     @IBOutlet weak var button: UIButton!
+    
+    /// the image view dispalying a checkmark or circle when cell selected/deselected
     @IBOutlet weak var selectionImage: UIImageView!
+    
+    /// the option that this cell is representing
     var option: MLOSelectableListOption? {
         didSet {
             isOptionSelected = false
         }
     }
     
+    /// if true, means option is selected. when set, updates UI
     var isOptionSelected = false {
         didSet {
             guard let option = option else {
@@ -35,14 +42,15 @@ class MLOOptionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // left align text
         button.contentHorizontalAlignment = .left
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        // corner radius
+        clipsToBounds = true
+        layer.cornerRadius = 10
     }
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//    }
-
+    /// action for when cell button is pressed
     @IBAction func selected(_ sender: Any) {
         isOptionSelected = !isOptionSelected
     }
