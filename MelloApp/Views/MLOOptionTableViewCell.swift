@@ -11,14 +11,25 @@ import UIKit
 class MLOOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var selectionImage: UIImageView!
-    var option: MLOSelectableListOption?
+    var option: MLOSelectableListOption? {
+        didSet {
+            isOptionSelected = false
+        }
+    }
+    var delegate: MLOSelectableOptionViewDelegate?
     
     var isOptionSelected = false {
         didSet {
+            guard let option = option else {
+                return
+            }
+            
             if isOptionSelected {
-                button.backgroundColor = option?.selectionColor
+                button.backgroundColor = option.selectionColor
+                selectionImage.image = #imageLiteral(resourceName: "checkmark")
             } else {
-                button.backgroundColor = option?.defaultColor
+                button.backgroundColor = option.defaultColor
+                selectionImage.image = #imageLiteral(resourceName: "deselected")
             }
         }
     }
