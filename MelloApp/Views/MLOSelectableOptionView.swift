@@ -35,13 +35,10 @@ struct MLOSelectableListOption {
     var selectionColor: UIColor
 }
 
-class MLOSelectableOptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MLOSelectableOptionViewDelegate {
+class MLOSelectableOptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     private var options: [MLOSelectableListOption] = []
-    
-//    var selectedOptions: [MLOSelectableListOption] = []
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
@@ -51,7 +48,6 @@ class MLOSelectableOptionViewController: UIViewController, UITableViewDelegate, 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "optionCell") as? MLOOptionTableViewCell else {
             return UITableViewCell()
         }
-        cell.delegate = self
         cell.option = options[indexPath.row]
         
         
@@ -71,23 +67,6 @@ class MLOSelectableOptionViewController: UIViewController, UITableViewDelegate, 
         }
         return options
     }
-    
-//
-//    func didSelect(option: MLOSelectableListOption) {
-//        selectedOptions.append(option)
-//    }
-//
-//    func didDeselect(option: MLOSelectableListOption) {
-//        selectedOptions.removeAll(where: { $0 == option })
-//    }
-    
-//    init(_ type: MLOSelectableOptionType) {
-//        options = type.options
-//    }
 
-}
 
-protocol MLOSelectableOptionViewDelegate {
-//    func didSelect(option: MLOSelectableListOption)
-//    func didDeselect(option: MLOSelectableListOption)
 }

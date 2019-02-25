@@ -16,7 +16,6 @@ class MLOOptionTableViewCell: UITableViewCell {
             isOptionSelected = false
         }
     }
-    var delegate: MLOSelectableOptionViewDelegate?
     
     var isOptionSelected = false {
         didSet {
