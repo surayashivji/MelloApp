@@ -18,6 +18,8 @@ class MLOSelectableOptionViewController:
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var nextViewController: UIViewController?
+
     /// the type of selectable options--changes options and title
     var type: MLOSelectableOptionType? {
         didSet {
@@ -39,6 +41,15 @@ class MLOSelectableOptionViewController:
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
+        navigationItem.setRightBarButton(UIBarButtonItem(title: "NEXT",
+                                                         style: .done,
+                                                         target: self,
+                                                         action: #selector(nextButtonTapped)),
+                                         animated: false)
+    }
+    
+    @objc private func nextButtonTapped() {
+        
     }
     
     // MARK: Table View methods
@@ -54,6 +65,10 @@ class MLOSelectableOptionViewController:
         }
         cell.option = options[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 58
     }
     
     /// returns list of options that are selected by the user

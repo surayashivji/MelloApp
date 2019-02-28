@@ -81,7 +81,7 @@ enum MLOSelectableOptionType {
                                             selectionColor: .brightPink),
                     MLOSelectableListOption(title: "Energized",
                                             defaultColor: .mediumPurple,
-                                            selectionColor: .lightBlue)] // TODO: selection color?
+                                            selectionColor: .orange)] 
         case .mindfulness:
             return [MLOSelectableListOption(title: "Sleep",
                                             defaultColor: .mediumPurple,

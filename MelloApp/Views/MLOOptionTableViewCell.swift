@@ -20,6 +20,7 @@ class MLOOptionTableViewCell: UITableViewCell {
     var option: MLOSelectableListOption? {
         didSet {
             isOptionSelected = false
+            button.setTitle(option?.title, for: .normal)
         }
     }
     
@@ -30,12 +31,9 @@ class MLOOptionTableViewCell: UITableViewCell {
                 return
             }
             
-            if isOptionSelected {
-                button.backgroundColor = option.selectionColor
-                selectionImage.image = #imageLiteral(resourceName: "checkmark")
-            } else {
-                button.backgroundColor = option.defaultColor
-                selectionImage.image = #imageLiteral(resourceName: "deselected")
+            UIView.animate(withDuration: 0.1) {
+                self.button.backgroundColor = self.isOptionSelected ? option.selectionColor : option.defaultColor
+                self.selectionImage.image = self.isOptionSelected ? #imageLiteral(resourceName: "checkmark") : #imageLiteral(resourceName: "deselected")
             }
         }
     }
@@ -44,10 +42,10 @@ class MLOOptionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // left align text
         button.contentHorizontalAlignment = .left
-        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 18, bottom: 10, right: 27)
         // corner radius
-        clipsToBounds = true
-        layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 10
     }
 
     /// action for when cell button is pressed
