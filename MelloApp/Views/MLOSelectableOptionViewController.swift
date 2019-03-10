@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MLOOnboardingViewController {
+    var type: MLOSelectableOptionType? { get set }
+}
+
 /// a view controller that presents options for selection
 class MLOSelectableOptionViewController:
     UIViewController,
@@ -20,14 +24,13 @@ class MLOSelectableOptionViewController:
     
     var nextViewController: UIViewController?
 
+    // Queue UI updates until UI is loaded
+    private var needsUpdate = false
     /// the type of selectable options--changes options and title
     var type: MLOSelectableOptionType? {
         didSet {
-            guard let type = type else { return }
-            titleLabel.text = type.title
-            subtitleLabel.text = type.subtitle
-            options = type.options
-            view.layoutIfNeeded()
+            if needsUpdate { updateUI() }
+            needsUpdate = true
         }
     }
     
@@ -38,18 +41,59 @@ class MLOSelectableOptionViewController:
         }
     }
     
+    private func updateUI() {
+        guard let type = type else { return }
+        titleLabel.text = type.title
+        subtitleLabel.text = type.subtitle
+        options = type.options
+        view.layoutIfNeeded()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if needsUpdate {
+            updateUI()
+            needsUpdate = false
+        }
+    }
+    
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
-        navigationItem.setRightBarButton(UIBarButtonItem(title: "NEXT",
-                                                         style: .done,
-                                                         target: self,
-                                                         action: #selector(nextButtonTapped)),
+        let nextButton = UIBarButtonItem(title: "NEXT",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(nextButtonTapped))
+        nextButton.tintColor = .white
+        navigationItem.setRightBarButton(nextButton,
                                          animated: false)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationItem.hidesBackButton = true
     }
     
     @objc private func nextButtonTapped() {
+        guard let nextDisplayType = type?.displayType else {
+            // TODO: end VC
+            return
+        }
         
+        // Determine type of next onboarding page
+        let nextViewController: UIViewController
+        switch nextDisplayType {
+        case .list:
+            guard let next = storyboard?.instantiateViewController(withIdentifier: "list")
+                as? MLOSelectableOptionViewController else { return }
+            next.type = type?.nextOption
+            nextViewController = next
+        case .grid:
+            guard let next = storyboard?
+                .instantiateViewController(withIdentifier: "grid") else { return }
+            nextViewController = next
+        }
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: Table View methods
@@ -85,6 +129,4 @@ class MLOSelectableOptionViewController:
         }
         return options
     }
-
-
 }

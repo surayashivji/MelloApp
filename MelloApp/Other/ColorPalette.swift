@@ -18,6 +18,7 @@ extension UIColor {
     static let green = UIColor.fromRGB(r: 12, g: 204, b: 196)
     
     static let lightBlue = UIColor(red: 0.89, green: 0.93, blue: 1, alpha: 1)
+    static let darkPurple = UIColor(red: 0.09, green: 0.09, blue: 0.2, alpha: 1)
     static let mediumPurple = UIColor(red: 0.14, green: 0.14, blue: 0.28, alpha: 1)
     static let brightPurple = UIColor(red: 0.34, green: 0.3, blue: 0.85, alpha: 1)
     static let brightGreen = UIColor(red: 0.55, green: 0.77, blue: 0.09, alpha: 1)
