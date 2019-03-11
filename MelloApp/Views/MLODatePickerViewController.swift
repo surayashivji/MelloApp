@@ -11,8 +11,6 @@ import UIKit
 class MLODatePickerViewController: UIViewController {
 
     override func viewDidLoad() {
-        tableView.dataSource = self
-        tableView.delegate = self
         let nextButton = UIBarButtonItem(title: "NEXT",
                                          style: .done,
                                          target: self,
@@ -26,5 +24,11 @@ class MLODatePickerViewController: UIViewController {
     
     @objc private func nextButtonTapped() {
        performSegue(withIdentifier: "next", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextViewController = segue.destination as? MLOListOptionViewController else { return }
+        nextViewController.view.layoutIfNeeded()
+        nextViewController.type = .timeOfDay
     }
 }

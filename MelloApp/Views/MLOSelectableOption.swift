@@ -117,7 +117,7 @@ enum MLOSelectableOptionType {
                                             selectionColor: .brightPink),
                     MLOSelectableListOption(title: "Energized",
                                             defaultColor: .mediumPurple,
-                                            selectionColor: .orange)] 
+                                            selectionColor: .orange)]
         case .mindfulness:
             return [MLOSelectableListOption(title: "Sleep",
                                             defaultColor: .mediumPurple,
@@ -146,7 +146,20 @@ enum MLOSelectableOptionType {
         case .scents:
             return [MLOSelectableListOption(title: "Citrus",
                                             defaultColor: .mediumPurple,
-                                            selectionColor: .white)]
+                                            selectionColor: .white,
+                                            selectionTextColor: .darkPurple),
+                    MLOSelectableListOption(title: "Floral",
+                                            defaultColor: .mediumPurple,
+                                            selectionColor: .white,
+                                            selectionTextColor: .darkPurple),
+                    MLOSelectableListOption(title: "Green",
+                                            defaultColor: .mediumPurple,
+                                            selectionColor: .white,
+                                            selectionTextColor: .darkPurple),
+                    MLOSelectableListOption(title: "Woody",
+                                            defaultColor: .mediumPurple,
+                                            selectionColor: .white,
+                                            selectionTextColor: .darkPurple)]
         }
     }
 }

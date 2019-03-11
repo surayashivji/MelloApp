@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startOnboarding",
             let navigationController = segue.destination as? UINavigationController,
-            let vc = navigationController.topViewController as? MLOSelectableOptionViewController {
+            let vc = navigationController.topViewController as? MLOListOptionViewController {
             vc.view.layoutIfNeeded()
             vc.type = .timeOfDay
         }

@@ -13,7 +13,7 @@ protocol MLOOnboardingViewController {
 }
 
 /// a view controller that presents options for selection
-class MLOSelectableOptionViewController:
+class MLOListOptionViewController:
     UIViewController,
     UITableViewDelegate,
     UITableViewDataSource {
@@ -81,7 +81,7 @@ class MLOSelectableOptionViewController:
         switch nextDisplayType {
         case .list:
             guard let next = storyboard?.instantiateViewController(withIdentifier: "list")
-                as? MLOSelectableOptionViewController else { return }
+                as? MLOListOptionViewController else { return }
             next.type = type?.nextOption
             nextViewController = next
         case .grid:
