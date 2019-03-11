@@ -33,6 +33,8 @@
 		840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */; };
 		840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */; };
 		840D3B022235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */; };
+		840D3B04223611F500004A9D /* MLOOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */; };
+		840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B05223612A600004A9D /* MLOProgressCircle.swift */; };
 		84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C27469222364C40050A011 /* Onboarding.storyboard */; };
 		84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746B222364F20050A011 /* MLOListOptionViewController.swift */; };
 		84C2746E222466F80050A011 /* MLOOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */; };
@@ -95,6 +97,8 @@
 		840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODatePickerViewController.swift; sourceTree = "<group>"; };
 		840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOGridOptionViewController.swift; sourceTree = "<group>"; };
 		840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOGridOptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MLOOnboardingViewController.swift; path = MelloApp/Controllers/MLOOnboardingViewController.swift; sourceTree = "<group>"; };
+		840D3B05223612A600004A9D /* MLOProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MLOProgressCircle.swift; path = MelloApp/MLOProgressCircle.swift; sourceTree = "<group>"; };
 		84C27469222364C40050A011 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		84C2746B222364F20050A011 /* MLOListOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOListOptionViewController.swift; sourceTree = "<group>"; };
 		84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		634F6D4421FED0FC00C665A7 = {
 			isa = PBXGroup;
 			children = (
+				840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */,
+				840D3B05223612A600004A9D /* MLOProgressCircle.swift */,
 				634F6D4F21FED0FC00C665A7 /* MelloApp */,
 				634F6D6421FED0FD00C665A7 /* MelloAppTests */,
 				634F6D6F21FED0FD00C665A7 /* MelloAppUITests */,
@@ -527,9 +533,11 @@
 				6303355B220F540900256800 /* ViewController+Alert.swift in Sources */,
 				840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */,
 				63D8E6E5220A92F9008E1480 /* SignUpViewController.swift in Sources */,
+				840D3B04223611F500004A9D /* MLOOnboardingViewController.swift in Sources */,
 				63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */,
 				63F1243F22137AC4009D240D /* ResetPasswordViewController.swift in Sources */,
 				840D3B022235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift in Sources */,
+				840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
 				63D8E6E3220A3957008E1480 /* CustomTextField.swift in Sources */,
 				84C27470222479330050A011 /* MLOSelectableOption.swift in Sources */,

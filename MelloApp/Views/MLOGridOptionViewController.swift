@@ -9,7 +9,7 @@
 import UIKit
 
 class MLOGridOptionViewController:
-    UIViewController,
+    MLOOnboardingViewController,
     UICollectionViewDelegate,
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout {
@@ -23,26 +23,16 @@ class MLOGridOptionViewController:
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        let nextButton = UIBarButtonItem(title: "NEXT",
-                                         style: .done,
-                                         target: self,
-                                         action: #selector(nextButtonTapped))
-        nextButton.tintColor = .white
-        navigationItem.setRightBarButton(nextButton,
-                                         animated: false)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationItem.hidesBackButton = true
+    }
+    
+    override func nextButtonTapped() {
+        performSegue(withIdentifier: "finish", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         titleLabel.text = type.title
         subtitleLabel.text = type.subtitle
         view.layoutIfNeeded()
-    }
-    
-    @IBAction func  nextButtonTapped(_ sender: Any) {
-       
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

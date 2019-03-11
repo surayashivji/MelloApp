@@ -22,14 +22,16 @@ class MLOGridOptionCollectionViewCell: UICollectionViewCell {
     }
     var isOptionSelected = false {
         didSet {
-            self.checkmarkImageView.image = self.isOptionSelected ? #imageLiteral(resourceName: "checkmark") : #imageLiteral(resourceName: "deselected")
-            
-            if isOptionSelected {
-                titleLabel.textColor = option?.selectionTextColor
-                backgroundColor = option?.selectionColor
-            } else {
-                titleLabel.textColor = .white
-                backgroundColor = .mediumPurple
+            UIView.animate(withDuration: 0.1) {
+                self.checkmarkImageView.image = self.isOptionSelected ? #imageLiteral(resourceName: "checkmark") : #imageLiteral(resourceName: "deselected")
+
+                if self.isOptionSelected {
+                    self.titleLabel.textColor = self.option?.selectionTextColor
+                    self.backgroundColor = self.option?.selectionColor
+                } else {
+                    self.titleLabel.textColor = .white
+                    self.backgroundColor = .mediumPurple
+                }
             }
         }
     }

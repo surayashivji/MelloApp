@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol MLOOnboardingViewController {
-    var type: MLOSelectableOptionType? { get set }
-}
-
 /// a view controller that presents options for selection
 class MLOListOptionViewController:
-    UIViewController,
+    MLOOnboardingViewController,
     UITableViewDelegate,
     UITableViewDataSource {
 
@@ -57,22 +53,13 @@ class MLOListOptionViewController:
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        let nextButton = UIBarButtonItem(title: "NEXT",
-                                         style: .done,
-                                         target: self,
-                                         action: #selector(nextButtonTapped))
-        nextButton.tintColor = .white
-        navigationItem.setRightBarButton(nextButton,
-                                         animated: false)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationItem.hidesBackButton = true
     }
     
-    @objc private func nextButtonTapped() {
-        guard let nextDisplayType = type?.displayType else {
-            // TODO: end VC
+    @objc override func nextButtonTapped() {
+        guard let nextDisplayType = type?.nextOption?.displayType else {
             return
         }
         
