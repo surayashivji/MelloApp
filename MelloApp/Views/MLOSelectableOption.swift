@@ -38,6 +38,8 @@ enum MLOOnboardingOptionInputType {
 enum MLOSelectableOptionType {
     case timeOfDay, goal, mindfulness, scents
     
+    static var allOptions: [MLOSelectableOptionType] = [.timeOfDay, .goal, .mindfulness, .scents]
+    
     var nextOption: MLOSelectableOptionType? {
         switch self {
         case .timeOfDay:

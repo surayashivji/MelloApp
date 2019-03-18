@@ -76,11 +76,17 @@ class MLOListOptionViewController:
                 .instantiateViewController(withIdentifier: "grid") else { return }
             nextViewController = next
         }
-        navigationController?.pushViewController(nextViewController, animated: true)
+        if let navigationController = navigationController as? MLOOnboardingNavigationController {
+            navigationController.incrementProgressIndicator()
+            navigationController.pushViewController(nextViewController, animated: true)
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        if let navigationController = navigationController as? MLOOnboardingNavigationController {
+            navigationController.decrementProgressIndicator()
+            navigationController.popViewController(animated: true)
+        }
     }
     
     // MARK: Table View methods

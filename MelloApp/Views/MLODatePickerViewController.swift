@@ -24,6 +24,7 @@ class MLODatePickerViewController: MLOOnboardingViewController, UITextFieldDeleg
                 NSAttributedStringKey.font: font]
             tf?.attributedPlaceholder = NSAttributedString(string: "_ _",
                                                           attributes: attributes)
+            
         }
     }
     
@@ -70,6 +71,9 @@ class MLODatePickerViewController: MLOOnboardingViewController, UITextFieldDeleg
     }
     
     @objc override func nextButtonTapped() {
+        if let navigationController = navigationController as? MLOOnboardingNavigationController {
+            navigationController.incrementProgressIndicator()
+        }
        performSegue(withIdentifier: "next", sender: self)
     }
     
