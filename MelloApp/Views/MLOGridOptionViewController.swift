@@ -58,7 +58,9 @@ class MLOGridOptionViewController:
         (collectionView.cellForItem(at: indexPath) as? MLOGridOptionCollectionViewCell)?.isOptionSelected.toggle()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.frame.size.width / 2) - 10
         let height = width * (110 / 150) // aspect ratio
         return CGSize(width: width, height: height)

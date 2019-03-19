@@ -37,6 +37,7 @@
 		840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B05223612A600004A9D /* MLOProgressCircle.swift */; };
 		840D3B08223741A000004A9D /* MLOOnboardingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */; };
 		84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */; };
+		84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */; };
 		84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C27469222364C40050A011 /* Onboarding.storyboard */; };
 		84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746B222364F20050A011 /* MLOListOptionViewController.swift */; };
 		84C2746E222466F80050A011 /* MLOOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */; };
@@ -103,6 +104,7 @@
 		840D3B05223612A600004A9D /* MLOProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOProgressCircle.swift; sourceTree = "<group>"; };
 		840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingNavigationController.swift; sourceTree = "<group>"; };
 		84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingFinishViewController.swift; sourceTree = "<group>"; };
+		84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOScentOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		84C27469222364C40050A011 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		84C2746B222364F20050A011 /* MLOListOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOListOptionViewController.swift; sourceTree = "<group>"; };
 		84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				84C2746F222479330050A011 /* MLOSelectableOption.swift */,
 				840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */,
 				84C27469222364C40050A011 /* Onboarding.storyboard */,
+				84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */,
 				840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */,
 				84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */,
 				63D8E6E2220A3957008E1480 /* CustomTextField.swift */,
@@ -525,6 +528,7 @@
 				84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
 				63D8E6E3220A3957008E1480 /* CustomTextField.swift in Sources */,
+				84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */,
 				84C27470222479330050A011 /* MLOSelectableOption.swift in Sources */,
 				63033559220F527300256800 /* FirebaseManager+Errors.swift in Sources */,
 				63033554220EA5B000256800 /* FirebaseManager.swift in Sources */,
