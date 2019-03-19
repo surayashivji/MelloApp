@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import UIImageViewAlignedSwift
 
 class MLOGridOptionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var checkmarkImageView: UIImageView!
-    @IBOutlet weak var sideImageView: UIImageView!
+    @IBOutlet weak var sideImageView: UIImageViewAligned!
     
     var option: MLOSelectableListOption? {
         didSet {
             isOptionSelected = false
             titleLabel.text = option?.title
             sideImageView.image = option?.defaultImage
+            sideImageView.alignment = .right
         }
     }
     var isOptionSelected = false {

@@ -10,6 +10,7 @@ target 'MelloApp' do
   pod 'Firebase/Auth'
   pod 'FLAnimatedImage'
   pod 'SwiftyJSON'
+  pod 'UIImageViewAlignedSwift'
 
   # Pods for MelloApp
 
