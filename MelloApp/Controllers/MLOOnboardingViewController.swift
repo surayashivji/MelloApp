@@ -18,14 +18,20 @@ class MLOOnboardingViewController: UIViewController {
                                          style: .done,
                                          target: self,
                                          action: #selector(nextButtonTapped))
+        
+        let font = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
+                          NSAttributedStringKey.font: font,
+                          NSAttributedStringKey.paragraphStyle: NSMutableParagraphStyle()]
+        nextButton.setTitleTextAttributes(attributes, for: .normal)
         nextButton.tintColor = .white
         navigationItem.setRightBarButton(nextButton,
                                          animated: false)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.shadowImage = UIImage()
-        
     }
+    
     @objc func nextButtonTapped() {
         incrementProgress()
     }

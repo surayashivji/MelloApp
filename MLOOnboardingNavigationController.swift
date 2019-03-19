@@ -38,14 +38,14 @@ class MLOOnboardingNavigationController: UINavigationController {
                                toItem: nil,
                                attribute: .notAnAttribute,
                                multiplier: 1,
-                               constant: 20),
+                               constant: 16),
             NSLayoutConstraint(item: progressIndicator,
                                attribute: .height,
                                relatedBy: .equal,
                                toItem: nil,
                                attribute: .notAnAttribute,
                                multiplier: 1,
-                               constant: 20)
+                               constant: 16)
             ])
     }
     
