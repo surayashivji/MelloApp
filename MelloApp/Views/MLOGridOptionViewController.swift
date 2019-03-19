@@ -36,7 +36,10 @@ class MLOGridOptionViewController:
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        if let navigationController = navigationController as? MLOOnboardingNavigationController {
+            navigationController.decrementProgressIndicator()
+            navigationController.popViewController(animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

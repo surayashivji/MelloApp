@@ -339,10 +339,10 @@
             </objects>
             <point key="canvasLocation" x="2964" y="72"/>
         </scene>
-        <!--Onboarding View Controller-->
+        <!--Onboarding Finish View Controller-->
         <scene sceneID="htG-5r-o4c">
             <objects>
-                <viewController id="AOM-sC-1Ov" customClass="MLOOnboardingViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AOM-sC-1Ov" customClass="MLOOnboardingFinishViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oY1-If-8tn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

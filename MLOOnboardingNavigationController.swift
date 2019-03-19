@@ -21,7 +21,7 @@ class MLOOnboardingNavigationController: UINavigationController {
                                toItem: progressIndicator,
                                attribute: .leading,
                                multiplier: 1,
-                               constant: -30),
+                               constant: -20),
             NSLayoutConstraint(item: navigationBar,
                                attribute: .centerY,
                                relatedBy: .equal,
@@ -50,7 +50,7 @@ class MLOOnboardingNavigationController: UINavigationController {
     }
     
     private var progressPerPage: Double {
-        return 1.0 / Double(MLOSelectableOptionType.allOptions.count + 1)
+        return 1.0 / Double(MLOSelectableOptionType.allOptions.count + 2)
     }
     
     func incrementProgressIndicator() {

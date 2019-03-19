@@ -59,6 +59,7 @@ class MLOListOptionViewController:
     }
     
     @objc override func nextButtonTapped() {
+        super.nextButtonTapped()
         guard let nextDisplayType = type?.nextOption?.displayType else {
             return
         }
@@ -76,10 +77,7 @@ class MLOListOptionViewController:
                 .instantiateViewController(withIdentifier: "grid") else { return }
             nextViewController = next
         }
-        if let navigationController = navigationController as? MLOOnboardingNavigationController {
-            navigationController.incrementProgressIndicator()
-            navigationController.pushViewController(nextViewController, animated: true)
-        }
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

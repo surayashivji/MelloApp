@@ -26,5 +26,13 @@ class MLOOnboardingViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         
     }
-    @objc func nextButtonTapped() {}
+    @objc func nextButtonTapped() {
+        incrementProgress()
+    }
+    
+    func incrementProgress() {
+        if let navigationController = navigationController as? MLOOnboardingNavigationController {
+            navigationController.incrementProgressIndicator()
+        }
+    }
 }
