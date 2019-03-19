@@ -26,6 +26,10 @@ class MLOGridOptionViewController:
     }
     
     override func nextButtonTapped() {
+        guard selectedOptions().count > 0 else {
+            alert(error: "Select at least 1 option to continue.")
+            return
+        }
         performSegue(withIdentifier: "finish", sender: self)
     }
     

@@ -59,6 +59,11 @@ class MLOListOptionViewController:
     }
     
     @objc override func nextButtonTapped() {
+        guard selectedOptions().count > 0 else {
+            alert(error: "Select at least 1 option to continue.")
+            return
+        }
+        
         super.nextButtonTapped()
         guard let nextDisplayType = type?.nextOption?.displayType else {
             return
@@ -108,16 +113,16 @@ class MLOListOptionViewController:
     
     /// returns list of options that are selected by the user
     func selectedOptions() -> [MLOSelectableListOption] {
-        var options = [MLOSelectableListOption]()
+        var selectedOptions = [MLOSelectableListOption]()
         for i in 0..<options.count {
             guard let cell = tableView.cellForRow(at:
                 IndexPath(row: i, section: 0)) as? MLOOptionTableViewCell else {
                 break
             }
             if let option = cell.option, cell.isOptionSelected {
-                options.append(option)
+                selectedOptions.append(option)
             }
         }
-        return options
+        return selectedOptions
     }
 }

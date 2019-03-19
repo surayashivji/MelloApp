@@ -21,9 +21,9 @@ class MLODatePickerViewController: MLOOnboardingViewController, UITextFieldDeleg
             let grey = UIColor(red: 0.37, green: 0.38, blue: 0.51, alpha: 1)
             let font = UIFont.systemFont(ofSize: 30, weight: .regular)
             let attributes = [NSAttributedStringKey.foregroundColor: grey,
-                NSAttributedStringKey.font: font]
+                              NSAttributedStringKey.font: font]
             tf?.attributedPlaceholder = NSAttributedString(string: "_ _",
-                                                          attributes: attributes)
+                                                           attributes: attributes)
         }
     }
     
@@ -75,6 +75,16 @@ class MLODatePickerViewController: MLOOnboardingViewController, UITextFieldDeleg
     }
     
     @objc override func nextButtonTapped() {
+        var components = DateComponents()
+        components.year = Int(yearField.text ?? "")
+        components.month = Int(monthField.text ?? "")
+        components.day = Int(dayField.text ?? "")
+        components.calendar = Calendar.current
+        
+        guard components.isValidDate else {
+            alert(error: "The date you entered is invalid.")
+            return
+        }
         super.nextButtonTapped()
         performSegue(withIdentifier: "next", sender: self)
     }

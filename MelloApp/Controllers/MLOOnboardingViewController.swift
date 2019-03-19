@@ -38,9 +38,21 @@ class MLOOnboardingViewController: UIViewController {
         incrementProgress()
     }
     
+    /// Increments the progress indicator by 1 notch
     func incrementProgress() {
         if let navigationController = navigationController as? MLOOnboardingNavigationController {
             navigationController.incrementProgressIndicator()
         }
+    }
+    
+    /// Alerts the user about an input error
+    ///
+    /// - Parameter error: the description of the error
+    func alert(error: String) {
+        let alert = UIAlertController(title: "Oops",
+                                      message: error,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:  nil))
+        present(alert, animated: true, completion: nil)
     }
 }
