@@ -24,6 +24,8 @@ class MLOOnboardingViewController: UIViewController {
                           NSAttributedStringKey.font: font,
                           NSAttributedStringKey.paragraphStyle: NSMutableParagraphStyle()]
         nextButton.setTitleTextAttributes(attributes, for: .normal)
+        nextButton.setTitleTextAttributes(attributes, for: .selected)
+        nextButton.setTitleTextAttributes(attributes, for: .highlighted)
         nextButton.tintColor = .white
         navigationItem.setRightBarButton(nextButton,
                                          animated: false)
