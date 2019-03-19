@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Checkmark_Light.png",
+      "filename" : "Woody.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Checkmark_Light@2x.png",
+      "filename" : "Woody@2x.png",
       "scale" : "2x"
     },
     {

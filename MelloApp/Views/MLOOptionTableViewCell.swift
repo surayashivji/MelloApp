@@ -33,7 +33,7 @@ class MLOOptionTableViewCell: UITableViewCell {
             
             UIView.animate(withDuration: 0.1) {
                 self.button.backgroundColor = self.isOptionSelected ? option.selectionColor : option.defaultColor
-                self.selectionImage.image = self.isOptionSelected ? #imageLiteral(resourceName: "checkmark") : #imageLiteral(resourceName: "deselected")
+                self.selectionImage.image = self.isOptionSelected ? option.selectionImage : #imageLiteral(resourceName: "deselected")
                 let textColor = self.isOptionSelected ? option.selectionTextColor : .white
                 self.button.setTitleColor(textColor, for: .normal)
             }

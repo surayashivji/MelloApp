@@ -285,17 +285,17 @@
                                                         <constraint firstAttribute="height" constant="11" id="pcA-ef-Y4k"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-GT-Ujg">
-                                                    <rect key="frame" x="103.5" y="0.0" width="34.5" height="102"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-GT-Ujg">
+                                                    <rect key="frame" x="89.5" y="10" width="48.5" height="92"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="GLJ-GT-Ujg" firstAttribute="width" secondItem="IhE-uH-GT6" secondAttribute="width" multiplier="0.25" id="1Zo-cP-nRv"/>
+                                            <constraint firstItem="GLJ-GT-Ujg" firstAttribute="width" secondItem="IhE-uH-GT6" secondAttribute="width" multiplier="0.35" id="1Zo-cP-nRv"/>
                                             <constraint firstItem="0gs-dy-aKN" firstAttribute="centerY" secondItem="IhE-uH-GT6" secondAttribute="centerY" id="S8R-vV-ZLx"/>
                                             <constraint firstAttribute="bottom" secondItem="GLJ-GT-Ujg" secondAttribute="bottom" id="Vo9-pI-95P"/>
-                                            <constraint firstItem="GLJ-GT-Ujg" firstAttribute="top" secondItem="IhE-uH-GT6" secondAttribute="top" id="nVW-am-6LB"/>
+                                            <constraint firstItem="GLJ-GT-Ujg" firstAttribute="top" secondItem="IhE-uH-GT6" secondAttribute="top" constant="10" id="nVW-am-6LB"/>
                                             <constraint firstItem="0gs-dy-aKN" firstAttribute="leading" secondItem="IhE-uH-GT6" secondAttribute="leadingMargin" constant="27" id="uir-6D-rTd"/>
                                             <constraint firstAttribute="trailing" secondItem="GLJ-GT-Ujg" secondAttribute="trailing" id="xTS-WD-eu3"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="7Xf-dF-e1P" secondAttribute="trailing" constant="9" id="xZ3-Ti-pvl"/>
@@ -425,7 +425,7 @@ These blends will adjust and adapt as you give mello feedback and integrate with
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" width="11" height="11"/>
+        <image name="checkmark" width="64" height="64"/>
         <image name="deselected" width="11" height="11"/>
     </resources>
 </document>

@@ -17,13 +17,13 @@ class MLOGridOptionCollectionViewCell: UICollectionViewCell {
         didSet {
             isOptionSelected = false
             titleLabel.text = option?.title
-            sideImageView.image = #imageLiteral(resourceName: "homelogo.png")
+            sideImageView.image = option?.defaultImage
         }
     }
     var isOptionSelected = false {
         didSet {
             UIView.animate(withDuration: 0.1) {
-                self.checkmarkImageView.image = self.isOptionSelected ? #imageLiteral(resourceName: "checkmark") : #imageLiteral(resourceName: "deselected")
+                self.checkmarkImageView.image = self.isOptionSelected ? self.option?.selectionImage : #imageLiteral(resourceName: "deselected")
 
                 if self.isOptionSelected {
                     self.titleLabel.textColor = self.option?.selectionTextColor
