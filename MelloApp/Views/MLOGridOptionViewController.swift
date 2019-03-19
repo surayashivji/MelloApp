@@ -72,16 +72,16 @@ class MLOGridOptionViewController:
     
     /// returns list of options that are selected by the user
     func selectedOptions() -> [MLOSelectableListOption] {
-        var options = [MLOSelectableListOption]()
-        for i in 0..<options.count {
+        var selectedOptions = [MLOSelectableListOption]()
+        for i in 0..<type.options.count {
             guard let cell = collectionView.cellForItem(at:
                 IndexPath(row: i, section: 0)) as? MLOGridOptionCollectionViewCell else {
                     break
             }
             if let option = cell.option, cell.isOptionSelected {
-                options.append(option)
+                selectedOptions.append(option)
             }
         }
-        return options
+        return selectedOptions
     }
 }
