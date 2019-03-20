@@ -410,6 +410,9 @@ These blends will adjust and adapt as you give mello feedback and integrate with
                                 <state key="normal" title="explore the app">
                                     <color key="titleColor" red="0.090847261250000005" green="0.091751791540000002" blue="0.19217529890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="uXH-fL-o1u" kind="presentation" id="dfK-fE-YSo"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zKX-SC-0fy">
                                 <rect key="frame" x="32" y="148.5" width="311" height="80"/>
@@ -504,6 +507,14 @@ These blends will adjust and adapt as you give mello feedback and integrate with
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPg-dV-yhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3693.5999999999999" y="71.514242878560722"/>
+        </scene>
+        <!--TabBarController-->
+        <scene sceneID="6LP-j9-plB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBarController" id="uXH-fL-o1u" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo4-q5-PEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4322" y="217"/>
         </scene>
     </scenes>
     <resources>

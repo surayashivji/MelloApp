@@ -71,6 +71,14 @@
                                     <segue destination="pGx-qZ-34H" kind="show" identifier="startOnboarding" id="deb-20-ne0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLC-wr-zPF">
+                                <rect key="frame" x="120" y="470" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="delete me shortcut to tabs"/>
+                                <connections>
+                                    <segue destination="ruA-7T-kww" kind="presentation" id="fnj-aX-BD3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -212,6 +220,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfW-9m-M51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1287" y="448"/>
+        </scene>
+        <!--TabBarController-->
+        <scene sceneID="vKu-4Z-qJi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBarController" id="ruA-7T-kww" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dP-T1-W4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="732"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="ond-xa-blo">
@@ -441,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBf-W2-HsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="779"/>
+            <point key="canvasLocation" x="-366" y="773"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="00V-Vw-teB">

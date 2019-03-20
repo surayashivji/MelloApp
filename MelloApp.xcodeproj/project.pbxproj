@@ -16,7 +16,7 @@
 		6343D06022082B0900B790E0 /* LongButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343D05F22082B0900B790E0 /* LongButton.swift */; };
 		6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343D06122082B3700B790E0 /* ColorPalette.swift */; };
 		634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D5021FED0FC00C665A7 /* AppDelegate.swift */; };
-		634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5421FED0FC00C665A7 /* Main.storyboard */; };
+		634F6D5621FED0FC00C665A7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5421FED0FC00C665A7 /* Login.storyboard */; };
 		634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5721FED0FC00C665A7 /* Assets.xcassets */; };
 		634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */; };
 		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
@@ -36,6 +36,10 @@
 		840D3B04223611F500004A9D /* MLOOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */; };
 		840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B05223612A600004A9D /* MLOProgressCircle.swift */; };
 		840D3B08223741A000004A9D /* MLOOnboardingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */; };
+		842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C52242D8AA00BF557C /* TabBarController.storyboard */; };
+		842D77C82242D8D400BF557C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C72242D8D400BF557C /* Home.storyboard */; };
+		842D77CA2242D8DE00BF557C /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C92242D8DE00BF557C /* Discover.storyboard */; };
+		842D77CF2242D90200BF557C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77CE2242D90200BF557C /* Profile.storyboard */; };
 		84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */; };
 		84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */; };
 		84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C27469222364C40050A011 /* Onboarding.storyboard */; };
@@ -75,7 +79,7 @@
 		6343D06122082B3700B790E0 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		634F6D4D21FED0FC00C665A7 /* MelloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634F6D5021FED0FC00C665A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		634F6D5521FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		634F6D5521FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		634F6D5721FED0FC00C665A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634F6D5A21FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		634F6D5C21FED0FC00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +107,10 @@
 		840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingViewController.swift; sourceTree = "<group>"; };
 		840D3B05223612A600004A9D /* MLOProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOProgressCircle.swift; sourceTree = "<group>"; };
 		840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingNavigationController.swift; sourceTree = "<group>"; };
+		842D77C52242D8AA00BF557C /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		842D77C72242D8D400BF557C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		842D77C92242D8DE00BF557C /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		842D77CE2242D90200BF557C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingFinishViewController.swift; sourceTree = "<group>"; };
 		84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOScentOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		84C27469222364C40050A011 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -175,6 +183,10 @@
 				84C2746F222479330050A011 /* MLOSelectableOption.swift */,
 				840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */,
 				84C27469222364C40050A011 /* Onboarding.storyboard */,
+				842D77C52242D8AA00BF557C /* TabBarController.storyboard */,
+				842D77C72242D8D400BF557C /* Home.storyboard */,
+				842D77C92242D8DE00BF557C /* Discover.storyboard */,
+				842D77CE2242D90200BF557C /* Profile.storyboard */,
 				84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */,
 				840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */,
 				84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */,
@@ -226,7 +238,7 @@
 				6343D05E22082AF100B790E0 /* Views */,
 				6343D05A2208274E00B790E0 /* Controllers */,
 				6343D06322082B8900B790E0 /* Other */,
-				634F6D5421FED0FC00C665A7 /* Main.storyboard */,
+				634F6D5421FED0FC00C665A7 /* Login.storyboard */,
 				634F6D5721FED0FC00C665A7 /* Assets.xcassets */,
 				634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */,
 				634F6D5C21FED0FC00C665A7 /* Info.plist */,
@@ -397,13 +409,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */,
+				842D77C82242D8D400BF557C /* Home.storyboard in Resources */,
 				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
+				842D77CA2242D8DE00BF557C /* Discover.storyboard in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
 				63033552220E9BCB00256800 /* GoogleService-Info.plist in Resources */,
+				842D77CF2242D90200BF557C /* Profile.storyboard in Resources */,
 				63B0DFC72217B4510031BE51 /* blob.gif in Resources */,
 				63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */,
 				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
-				634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */,
+				634F6D5621FED0FC00C665A7 /* Login.storyboard in Resources */,
 				84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,12 +589,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		634F6D5421FED0FC00C665A7 /* Main.storyboard */ = {
+		634F6D5421FED0FC00C665A7 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				634F6D5521FED0FC00C665A7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */ = {
