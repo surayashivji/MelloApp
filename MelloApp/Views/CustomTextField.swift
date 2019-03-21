@@ -13,9 +13,8 @@ class CustomTextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
-        let placeholderColor = ColorPalette.muted
         let placeholderString = NSAttributedString(string: self.attributedPlaceholder?.string ?? "",
-                                                   attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
+                                                   attributes: [NSAttributedStringKey.foregroundColor: UIColor.muted])
         self.attributedPlaceholder = placeholderString
     }
 }

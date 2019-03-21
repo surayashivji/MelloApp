@@ -16,7 +16,7 @@
 		6343D06022082B0900B790E0 /* LongButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343D05F22082B0900B790E0 /* LongButton.swift */; };
 		6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343D06122082B3700B790E0 /* ColorPalette.swift */; };
 		634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D5021FED0FC00C665A7 /* AppDelegate.swift */; };
-		634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5421FED0FC00C665A7 /* Main.storyboard */; };
+		634F6D5621FED0FC00C665A7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5421FED0FC00C665A7 /* Login.storyboard */; };
 		634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5721FED0FC00C665A7 /* Assets.xcassets */; };
 		634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */; };
 		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
@@ -30,6 +30,26 @@
 		63F1243F22137AC4009D240D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1243E22137AC4009D240D /* ResetPasswordViewController.swift */; };
 		63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244322167132009D240D /* ViewController+Keyboard.swift */; };
 		63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244622169C0F009D240D /* Date+Conversions.swift */; };
+		840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */; };
+		840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */; };
+		840D3B022235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */; };
+		840D3B04223611F500004A9D /* MLOOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */; };
+		840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B05223612A600004A9D /* MLOProgressCircle.swift */; };
+		840D3B08223741A000004A9D /* MLOOnboardingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */; };
+		842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C52242D8AA00BF557C /* TabBarController.storyboard */; };
+		842D77C82242D8D400BF557C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C72242D8D400BF557C /* Home.storyboard */; };
+		842D77CA2242D8DE00BF557C /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C92242D8DE00BF557C /* Discover.storyboard */; };
+		842D77CF2242D90200BF557C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77CE2242D90200BF557C /* Profile.storyboard */; };
+		842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D02242DE6700BF557C /* MLODrawerController.swift */; };
+		842D77D42243F65700BF557C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77D32243F65700BF557C /* Menu.storyboard */; };
+		842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D522440B2500BF557C /* MLOHomeViewController.swift */; };
+		842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */; };
+		84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */; };
+		84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */; };
+		84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C27469222364C40050A011 /* Onboarding.storyboard */; };
+		84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746B222364F20050A011 /* MLOListOptionViewController.swift */; };
+		84C2746E222466F80050A011 /* MLOOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */; };
+		84C27470222479330050A011 /* MLOSelectableOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2746F222479330050A011 /* MLOSelectableOption.swift */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +83,7 @@
 		6343D06122082B3700B790E0 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		634F6D4D21FED0FC00C665A7 /* MelloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634F6D5021FED0FC00C665A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		634F6D5521FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		634F6D5521FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		634F6D5721FED0FC00C665A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634F6D5A21FED0FC00C665A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		634F6D5C21FED0FC00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +105,27 @@
 		67A5C89323A68CE81AE66E1D /* Pods-MelloAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		810CC030611815222760D61D /* Pods_MelloAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODatePickerViewController.swift; sourceTree = "<group>"; };
+		840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOGridOptionViewController.swift; sourceTree = "<group>"; };
+		840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOGridOptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingViewController.swift; sourceTree = "<group>"; };
+		840D3B05223612A600004A9D /* MLOProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOProgressCircle.swift; sourceTree = "<group>"; };
+		840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingNavigationController.swift; sourceTree = "<group>"; };
+		842D77C52242D8AA00BF557C /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		842D77C72242D8D400BF557C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		842D77C92242D8DE00BF557C /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		842D77CE2242D90200BF557C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		842D77D02242DE6700BF557C /* MLODrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODrawerController.swift; sourceTree = "<group>"; };
+		842D77D22243636100BF557C /* Mello-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mello-Bridging-Header.h"; sourceTree = "<group>"; };
+		842D77D32243F65700BF557C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		842D77D522440B2500BF557C /* MLOHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOHomeViewController.swift; sourceTree = "<group>"; };
+		842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOHamburgerMenuViewController.swift; sourceTree = "<group>"; };
+		84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingFinishViewController.swift; sourceTree = "<group>"; };
+		84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOScentOptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		84C27469222364C40050A011 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		84C2746B222364F20050A011 /* MLOListOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOListOptionViewController.swift; sourceTree = "<group>"; };
+		84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOptionTableViewCell.swift; sourceTree = "<group>"; };
+		84C2746F222479330050A011 /* MLOSelectableOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOSelectableOption.swift; sourceTree = "<group>"; };
 		976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.debug.xcconfig"; sourceTree = "<group>"; };
 		992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +171,8 @@
 		6343D05A2208274E00B790E0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */,
+				840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */,
 				6343D05C220827F600B790E0 /* HomeViewController.swift */,
 				63A8D6DB22098E08009F7196 /* LoginViewController.swift */,
 				63D8E6E4220A92F9008E1480 /* SignUpViewController.swift */,
@@ -138,17 +181,28 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		6343D05B220827C700B790E0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		6343D05E22082AF100B790E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				840D3B05223612A600004A9D /* MLOProgressCircle.swift */,
 				6343D05F22082B0900B790E0 /* LongButton.swift */,
+				84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */,
+				84C2746B222364F20050A011 /* MLOListOptionViewController.swift */,
+				840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */,
+				84C2746F222479330050A011 /* MLOSelectableOption.swift */,
+				840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */,
+				84C27469222364C40050A011 /* Onboarding.storyboard */,
+				842D77C52242D8AA00BF557C /* TabBarController.storyboard */,
+				842D77D02242DE6700BF557C /* MLODrawerController.swift */,
+				842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */,
+				842D77D522440B2500BF557C /* MLOHomeViewController.swift */,
+				842D77D32243F65700BF557C /* Menu.storyboard */,
+				842D77C72242D8D400BF557C /* Home.storyboard */,
+				842D77C92242D8DE00BF557C /* Discover.storyboard */,
+				842D77CE2242D90200BF557C /* Profile.storyboard */,
+				84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */,
+				840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */,
+				84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */,
 				63D8E6E2220A3957008E1480 /* CustomTextField.swift */,
 			);
 			path = Views;
@@ -166,6 +220,7 @@
 		634F6D4421FED0FC00C665A7 = {
 			isa = PBXGroup;
 			children = (
+				842D77D22243636100BF557C /* Mello-Bridging-Header.h */,
 				634F6D4F21FED0FC00C665A7 /* MelloApp */,
 				634F6D6421FED0FD00C665A7 /* MelloAppTests */,
 				634F6D6F21FED0FD00C665A7 /* MelloAppUITests */,
@@ -188,18 +243,16 @@
 		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
 			isa = PBXGroup;
 			children = (
-				63B3E2832218B563002059BC /* Assets */,
 				63033551220E998300256800 /* GoogleService-Info.plist */,
 				63B0DFC82217B4690031BE51 /* navlogo.png */,
 				63B0DFCD2217B6080031BE51 /* homelogo.png */,
 				63B0DFC62217B44D0031BE51 /* blob.gif */,
 				63F1244522169BE3009D240D /* Extensions */,
 				63033555220EBA2700256800 /* Services */,
-				6343D05B220827C700B790E0 /* Models */,
 				6343D05E22082AF100B790E0 /* Views */,
 				6343D05A2208274E00B790E0 /* Controllers */,
 				6343D06322082B8900B790E0 /* Other */,
-				634F6D5421FED0FC00C665A7 /* Main.storyboard */,
+				634F6D5421FED0FC00C665A7 /* Login.storyboard */,
 				634F6D5721FED0FC00C665A7 /* Assets.xcassets */,
 				634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */,
 				634F6D5C21FED0FC00C665A7 /* Info.plist */,
@@ -223,21 +276,6 @@
 				634F6D7221FED0FD00C665A7 /* Info.plist */,
 			);
 			path = MelloAppUITests;
-			sourceTree = "<group>";
-		};
-		63B3E2832218B563002059BC /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				63B3E2842218B56C002059BC /* TabBar */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		63B3E2842218B56C002059BC /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		63F1244522169BE3009D240D /* Extensions */ = {
@@ -286,7 +324,6 @@
 				634F6D4A21FED0FC00C665A7 /* Frameworks */,
 				634F6D4B21FED0FC00C665A7 /* Resources */,
 				F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */,
-				B42203EECC0BA4F82F4DD89F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,8 +342,6 @@
 				634F6D5D21FED0FC00C665A7 /* Sources */,
 				634F6D5E21FED0FC00C665A7 /* Frameworks */,
 				634F6D5F21FED0FC00C665A7 /* Resources */,
-				27694C1C14B4C96E9A4E15E3 /* [CP] Embed Pods Frameworks */,
-				0F584EE0998EEF032B5786BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,8 +361,6 @@
 				634F6D6821FED0FD00C665A7 /* Sources */,
 				634F6D6921FED0FD00C665A7 /* Frameworks */,
 				634F6D6A21FED0FD00C665A7 /* Resources */,
-				6042682003AF4E80FFBAC43E /* [CP] Embed Pods Frameworks */,
-				30A753E28B17BA7525C052BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,13 +423,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */,
+				842D77C82242D8D400BF557C /* Home.storyboard in Resources */,
+				842D77D42243F65700BF557C /* Menu.storyboard in Resources */,
 				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
+				842D77CA2242D8DE00BF557C /* Discover.storyboard in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
 				63033552220E9BCB00256800 /* GoogleService-Info.plist in Resources */,
+				842D77CF2242D90200BF557C /* Profile.storyboard in Resources */,
 				63B0DFC72217B4510031BE51 /* blob.gif in Resources */,
 				63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */,
 				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
-				634F6D5621FED0FC00C665A7 /* Main.storyboard in Resources */,
+				634F6D5621FED0FC00C665A7 /* Login.storyboard in Resources */,
+				84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,36 +456,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F584EE0998EEF032B5786BB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27694C1C14B4C96E9A4E15E3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2E40596A4E04101A7DF26009 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,36 +474,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		30A753E28B17BA7525C052BC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6042682003AF4E80FFBAC43E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AD291728C01CA876EAE89532 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -511,21 +490,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B42203EECC0BA4F82F4DD89F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6BF2536D59F338249BB1250 /* [CP] Check Pods Manifest.lock */ = {
@@ -552,11 +516,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -564,12 +530,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -579,19 +547,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */,
+				842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */,
 				63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */,
 				634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */,
+				84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */,
+				842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */,
 				6303355B220F540900256800 /* ViewController+Alert.swift in Sources */,
+				840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */,
 				63D8E6E5220A92F9008E1480 /* SignUpViewController.swift in Sources */,
+				840D3B04223611F500004A9D /* MLOOnboardingViewController.swift in Sources */,
 				63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */,
 				63F1243F22137AC4009D240D /* ResetPasswordViewController.swift in Sources */,
+				840D3B022235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift in Sources */,
+				840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */,
+				84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
 				63D8E6E3220A3957008E1480 /* CustomTextField.swift in Sources */,
+				84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */,
+				84C27470222479330050A011 /* MLOSelectableOption.swift in Sources */,
 				63033559220F527300256800 /* FirebaseManager+Errors.swift in Sources */,
 				63033554220EA5B000256800 /* FirebaseManager.swift in Sources */,
+				84C2746E222466F80050A011 /* MLOOptionTableViewCell.swift in Sources */,
 				6343D05D220827F600B790E0 /* HomeViewController.swift in Sources */,
+				840D3B08223741A000004A9D /* MLOOnboardingNavigationController.swift in Sources */,
 				63A8D6DC22098E08009F7196 /* LoginViewController.swift in Sources */,
 				6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */,
+				840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,12 +609,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		634F6D5421FED0FC00C665A7 /* Main.storyboard */ = {
+		634F6D5421FED0FC00C665A7 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				634F6D5521FED0FC00C665A7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */ = {
@@ -764,6 +746,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mello-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -780,6 +763,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mello-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

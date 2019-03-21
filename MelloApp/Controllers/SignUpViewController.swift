@@ -68,6 +68,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 // success - create user in database: name, email, date
                 self?.manager.addUserToDB(uid: user.uid, name: name, email: email)
                 // TODO segue to onboarding
+                self?.performSegue(withIdentifier: "startOnboarding", sender: self)
             })
         }
     }

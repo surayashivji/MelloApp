@@ -61,6 +61,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
                 // Login Success
                 guard let user = user else { return } // FIRUser
+                
                 // TODO: segue home
             })
         }

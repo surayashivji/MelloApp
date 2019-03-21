@@ -53,5 +53,19 @@ class HomeViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startOnboarding",
+            let navigationController = segue.destination as? UINavigationController,
+            let vc = navigationController.topViewController as? MLOListOptionViewController {
+            vc.view.layoutIfNeeded()
+            vc.type = .timeOfDay
+        }
+    }
 
+    @IBAction func test(_ sender: Any) {
+        if let x = MLODrawerController.setupDrawer() {
+            present(x, animated: true, completion: nil)
+        }
+    }
 }
