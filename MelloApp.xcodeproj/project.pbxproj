@@ -40,6 +40,10 @@
 		842D77C82242D8D400BF557C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C72242D8D400BF557C /* Home.storyboard */; };
 		842D77CA2242D8DE00BF557C /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C92242D8DE00BF557C /* Discover.storyboard */; };
 		842D77CF2242D90200BF557C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77CE2242D90200BF557C /* Profile.storyboard */; };
+		842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D02242DE6700BF557C /* MLODrawerController.swift */; };
+		842D77D42243F65700BF557C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77D32243F65700BF557C /* Menu.storyboard */; };
+		842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D522440B2500BF557C /* MLOHomeViewController.swift */; };
+		842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */; };
 		84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */; };
 		84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */; };
 		84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C27469222364C40050A011 /* Onboarding.storyboard */; };
@@ -111,6 +115,11 @@
 		842D77C72242D8D400BF557C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		842D77C92242D8DE00BF557C /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		842D77CE2242D90200BF557C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		842D77D02242DE6700BF557C /* MLODrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODrawerController.swift; sourceTree = "<group>"; };
+		842D77D22243636100BF557C /* Mello-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mello-Bridging-Header.h"; sourceTree = "<group>"; };
+		842D77D32243F65700BF557C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		842D77D522440B2500BF557C /* MLOHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOHomeViewController.swift; sourceTree = "<group>"; };
+		842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOHamburgerMenuViewController.swift; sourceTree = "<group>"; };
 		84984F8722416B340087D8D2 /* MLOOnboardingFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOOnboardingFinishViewController.swift; sourceTree = "<group>"; };
 		84984F8B224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOScentOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		84C27469222364C40050A011 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -184,6 +193,10 @@
 				840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */,
 				84C27469222364C40050A011 /* Onboarding.storyboard */,
 				842D77C52242D8AA00BF557C /* TabBarController.storyboard */,
+				842D77D02242DE6700BF557C /* MLODrawerController.swift */,
+				842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */,
+				842D77D522440B2500BF557C /* MLOHomeViewController.swift */,
+				842D77D32243F65700BF557C /* Menu.storyboard */,
 				842D77C72242D8D400BF557C /* Home.storyboard */,
 				842D77C92242D8DE00BF557C /* Discover.storyboard */,
 				842D77CE2242D90200BF557C /* Profile.storyboard */,
@@ -207,6 +220,7 @@
 		634F6D4421FED0FC00C665A7 = {
 			isa = PBXGroup;
 			children = (
+				842D77D22243636100BF557C /* Mello-Bridging-Header.h */,
 				634F6D4F21FED0FC00C665A7 /* MelloApp */,
 				634F6D6421FED0FD00C665A7 /* MelloAppTests */,
 				634F6D6F21FED0FD00C665A7 /* MelloAppUITests */,
@@ -411,6 +425,7 @@
 			files = (
 				842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */,
 				842D77C82242D8D400BF557C /* Home.storyboard in Resources */,
+				842D77D42243F65700BF557C /* Menu.storyboard in Resources */,
 				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
 				842D77CA2242D8DE00BF557C /* Discover.storyboard in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
@@ -505,6 +520,7 @@
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -514,6 +530,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -530,9 +547,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */,
+				842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */,
 				63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */,
 				634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */,
 				84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */,
+				842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */,
 				6303355B220F540900256800 /* ViewController+Alert.swift in Sources */,
 				840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */,
 				63D8E6E5220A92F9008E1480 /* SignUpViewController.swift in Sources */,
@@ -726,6 +746,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mello-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -742,6 +763,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mello-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

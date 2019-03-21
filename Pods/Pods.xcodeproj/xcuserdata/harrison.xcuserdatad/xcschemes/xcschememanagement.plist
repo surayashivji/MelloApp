@@ -67,6 +67,11 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>MMDrawerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MelloApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>

@@ -76,7 +76,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="delete me shortcut to tabs"/>
                                 <connections>
-                                    <segue destination="ruA-7T-kww" kind="presentation" id="fnj-aX-BD3"/>
+                                    <action selector="test:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Izn-1e-bBx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -219,7 +219,7 @@
                 <viewControllerPlaceholder storyboardName="Onboarding" id="pGx-qZ-34H" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfW-9m-M51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1287" y="448"/>
+            <point key="canvasLocation" x="340" y="603"/>
         </scene>
         <!--TabBarController-->
         <scene sceneID="vKu-4Z-qJi">
@@ -227,7 +227,7 @@
                 <viewControllerPlaceholder storyboardName="TabBarController" id="ruA-7T-kww" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dP-T1-W4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="732"/>
+            <point key="canvasLocation" x="1120" y="647"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="ond-xa-blo">

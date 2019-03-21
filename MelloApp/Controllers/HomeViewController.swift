@@ -63,4 +63,9 @@ class HomeViewController: UIViewController {
         }
     }
 
+    @IBAction func test(_ sender: Any) {
+        if let x = MLODrawerController.setupDrawer() {
+            present(x, animated: true, completion: nil)
+        }
+    }
 }

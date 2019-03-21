@@ -11,7 +11,7 @@ target 'MelloApp' do
   pod 'FLAnimatedImage'
   pod 'SwiftyJSON'
   pod 'UIImageViewAlignedSwift'
-
+  pod 'MMDrawerController', '~> 0.5.7'
   # Pods for MelloApp
 
   target 'MelloAppTests' do
