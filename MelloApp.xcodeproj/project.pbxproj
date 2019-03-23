@@ -21,6 +21,10 @@
 		634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */; };
 		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
 		634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */; };
+		636468E522454B1000A76A95 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468E422454B1000A76A95 /* CustomTabBar.swift */; };
+		636468E72245A6F300A76A95 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468E62245A6F300A76A95 /* ProfileViewController.swift */; };
+		636468E92245C25300A76A95 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468E82245C25300A76A95 /* StatsView.swift */; };
+		636468EE224624D900A76A95 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468ED224624D900A76A95 /* HistoryTableViewCell.swift */; };
 		63A8D6DC22098E08009F7196 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8D6DB22098E08009F7196 /* LoginViewController.swift */; };
 		63B0DFC72217B4510031BE51 /* blob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC62217B44D0031BE51 /* blob.gif */; };
 		63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC82217B4690031BE51 /* navlogo.png */; };
@@ -93,6 +97,10 @@
 		634F6D6C21FED0FD00C665A7 /* MelloAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelloAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelloAppUITests.swift; sourceTree = "<group>"; };
 		634F6D7221FED0FD00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636468E422454B1000A76A95 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		636468E62245A6F300A76A95 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		636468E82245C25300A76A95 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		636468ED224624D900A76A95 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		63A8D6DB22098E08009F7196 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63B0DFC62217B44D0031BE51 /* blob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blob.gif; sourceTree = "<group>"; };
 		63B0DFC82217B4690031BE51 /* navlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navlogo.png; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 				63A8D6DB22098E08009F7196 /* LoginViewController.swift */,
 				63D8E6E4220A92F9008E1480 /* SignUpViewController.swift */,
 				63F1243E22137AC4009D240D /* ResetPasswordViewController.swift */,
+				636468E62245A6F300A76A95 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +213,9 @@
 				840D3B012235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift */,
 				84C2746D222466F80050A011 /* MLOOptionTableViewCell.swift */,
 				63D8E6E2220A3957008E1480 /* CustomTextField.swift */,
+				636468E422454B1000A76A95 /* CustomTabBar.swift */,
+				636468E82245C25300A76A95 /* StatsView.swift */,
+				636468ED224624D900A76A95 /* HistoryTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -557,12 +569,15 @@
 				840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */,
 				63D8E6E5220A92F9008E1480 /* SignUpViewController.swift in Sources */,
 				840D3B04223611F500004A9D /* MLOOnboardingViewController.swift in Sources */,
+				636468EE224624D900A76A95 /* HistoryTableViewCell.swift in Sources */,
 				63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */,
 				63F1243F22137AC4009D240D /* ResetPasswordViewController.swift in Sources */,
 				840D3B022235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift in Sources */,
+				636468E72245A6F300A76A95 /* ProfileViewController.swift in Sources */,
 				840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */,
 				84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
+				636468E522454B1000A76A95 /* CustomTabBar.swift in Sources */,
 				63D8E6E3220A3957008E1480 /* CustomTextField.swift in Sources */,
 				84984F8C224185780087D8D2 /* MLOScentOptionCollectionViewCell.swift in Sources */,
 				84C27470222479330050A011 /* MLOSelectableOption.swift in Sources */,
@@ -571,6 +586,7 @@
 				84C2746E222466F80050A011 /* MLOOptionTableViewCell.swift in Sources */,
 				6343D05D220827F600B790E0 /* HomeViewController.swift in Sources */,
 				840D3B08223741A000004A9D /* MLOOnboardingNavigationController.swift in Sources */,
+				636468E92245C25300A76A95 /* StatsView.swift in Sources */,
 				63A8D6DC22098E08009F7196 /* LoginViewController.swift in Sources */,
 				6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */,
 				840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */,

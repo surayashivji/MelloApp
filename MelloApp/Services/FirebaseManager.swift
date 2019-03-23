@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftyJSON
 
 class FirebaseManager {
     
@@ -69,5 +70,37 @@ class FirebaseManager {
     // Email is sent to reset password
     func resetPasswordWithEmail(email: String, completion: @escaping (Error?) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email, completion: completion)
+    }
+    
+    // MARK: Query User Profile
+    
+    // Get user's history of blends
+    // @return list of dictionaries of blend history
+    func getUserBlendHistory(completion: @escaping ([[String:String]]) -> Void) {
+        var blendHistory = [[String:String]]()
+        if signedIn {
+            let userID = user?.uid
+            reference.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if let history = value?["history"] as? NSDictionary {
+                    for item in history {
+                        let json = JSON(item.value)
+                        let blendID: String = json["blend_ID"].stringValue
+                        let startTime: String = json["startime"].stringValue
+                        let endTime: String = json["endtime"].stringValue
+                        // let timestamp = json["timestamp"].doubleValue
+                        // let date = Date(timeIntervalSince1970: timestamp/1000)
+                        
+                        let dict : [String:String] = [
+                            "blendID" : blendID,
+                            "startTime" : startTime,
+                            "endTime" : endTime
+                        ]
+                        blendHistory.append(dict)
+                    }
+                    completion(blendHistory)
+                }
+            }
+        }
     }
 }
