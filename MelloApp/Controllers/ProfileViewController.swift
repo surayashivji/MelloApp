@@ -115,17 +115,17 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let blend = history[indexPath.row]
+        let blend = history[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         if let blendID = blend["blend_ID"] {
-            manager.getBlendQualities(blendID: blendID as! String) { (aromaQuality, benefitQuality) in
+            manager.getBlendQualities(blendID: blendID as! String) { (name, aromaQuality, benefitQuality) in
                 print("\(aromaQuality)\(benefitQuality).png")
                 cell.iconImageView.image = self.selectIconFor(aroma: aromaQuality, benefit: benefitQuality)
+                cell.blendNameLabel.text = name
             }
         }
-        cell.blendNameLabel.text = (blend["blend_NAME"] as! String)
         let timestamp = blend["timestamp"] as! Double
         let date = Date(timeIntervalSince1970: timestamp/1000)
         cell.timeBlendLabel.text = date.asString(style: .long)

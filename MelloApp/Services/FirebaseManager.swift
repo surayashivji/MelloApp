@@ -57,6 +57,17 @@ class FirebaseManager {
         // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
+    // Init new user's stats
+    func initUserStats(uid: String) {
+        let statsRef = reference.child("users").child(uid).child("stats")
+        let statsData: [String:Int] = ["current_streak": 0,
+                                       "longest_streak": 0,
+                                       "time_diffused": 0,
+                                       "total_sessions": 0]
+        statsRef.setValue(statsData)
+        print("Successfully init stats to Database")
+    }
+    
     // Signs user out
     func signOutUser(completion: @escaping(Bool) -> Void) {
         do {
@@ -112,12 +123,9 @@ class FirebaseManager {
                     for item in history {
                         let json = JSON(item.value)
                         let blendID: String = json["blend_ID"].stringValue
-                        let blendName: String = json["blend_NAME"].stringValue
                         let timestamp = json["timestamp"].doubleValue
-                        
                         let dict : [String:Any] = [
                             "blend_ID" : blendID,
-                            "blend_NAME" : blendName,
                             "timestamp" : timestamp
                         ]
                         blendHistory.append(dict)
@@ -128,15 +136,16 @@ class FirebaseManager {
         }
     }
     
-    // Get aroma and benefit based on blend ID
-    func getBlendQualities(blendID: String, completion: @escaping (String, String) -> Void) {
+    // Get name / aroma / benefit based on blend ID
+    func getBlendQualities(blendID: String, completion: @escaping (String, String, String) -> Void) {
         if signedIn {
             reference.child("aromatherapy").child("blends").child(blendID).observeSingleEvent(of: .value) { (snapshot) in
                 if let blend = snapshot.value as? NSDictionary {
                     let json = JSON(blend)
+                    let name: String = json["general_name"].stringValue
                     let aroma: String = json["aroma"].stringValue
                     let benefit: String = json["benefit"].stringValue
-                    completion(aroma, benefit)
+                    completion(name, aroma, benefit)
                 }
             }
         }

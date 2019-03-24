@@ -65,9 +65,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 }
                 guard let user = user else { return } // FIRUser
                 print("user: \(user)")
-                // success - create user in database: name, email, date
+                // successfully created user
+                // -- create user in database: name, email, date
                 self?.manager.addUserToDB(uid: user.uid, name: name, email: email)
-                // TODO segue to onboarding
+                // -- initialize statistics with empty data
+                 self?.manager.initUserStats(uid: user.uid)
+                // segue to onboarding
                 self?.performSegue(withIdentifier: "startOnboarding", sender: self)
             })
         }
