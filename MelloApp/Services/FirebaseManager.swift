@@ -74,10 +74,36 @@ class FirebaseManager {
     
     // MARK: Query User Profile
     
+    // Get user's statistics
+    func getUserStats(completion: @escaping ([String:String]) -> Void) {
+        var statsHistory = [String:String]()
+        if signedIn {
+            let userID = user?.uid
+            reference.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if let stats = value?["stats"] as? NSDictionary {
+                    let json = JSON(stats)
+                    let currentStreak: String = json["current_streak"].stringValue
+                    let longestStreak: String = json["longest_streak"].stringValue
+                    let timeDiffused: String = json["time_diffused"].stringValue
+                    let totalSessions = json["total_sessions"].stringValue
+                    
+                    let dict : [String:String] = [
+                        "currentStreak" : currentStreak,
+                        "longestStreak" : longestStreak,
+                        "timeDiffused" : timeDiffused,
+                        "totalSessions" : totalSessions
+                    ]
+                    statsHistory = dict
+                    completion(statsHistory)
+                }
+            }
+        }
+    }
+    
     // Get user's history of blends
-    // @return list of dictionaries of blend history
-    func getUserBlendHistory(completion: @escaping ([[String:String]]) -> Void) {
-        var blendHistory = [[String:String]]()
+    func getUserBlendHistory(completion: @escaping ([[String:Any]]) -> Void) {
+        var blendHistory = [[String:Any]]()
         if signedIn {
             let userID = user?.uid
             reference.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
@@ -86,19 +112,31 @@ class FirebaseManager {
                     for item in history {
                         let json = JSON(item.value)
                         let blendID: String = json["blend_ID"].stringValue
-                        let startTime: String = json["startime"].stringValue
-                        let endTime: String = json["endtime"].stringValue
-                        // let timestamp = json["timestamp"].doubleValue
-                        // let date = Date(timeIntervalSince1970: timestamp/1000)
+                        let blendName: String = json["blend_NAME"].stringValue
+                        let timestamp = json["timestamp"].doubleValue
                         
-                        let dict : [String:String] = [
-                            "blendID" : blendID,
-                            "startTime" : startTime,
-                            "endTime" : endTime
+                        let dict : [String:Any] = [
+                            "blend_ID" : blendID,
+                            "blend_NAME" : blendName,
+                            "timestamp" : timestamp
                         ]
                         blendHistory.append(dict)
                     }
                     completion(blendHistory)
+                }
+            }
+        }
+    }
+    
+    // Get aroma and benefit based on blend ID
+    func getBlendQualities(blendID: String, completion: @escaping (String, String) -> Void) {
+        if signedIn {
+            reference.child("aromatherapy").child("blends").child(blendID).observeSingleEvent(of: .value) { (snapshot) in
+                if let blend = snapshot.value as? NSDictionary {
+                    let json = JSON(blend)
+                    let aroma: String = json["aroma"].stringValue
+                    let benefit: String = json["benefit"].stringValue
+                    completion(aroma, benefit)
                 }
             }
         }

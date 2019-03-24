@@ -28,19 +28,24 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     @IBOutlet weak var currentStreakLabel: UILabel!
     @IBOutlet weak var longestStreakLabel: UILabel!
     
-    
     var isStatsVisible = true
     let disabledText = UIColor.disabledText
     let enabledText = UIColor.white
-    var history = [[String:String]]()
+    var history = [[String:Any]]()
+    var stats = [String:String]()
+    
+    let cellSpacingHeight: CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.historyTableView.delegate = self
         self.historyTableView.dataSource = self
+        self.historyTableView.tableFooterView = UIView()
+        self.historyTableView.backgroundView = nil;
+        self.historyTableView.backgroundColor = UIColor.clear
         
-        setupStats()
+        fetchStats()
         fetchHistory()
     }
     
@@ -73,35 +78,79 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     }
     
     func setupStats() {
-        
+        timeDiffusedLabel.text = stats["timeDiffused"]
+        totalSessionsLabel.text = stats["totalSessions"]
+        currentStreakLabel.text = stats["currentStreak"]
+        longestStreakLabel.text = stats["longestStreak"]
+    }
+    
+    // MARK: Data Querying
+    
+    func fetchStats() {
+        manager.getUserStats { (userStats) in
+            self.stats = userStats
+            DispatchQueue.main.async {
+                self.setupStats()
+            }
+        }
     }
     
     func fetchHistory() {
-        print("fetching history")
         manager.getUserBlendHistory { (userHistory) in
-            print("here i am")
             self.history = userHistory
-            print(self.history.count)
             DispatchQueue.main.async {
-                print("here")
                 self.historyTableView.reloadData()
             }
         }
     }
     
+    func selectIconFor(aroma: String, benefit: String) -> UIImage? {
+        let path = "\(aroma)\(benefit).png"
+        return UIImage(named: path)
+    }
+    
     // MARK: Table View Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count")
-        print(self.history.count)
-        return self.history.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let blend = history[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
-        cell.blendNameLabel.text = blend["blendID"]
-        cell.timeBlendLabel.text = blend["startTime"]
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        if let blendID = blend["blend_ID"] {
+            manager.getBlendQualities(blendID: blendID as! String) { (aromaQuality, benefitQuality) in
+                print("\(aromaQuality)\(benefitQuality).png")
+                cell.iconImageView.image = self.selectIconFor(aroma: aromaQuality, benefit: benefitQuality)
+            }
+        }
+        cell.blendNameLabel.text = (blend["blend_NAME"] as! String)
+        let timestamp = blend["timestamp"] as! Double
+        let date = Date(timeIntervalSince1970: timestamp/1000)
+        cell.timeBlendLabel.text = date.asString(style: .long)
         return cell
+    }
+    
+    // Make the background color show through
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.history.count
+    }
+    
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
     }
     
 }

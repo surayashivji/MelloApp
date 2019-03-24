@@ -16,8 +16,11 @@ extension Date {
     init(milliseconds:Int) {
         self = Date(timeIntervalSince1970: TimeInterval(milliseconds / 1000))
     }
+    
+    func asString(style: DateFormatter.Style) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = style
+        return dateFormatter.string(from: self)
+    }
+
 }
-
-// Date().millisecondsSince1970 // 1476889390939
-// Date(milliseconds: 0) // "Dec 31, 1969, 4:00 PM" (PDT variant of 1970 UTC)
-
