@@ -214,7 +214,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="noFavorites" id="nwl-No-OEO">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="noFavorites" id="nwl-No-OEO" customClass="MLORoundCollectionViewCell" customModule="MelloApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -307,7 +307,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Floral" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfL-gu-ad9">
-                                                            <rect key="frame" x="20" y="63" width="93" height="15"/>
+                                                            <rect key="frame" x="11" y="63" width="111" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="vbz-70-Q0N"/>
                                                             </constraints>
@@ -316,7 +316,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="peppermint, majoram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2S-vX-LFy">
-                                                            <rect key="frame" x="20" y="81" width="93" height="10"/>
+                                                            <rect key="frame" x="11" y="81" width="111" height="10"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="10" id="ISu-5E-Rfw"/>
                                                             </constraints>
@@ -331,14 +331,14 @@
                                                     <constraint firstAttribute="trailing" secondItem="Prm-bq-dJw" secondAttribute="trailing" id="0Lf-hU-0wQ"/>
                                                     <constraint firstItem="Prm-bq-dJw" firstAttribute="top" secondItem="5US-26-cje" secondAttribute="top" id="2cC-a4-eqN"/>
                                                     <constraint firstItem="DfL-gu-ad9" firstAttribute="top" secondItem="Prm-bq-dJw" secondAttribute="bottom" constant="22" id="5OX-O2-fKn"/>
-                                                    <constraint firstItem="E2S-vX-LFy" firstAttribute="leading" secondItem="5US-26-cje" secondAttribute="leadingMargin" constant="12" id="9mh-IK-RE6"/>
                                                     <constraint firstAttribute="bottom" secondItem="5kG-gg-JlB" secondAttribute="bottom" constant="9" id="DFX-rH-SxA"/>
-                                                    <constraint firstItem="DfL-gu-ad9" firstAttribute="leading" secondItem="5US-26-cje" secondAttribute="leadingMargin" constant="12" id="UGc-Vx-Hxc"/>
+                                                    <constraint firstItem="DfL-gu-ad9" firstAttribute="leading" secondItem="5US-26-cje" secondAttribute="leadingMargin" constant="3" id="UGc-Vx-Hxc"/>
+                                                    <constraint firstItem="E2S-vX-LFy" firstAttribute="trailing" secondItem="DfL-gu-ad9" secondAttribute="trailing" id="UhB-kw-ekz"/>
                                                     <constraint firstItem="E2S-vX-LFy" firstAttribute="top" secondItem="DfL-gu-ad9" secondAttribute="bottom" constant="3" id="oLJ-U4-Xpq"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="E2S-vX-LFy" secondAttribute="trailing" constant="12" id="qyj-eE-as9"/>
                                                     <constraint firstAttribute="trailing" secondItem="5kG-gg-JlB" secondAttribute="trailing" constant="9" id="rD0-5C-GQ2"/>
+                                                    <constraint firstItem="E2S-vX-LFy" firstAttribute="leading" secondItem="DfL-gu-ad9" secondAttribute="leading" id="sHS-hb-2oJ"/>
                                                     <constraint firstItem="Prm-bq-dJw" firstAttribute="leading" secondItem="5US-26-cje" secondAttribute="leading" id="wJc-JN-YhH"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="DfL-gu-ad9" secondAttribute="trailing" constant="12" id="xSX-8B-Be9"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="DfL-gu-ad9" secondAttribute="trailing" constant="3" id="xSX-8B-Be9"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="favoriteButton" destination="KhO-Gb-DKy" id="Dc0-k8-q7s"/>

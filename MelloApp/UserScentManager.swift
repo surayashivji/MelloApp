@@ -36,7 +36,7 @@ class UserScentManager {
     }
     
     static func favorites() -> [ScentBlend] {
-        return [ScentBlend.citrus, ScentBlend.floral]
+        return [] //[ScentBlend.citrus, ScentBlend.floral]
     }
     // TODO: this will eventually take in a blend ID but right now it is placeholder for the dummy content
     static func toggleFavoriteScent(scentAdded: String) {
