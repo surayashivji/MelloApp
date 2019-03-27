@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSource, UITableViewDelegate, DiffuseButtonDelegate {
     
     // MARK: Setup
     let manager = FirebaseManager()
@@ -109,6 +109,11 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
         return UIImage(named: path)
     }
     
+    func didPressDiffuse(_ tag: Int) {
+        print("I have pressed a button with a tag: \(tag)")
+        self.alertUserOf(title: "Connect your mello to start diffusing!", message: "Connect your mello to start diffusing", completion: {_ in })
+    }
+    
     // MARK: Table View Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -117,6 +122,9 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let blend = history[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
+        cell.selectionStyle = .none
+        cell.delegate = self
+        cell.diffusePlayButton.tag = indexPath.section
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         if let blendID = blend["blend_ID"] {
@@ -128,7 +136,8 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
         }
         let timestamp = blend["timestamp"] as! Double
         let date = Date(timeIntervalSince1970: timestamp/1000)
-        cell.timeBlendLabel.text = date.asString(style: .long)
+        print(date.asString(style: .medium))
+        cell.timeBlendLabel.text = date.asString(style: .medium)
         return cell
     }
     
