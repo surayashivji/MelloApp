@@ -30,6 +30,14 @@ class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
     }
     
     @IBAction func favoriteButtonPressed(_ sender: Any) {
+        let scentTitle = NSAttributedString(string: scent?.name ?? "scent",
+                                            attributes: [.font : UIFont.italicSystemFont(ofSize: 13)])
+        let alertMessage = NSMutableAttributedString(attributedString: scentTitle)
+        let addedRemoved = scent?.isFavorite ?? true ? "added to" : "removed from"
+        let addedMessage = NSAttributedString(string: " \(addedRemoved) your favorites",
+            attributes: [.font : UIFont.systemFont(ofSize: 13, weight: .semibold)])
+        alertMessage.append(addedMessage)
+        BannerPresenter.shared.presentLower(text: alertMessage, icon: #imageLiteral(resourceName: "Image"))
         updateFavoriteIcon()
     }
     
