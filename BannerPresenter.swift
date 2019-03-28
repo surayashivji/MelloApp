@@ -151,7 +151,9 @@ class BannerPresenter {
         }
         
         // Dismiss automatically
-        dismissTimer = Timer.scheduledTimer(withTimeInterval: dismissAfter, repeats: false, block: { timer in
+        dismissTimer = Timer.scheduledTimer(withTimeInterval: dismissAfter,
+                                            repeats: false,
+                                            block: { timer in
             self.dismiss()
             timer.invalidate()
         })
@@ -179,7 +181,8 @@ class BannerPresenter {
     /// Fetches the topmost view controller in the window to present banners onto
     /// Adapted from SO: https://stackoverflow.com/questions/6131205/iphone-how-to-find-topmost-view-controller
     private func topViewController() -> UIViewController? {
-        guard let window = UIApplication.shared.keyWindow, let rootViewController = window.rootViewController else {
+        guard let window = UIApplication.shared.keyWindow,
+            let rootViewController = window.rootViewController else {
             return nil
         }
         
