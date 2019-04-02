@@ -20,19 +20,8 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var diffusePlayButton: UIButton!
     
     weak var delegate: DiffuseButtonDelegate?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
     
     @IBAction func playButtonTapped(_ sender: UIButton) {
-        print("play tapped")
         delegate?.didPressDiffuse(sender.tag)
     }
     

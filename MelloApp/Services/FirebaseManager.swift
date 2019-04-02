@@ -53,7 +53,6 @@ class FirebaseManager {
                                       "name": name,
                                       "timestamp": timestamp]
         userRef.setValue(userData)
-        print("Successfully added user to Database")
         // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
@@ -65,7 +64,6 @@ class FirebaseManager {
                                        "time_diffused": 0,
                                        "total_sessions": 0]
         statsRef.setValue(statsData)
-        print("Successfully init stats to Database")
     }
     
     // Signs user out
@@ -86,11 +84,14 @@ class FirebaseManager {
     // MARK: Query User Profile
     
     // Get user's statistics
-    func getUserStats(completion: @escaping ([String:String]) -> Void) {
+    func getUserStats(completion: @escaping ([String:String]?) -> Void) {
         var statsHistory = [String:String]()
         if signedIn {
-            let userID = user?.uid
-            reference.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            guard let userID = user?.uid else {
+                completion(nil)
+                return
+            }
+            reference.child("users").child(userID).observeSingleEvent(of: .value) { (snapshot) in
                 let value = snapshot.value as? NSDictionary
                 if let stats = value?["stats"] as? NSDictionary {
                     let json = JSON(stats)

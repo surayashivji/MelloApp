@@ -28,9 +28,10 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     @IBOutlet weak var currentStreakLabel: UILabel!
     @IBOutlet weak var longestStreakLabel: UILabel!
     
-    var isStatsVisible = true
-    let disabledText = UIColor.disabledText
-    let enabledText = UIColor.white
+    private var isStatsVisible = true
+    private let disabledText = UIColor.disabledText
+    private let enabledText = UIColor.white
+    
     var history = [[String:Any]]()
     var stats = [String:String]()
     
@@ -88,9 +89,11 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     
     func fetchStats() {
         manager.getUserStats { (userStats) in
-            self.stats = userStats
-            DispatchQueue.main.async {
-                self.setupStats()
+            if let stats = userStats {
+                self.stats = stats
+                DispatchQueue.main.async {
+                    self.setupStats()
+                }
             }
         }
     }
