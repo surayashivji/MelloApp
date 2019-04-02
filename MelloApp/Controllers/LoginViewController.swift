@@ -62,7 +62,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 // Login Success
                 guard let user = user else { return } // FIRUser
                 
-                // TODO: segue home
+                // Segue to home
+                if let loginHome = MLODrawerController.setupDrawer() {
+                    self?.present(loginHome, animated: true, completion: nil)
+                }
             })
         }
     }
