@@ -39,14 +39,15 @@
             </objects>
             <point key="canvasLocation" x="-264" y="-360"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar-->
         <scene sceneID="pEJ-MV-5kR">
             <objects>
-                <tabBarController id="2Fy-U4-LMU" sceneMemberID="viewController">
+                <tabBarController id="2Fy-U4-LMU" customClass="CustomTabBar" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iB4-Tz-4BB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Sny-al-hAd" kind="relationship" relationship="viewControllers" id="Unt-j5-8xE"/>
