@@ -26,6 +26,38 @@
 		63B0DFC72217B4510031BE51 /* blob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC62217B44D0031BE51 /* blob.gif */; };
 		63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC82217B4690031BE51 /* navlogo.png */; };
 		63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFCD2217B6080031BE51 /* homelogo.png */; };
+		63EE2FF022595C73003A99E3 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FED22595C73003A99E3 /* CustomSwitch.swift */; };
+		63EE2FF122595C73003A99E3 /* FaceToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FEE22595C73003A99E3 /* FaceToggle.swift */; };
+		63EE2FF222595C73003A99E3 /* PreferenceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FEF22595C73003A99E3 /* PreferenceButton.swift */; };
+		63EE2FF722595C9B003A99E3 /* ModalBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FF422595C9B003A99E3 /* ModalBaseVC.swift */; };
+		63EE2FF822595C9B003A99E3 /* ModalPresentationAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FF522595C9B003A99E3 /* ModalPresentationAnimationVC.swift */; };
+		63EE2FF922595C9B003A99E3 /* ModalPresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FF622595C9B003A99E3 /* ModalPresentationVC.swift */; };
+		63EE2FFB22595CC7003A99E3 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FFA22595CC7003A99E3 /* Notifications.swift */; };
+		63EE2FFD22595DFA003A99E3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE2FFC22595DFA003A99E3 /* Menu.storyboard */; };
+		63EE2FFF22595E15003A99E3 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FFE22595E15003A99E3 /* SideMenuViewController.swift */; };
+		63EE301922595E8E003A99E3 /* DevicesAndIntegrations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE300122595E8D003A99E3 /* DevicesAndIntegrations.storyboard */; };
+		63EE301A22595E8E003A99E3 /* DeviceAndIntegrationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300222595E8D003A99E3 /* DeviceAndIntegrationsViewController.swift */; };
+		63EE301B22595E8E003A99E3 /* Ratings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE300422595E8D003A99E3 /* Ratings.storyboard */; };
+		63EE301C22595E8E003A99E3 /* EnergizerRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300522595E8D003A99E3 /* EnergizerRatingViewController.swift */; };
+		63EE301D22595E8E003A99E3 /* FaceToggle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EE300622595E8D003A99E3 /* FaceToggle.xib */; };
+		63EE301E22595E8E003A99E3 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300722595E8D003A99E3 /* ThanksViewController.swift */; };
+		63EE301F22595E8E003A99E3 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300822595E8D003A99E3 /* Ratings.swift */; };
+		63EE302022595E8E003A99E3 /* RatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300922595E8D003A99E3 /* RatingsViewController.swift */; };
+		63EE302122595E8E003A99E3 /* RepeatBlendRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300A22595E8D003A99E3 /* RepeatBlendRatingViewController.swift */; };
+		63EE302222595E8E003A99E3 /* RatingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300B22595E8D003A99E3 /* RatingsPageViewController.swift */; };
+		63EE302322595E8E003A99E3 /* SmellRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300C22595E8D003A99E3 /* SmellRatingViewController.swift */; };
+		63EE302422595E8E003A99E3 /* FaceToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300D22595E8D003A99E3 /* FaceToggleView.swift */; };
+		63EE302522595E8E003A99E3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE300F22595E8E003A99E3 /* EditProfileViewController.swift */; };
+		63EE302622595E8E003A99E3 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301022595E8E003A99E3 /* PreferencesViewController.swift */; };
+		63EE302722595E8E003A99E3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301122595E8E003A99E3 /* SettingsTableViewCell.swift */; };
+		63EE302822595E8E003A99E3 /* SettingsNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301222595E8E003A99E3 /* SettingsNavViewController.swift */; };
+		63EE302922595E8E003A99E3 /* PreferrencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301322595E8E003A99E3 /* PreferrencesTableViewCell.swift */; };
+		63EE302A22595E8E003A99E3 /* PreferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301422595E8E003A99E3 /* PreferenceCollectionViewCell.swift */; };
+		63EE302B22595E8E003A99E3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE301522595E8E003A99E3 /* Settings.storyboard */; };
+		63EE302C22595E8E003A99E3 /* PreferenceButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EE301622595E8E003A99E3 /* PreferenceButton.xib */; };
+		63EE302D22595E8E003A99E3 /* PreferenceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301722595E8E003A99E3 /* PreferenceButtonView.swift */; };
+		63EE302E22595E8E003A99E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301822595E8E003A99E3 /* SettingsViewController.swift */; };
+		63EE303022595F1E003A99E3 /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE302F22595F1E003A99E3 /* HomeContainerViewController.swift */; };
 		63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244322167132009D240D /* ViewController+Keyboard.swift */; };
 		63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244622169C0F009D240D /* Date+Conversions.swift */; };
 		840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */; };
@@ -64,7 +96,6 @@
 		84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E545032259204B00DDB89B /* InsetCollectionView.swift */; };
 		84E5450922594DED00DDB89B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450522594DEC00DDB89B /* Home.storyboard */; };
 		84E5450A22594DED00DDB89B /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450622594DEC00DDB89B /* Discover.storyboard */; };
-		84E5450B22594DED00DDB89B /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450722594DEC00DDB89B /* Menu.storyboard */; };
 		84E5450C22594DED00DDB89B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450822594DEC00DDB89B /* Profile.storyboard */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
@@ -114,6 +145,38 @@
 		63B0DFC62217B44D0031BE51 /* blob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blob.gif; sourceTree = "<group>"; };
 		63B0DFC82217B4690031BE51 /* navlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navlogo.png; sourceTree = "<group>"; };
 		63B0DFCD2217B6080031BE51 /* homelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelogo.png; sourceTree = "<group>"; };
+		63EE2FED22595C73003A99E3 /* CustomSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		63EE2FEE22595C73003A99E3 /* FaceToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceToggle.swift; sourceTree = "<group>"; };
+		63EE2FEF22595C73003A99E3 /* PreferenceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceButton.swift; sourceTree = "<group>"; };
+		63EE2FF422595C9B003A99E3 /* ModalBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalBaseVC.swift; sourceTree = "<group>"; };
+		63EE2FF522595C9B003A99E3 /* ModalPresentationAnimationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationAnimationVC.swift; sourceTree = "<group>"; };
+		63EE2FF622595C9B003A99E3 /* ModalPresentationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationVC.swift; sourceTree = "<group>"; };
+		63EE2FFA22595CC7003A99E3 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		63EE2FFC22595DFA003A99E3 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		63EE2FFE22595E15003A99E3 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		63EE300122595E8D003A99E3 /* DevicesAndIntegrations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DevicesAndIntegrations.storyboard; sourceTree = "<group>"; };
+		63EE300222595E8D003A99E3 /* DeviceAndIntegrationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAndIntegrationsViewController.swift; sourceTree = "<group>"; };
+		63EE300422595E8D003A99E3 /* Ratings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ratings.storyboard; sourceTree = "<group>"; };
+		63EE300522595E8D003A99E3 /* EnergizerRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergizerRatingViewController.swift; sourceTree = "<group>"; };
+		63EE300622595E8D003A99E3 /* FaceToggle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceToggle.xib; sourceTree = "<group>"; };
+		63EE300722595E8D003A99E3 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
+		63EE300822595E8D003A99E3 /* Ratings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
+		63EE300922595E8D003A99E3 /* RatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsViewController.swift; sourceTree = "<group>"; };
+		63EE300A22595E8D003A99E3 /* RepeatBlendRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatBlendRatingViewController.swift; sourceTree = "<group>"; };
+		63EE300B22595E8D003A99E3 /* RatingsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsPageViewController.swift; sourceTree = "<group>"; };
+		63EE300C22595E8D003A99E3 /* SmellRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmellRatingViewController.swift; sourceTree = "<group>"; };
+		63EE300D22595E8D003A99E3 /* FaceToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceToggleView.swift; sourceTree = "<group>"; };
+		63EE300F22595E8E003A99E3 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		63EE301022595E8E003A99E3 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		63EE301122595E8E003A99E3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		63EE301222595E8E003A99E3 /* SettingsNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNavViewController.swift; sourceTree = "<group>"; };
+		63EE301322595E8E003A99E3 /* PreferrencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferrencesTableViewCell.swift; sourceTree = "<group>"; };
+		63EE301422595E8E003A99E3 /* PreferenceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		63EE301522595E8E003A99E3 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		63EE301622595E8E003A99E3 /* PreferenceButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferenceButton.xib; sourceTree = "<group>"; };
+		63EE301722595E8E003A99E3 /* PreferenceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceButtonView.swift; sourceTree = "<group>"; };
+		63EE301822595E8E003A99E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		63EE302F22595F1E003A99E3 /* HomeContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
 		63F1244322167132009D240D /* ViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		63F1244622169C0F009D240D /* Date+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Conversions.swift"; sourceTree = "<group>"; };
 		67A5C89323A68CE81AE66E1D /* Pods-MelloAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +219,6 @@
 		84E545032259204B00DDB89B /* InsetCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsetCollectionView.swift; path = "MelloApp/Views/UI components/InsetCollectionView.swift"; sourceTree = "<group>"; };
 		84E5450522594DEC00DDB89B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
 		84E5450622594DEC00DDB89B /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Storyboards/Discover.storyboard; sourceTree = "<group>"; };
-		84E5450722594DEC00DDB89B /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = Storyboards/Menu.storyboard; sourceTree = "<group>"; };
 		84E5450822594DEC00DDB89B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboards/Profile.storyboard; sourceTree = "<group>"; };
 		976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.debug.xcconfig"; sourceTree = "<group>"; };
 		992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,15 +276,20 @@
 		6343D05E22082AF100B790E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				63EE300022595E8D003A99E3 /* Devices+Integrations */,
+				63EE300322595E8D003A99E3 /* Ratings */,
+				63EE300E22595E8E003A99E3 /* Settings */,
 				849C701D224AD6F900AE9494 /* UI components */,
 				849C701C224AD6E500AE9494 /* Onboarding */,
 				849C701B224AD6CA00AE9494 /* Storyboards */,
+				63EE2FFE22595E15003A99E3 /* SideMenuViewController.swift */,
+				63EE302F22595F1E003A99E3 /* HomeContainerViewController.swift */,
 				842D77D02242DE6700BF557C /* MLODrawerController.swift */,
 				842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */,
 				842D77D522440B2500BF557C /* MLOHomeViewController.swift */,
+				63EE2FFC22595DFA003A99E3 /* Menu.storyboard */,
 				84E5450622594DEC00DDB89B /* Discover.storyboard */,
 				84E5450522594DEC00DDB89B /* Home.storyboard */,
-				84E5450722594DEC00DDB89B /* Menu.storyboard */,
 				84E5450822594DEC00DDB89B /* Profile.storyboard */,
 				636468E422454B1000A76A95 /* CustomTabBar.swift */,
 				636468E82245C25300A76A95 /* StatsView.swift */,
@@ -269,6 +336,8 @@
 		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
 			isa = PBXGroup;
 			children = (
+				63EE2FF322595C9B003A99E3 /* Custom Modal */,
+				63EE2FEC22595C73003A99E3 /* Custom Controls */,
 				63033551220E998300256800 /* GoogleService-Info.plist */,
 				63B0DFC82217B4690031BE51 /* navlogo.png */,
 				8458EB8522594E9D0077EE95 /* CustomTextField.swift */,
@@ -315,9 +384,73 @@
 			path = MelloAppUITests;
 			sourceTree = "<group>";
 		};
+		63EE2FEC22595C73003A99E3 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				63EE2FED22595C73003A99E3 /* CustomSwitch.swift */,
+				63EE2FEE22595C73003A99E3 /* FaceToggle.swift */,
+				63EE2FEF22595C73003A99E3 /* PreferenceButton.swift */,
+			);
+			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		63EE2FF322595C9B003A99E3 /* Custom Modal */ = {
+			isa = PBXGroup;
+			children = (
+				63EE2FF422595C9B003A99E3 /* ModalBaseVC.swift */,
+				63EE2FF522595C9B003A99E3 /* ModalPresentationAnimationVC.swift */,
+				63EE2FF622595C9B003A99E3 /* ModalPresentationVC.swift */,
+			);
+			path = "Custom Modal";
+			sourceTree = "<group>";
+		};
+		63EE300022595E8D003A99E3 /* Devices+Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				63EE300122595E8D003A99E3 /* DevicesAndIntegrations.storyboard */,
+				63EE300222595E8D003A99E3 /* DeviceAndIntegrationsViewController.swift */,
+			);
+			path = "Devices+Integrations";
+			sourceTree = "<group>";
+		};
+		63EE300322595E8D003A99E3 /* Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				63EE300422595E8D003A99E3 /* Ratings.storyboard */,
+				63EE300522595E8D003A99E3 /* EnergizerRatingViewController.swift */,
+				63EE300622595E8D003A99E3 /* FaceToggle.xib */,
+				63EE300722595E8D003A99E3 /* ThanksViewController.swift */,
+				63EE300822595E8D003A99E3 /* Ratings.swift */,
+				63EE300922595E8D003A99E3 /* RatingsViewController.swift */,
+				63EE300A22595E8D003A99E3 /* RepeatBlendRatingViewController.swift */,
+				63EE300B22595E8D003A99E3 /* RatingsPageViewController.swift */,
+				63EE300C22595E8D003A99E3 /* SmellRatingViewController.swift */,
+				63EE300D22595E8D003A99E3 /* FaceToggleView.swift */,
+			);
+			path = Ratings;
+			sourceTree = "<group>";
+		};
+		63EE300E22595E8E003A99E3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				63EE300F22595E8E003A99E3 /* EditProfileViewController.swift */,
+				63EE301022595E8E003A99E3 /* PreferencesViewController.swift */,
+				63EE301122595E8E003A99E3 /* SettingsTableViewCell.swift */,
+				63EE301222595E8E003A99E3 /* SettingsNavViewController.swift */,
+				63EE301322595E8E003A99E3 /* PreferrencesTableViewCell.swift */,
+				63EE301422595E8E003A99E3 /* PreferenceCollectionViewCell.swift */,
+				63EE301522595E8E003A99E3 /* Settings.storyboard */,
+				63EE301622595E8E003A99E3 /* PreferenceButton.xib */,
+				63EE301722595E8E003A99E3 /* PreferenceButtonView.swift */,
+				63EE301822595E8E003A99E3 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		63F1244522169BE3009D240D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				63EE2FFA22595CC7003A99E3 /* Notifications.swift */,
 				63033558220F527300256800 /* FirebaseManager+Errors.swift */,
 				6303355A220F540900256800 /* ViewController+Alert.swift */,
 				63F1244322167132009D240D /* ViewController+Keyboard.swift */,
@@ -503,17 +636,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EE301D22595E8E003A99E3 /* FaceToggle.xib in Resources */,
+				63EE302B22595E8E003A99E3 /* Settings.storyboard in Resources */,
 				842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */,
 				84E5450A22594DED00DDB89B /* Discover.storyboard in Resources */,
+				63EE302C22595E8E003A99E3 /* PreferenceButton.xib in Resources */,
+				63EE2FFD22595DFA003A99E3 /* Menu.storyboard in Resources */,
 				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
 				63033552220E9BCB00256800 /* GoogleService-Info.plist in Resources */,
 				84E5450922594DED00DDB89B /* Home.storyboard in Resources */,
+				63EE301922595E8E003A99E3 /* DevicesAndIntegrations.storyboard in Resources */,
 				63B0DFC72217B4510031BE51 /* blob.gif in Resources */,
-				84E5450B22594DED00DDB89B /* Menu.storyboard in Resources */,
 				63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */,
 				84E5450C22594DED00DDB89B /* Profile.storyboard in Resources */,
 				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
+				63EE301B22595E8E003A99E3 /* Ratings.storyboard in Resources */,
 				634F6D5621FED0FC00C665A7 /* Login.storyboard in Resources */,
 				84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */,
 			);
@@ -628,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */,
+				63EE301A22595E8E003A99E3 /* DeviceAndIntegrationsViewController.swift in Sources */,
 				842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */,
 				63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */,
 				84E5450222590DDB00DDB89B /* DailyScheduleDataSource.swift in Sources */,
@@ -637,38 +776,63 @@
 				8458EB8F22594EF70077EE95 /* HorizontalCollectionView.swift in Sources */,
 				84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */,
 				842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */,
+				63EE302722595E8E003A99E3 /* SettingsTableViewCell.swift in Sources */,
+				63EE2FFF22595E15003A99E3 /* SideMenuViewController.swift in Sources */,
 				6303355B220F540900256800 /* ViewController+Alert.swift in Sources */,
+				63EE2FF822595C9B003A99E3 /* ModalPresentationAnimationVC.swift in Sources */,
 				84CAC4C0224ACB060067EA2A /* MLODateCollectionViewCell.swift in Sources */,
+				63EE2FF222595C73003A99E3 /* PreferenceButton.swift in Sources */,
 				840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */,
 				636468EE224624D900A76A95 /* HistoryTableViewCell.swift in Sources */,
 				63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */,
+				63EE302322595E8E003A99E3 /* SmellRatingViewController.swift in Sources */,
 				84E5450022590CFD00DDB89B /* ScheduleItemTableViewCell.swift in Sources */,
+				63EE2FF122595C73003A99E3 /* FaceToggle.swift in Sources */,
+				63EE303022595F1E003A99E3 /* HomeContainerViewController.swift in Sources */,
 				8458EB8622594E9D0077EE95 /* CustomTextField.swift in Sources */,
+				63EE302922595E8E003A99E3 /* PreferrencesTableViewCell.swift in Sources */,
+				63EE302422595E8E003A99E3 /* FaceToggleView.swift in Sources */,
 				84CAC4C8224ACCEC0067EA2A /* RecommendationsDataSource.swift in Sources */,
+				63EE301C22595E8E003A99E3 /* EnergizerRatingViewController.swift in Sources */,
 				8458EB9222594EF70077EE95 /* MLOOnboardingViewController.swift in Sources */,
 				8458EB8422594E940077EE95 /* MLOOptionTableViewCell.swift in Sources */,
+				63EE2FF722595C9B003A99E3 /* ModalBaseVC.swift in Sources */,
 				840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */,
+				63EE301F22595E8E003A99E3 /* Ratings.swift in Sources */,
 				84CAC4C2224ACB160067EA2A /* MLOScentCollectionViewCell.swift in Sources */,
+				63EE2FF022595C73003A99E3 /* CustomSwitch.swift in Sources */,
 				849C7024224B460400AE9494 /* BannerPresenter.swift in Sources */,
 				8458EB8322594E940077EE95 /* MLOGridOptionCollectionViewCell.swift in Sources */,
 				84CAC4C6224ACCC30067EA2A /* FavoritesDataSource.swift in Sources */,
+				63EE2FF922595C9B003A99E3 /* ModalPresentationVC.swift in Sources */,
+				63EE302A22595E8E003A99E3 /* PreferenceCollectionViewCell.swift in Sources */,
 				84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */,
+				63EE301E22595E8E003A99E3 /* ThanksViewController.swift in Sources */,
+				63EE302022595E8E003A99E3 /* RatingsViewController.swift in Sources */,
+				63EE302122595E8E003A99E3 /* RepeatBlendRatingViewController.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
 				636468E522454B1000A76A95 /* CustomTabBar.swift in Sources */,
+				63EE302622595E8E003A99E3 /* PreferencesViewController.swift in Sources */,
 				84C27470222479330050A011 /* MLOSelectableOption.swift in Sources */,
 				63033559220F527300256800 /* FirebaseManager+Errors.swift in Sources */,
+				63EE302822595E8E003A99E3 /* SettingsNavViewController.swift in Sources */,
 				8458EB8222594E940077EE95 /* ResetPasswordViewController.swift in Sources */,
 				63033554220EA5B000256800 /* FirebaseManager.swift in Sources */,
 				636468E92245C25300A76A95 /* StatsView.swift in Sources */,
 				849C7014224AD30800AE9494 /* MLORoundCollectionViewCell.swift in Sources */,
+				63EE2FFB22595CC7003A99E3 /* Notifications.swift in Sources */,
 				8458EB9122594EF70077EE95 /* MLOOnboardingNavigationController.swift in Sources */,
 				84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */,
 				6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */,
 				840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */,
 				849C7022224AD94E00AE9494 /* UserScentManager.swift in Sources */,
+				63EE302522595E8E003A99E3 /* EditProfileViewController.swift in Sources */,
 				84CAC4C4224ACC8A0067EA2A /* ScheduleDataSource.swift in Sources */,
 				8458EB8D22594EF70077EE95 /* ProfileViewController.swift in Sources */,
+				63EE302E22595E8E003A99E3 /* SettingsViewController.swift in Sources */,
 				8458EB7F22594E940077EE95 /* SignUpViewController.swift in Sources */,
+				63EE302222595E8E003A99E3 /* RatingsPageViewController.swift in Sources */,
+				63EE302D22595E8E003A99E3 /* PreferenceButtonView.swift in Sources */,
 				8458EB8122594E940077EE95 /* MLOScentOptionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

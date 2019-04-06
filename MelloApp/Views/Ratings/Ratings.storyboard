@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ratings View Controller-->
+        <scene sceneID="IZw-bc-fLh">
+            <objects>
+                <viewController storyboardIdentifier="RatingsViewController" id="0Vg-l3-gFt" customClass="RatingsViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iRA-yv-Rxz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Bs-Sb-AbA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Iqg-KD-LLu" kind="embed" identifier="ratingPagesSegue" id="OiW-d3-9aK"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9R-Lh-MOB">
+                                <rect key="frame" x="324" y="15" width="31" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="0.68235294117647061" green="0.70588235294117641" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="skip:" destination="0Vg-l3-gFt" eventType="touchUpInside" id="9xp-Gu-w2i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K9R-Lh-MOB" firstAttribute="top" secondItem="Qwo-5M-F1Q" secondAttribute="top" constant="15" id="1EO-oe-5OM"/>
+                            <constraint firstItem="6Bs-Sb-AbA" firstAttribute="leading" secondItem="Qwo-5M-F1Q" secondAttribute="leading" id="28A-R3-qpk"/>
+                            <constraint firstItem="Qwo-5M-F1Q" firstAttribute="trailing" secondItem="K9R-Lh-MOB" secondAttribute="trailing" constant="20" id="MGl-BG-99h"/>
+                            <constraint firstItem="6Bs-Sb-AbA" firstAttribute="top" secondItem="Qwo-5M-F1Q" secondAttribute="top" id="cur-48-uPa"/>
+                            <constraint firstItem="Qwo-5M-F1Q" firstAttribute="bottom" secondItem="6Bs-Sb-AbA" secondAttribute="bottom" id="r0O-Tj-gZw"/>
+                            <constraint firstItem="Qwo-5M-F1Q" firstAttribute="trailing" secondItem="6Bs-Sb-AbA" secondAttribute="trailing" id="uxJ-88-T8K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qwo-5M-F1Q"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="239"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnq-WN-xZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="-76"/>
+        </scene>
+        <!--Smell Rating View Controller-->
+        <scene sceneID="iFi-HY-r6V">
+            <objects>
+                <viewController storyboardIdentifier="SmellRatingViewController" id="GxF-wZ-Rdl" customClass="SmellRatingViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iH2-FK-5sk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate Sleepy Green's Smell" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-r0-jiD">
+                                <rect key="frame" x="95" y="44" width="185" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="H3m-Kh-Abg"/>
+                                    <constraint firstAttribute="height" constant="47" id="k9C-8J-IUa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-yY-sgz">
+                                <rect key="frame" x="0.0" y="115" width="375" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ijn-zt-XNr">
+                                        <rect key="frame" x="182.5" y="0.0" width="10" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="R9I-as-pdi"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waM-ZH-qx7" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="207.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.78000000000000003" green="0.17000000000000001" blue="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="UGD-ap-FzM"/>
+                                            <constraint firstAttribute="width" constant="36" id="aC0-TT-FdU"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDo-XU-uXv" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="283.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Ikq-Qh-VpK"/>
+                                            <constraint firstAttribute="width" constant="36" id="Xcy-x8-cfE"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd1-8v-TCL" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="131.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="FbJ-uh-c9q"/>
+                                            <constraint firstAttribute="width" constant="36" id="vBy-Pc-S1B"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUa-js-jdf" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="55.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="dVM-Wb-tj4"/>
+                                            <constraint firstAttribute="height" constant="36" id="wM3-Mo-Kh1"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terrible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqo-eh-j3f">
+                                        <rect key="frame" x="61" y="39" width="25" height="9.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not sure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-Fv-4sk">
+                                        <rect key="frame" x="135" y="39" width="29" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enjoyable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-C3-hfv">
+                                        <rect key="frame" x="208.5" y="39" width="34" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amazing!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-kn-ctf">
+                                        <rect key="frame" x="285.5" y="39" width="32" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ijn-zt-XNr" firstAttribute="centerX" secondItem="s5i-yY-sgz" secondAttribute="centerX" id="6xF-Js-cU4"/>
+                                    <constraint firstItem="Pd1-8v-TCL" firstAttribute="leading" secondItem="dUa-js-jdf" secondAttribute="trailing" constant="40" id="8eb-6i-MOJ"/>
+                                    <constraint firstItem="Ijn-zt-XNr" firstAttribute="top" secondItem="s5i-yY-sgz" secondAttribute="top" id="8s4-ve-AqS"/>
+                                    <constraint firstItem="waM-ZH-qx7" firstAttribute="leading" secondItem="Ijn-zt-XNr" secondAttribute="trailing" constant="15" id="C7f-IM-LWD"/>
+                                    <constraint firstItem="jtg-kn-ctf" firstAttribute="centerX" secondItem="zDo-XU-uXv" secondAttribute="centerX" id="DA3-Gg-Jeo"/>
+                                    <constraint firstItem="zfN-C3-hfv" firstAttribute="centerX" secondItem="waM-ZH-qx7" secondAttribute="centerX" id="Dlz-5f-d1G"/>
+                                    <constraint firstItem="Ijn-zt-XNr" firstAttribute="leading" secondItem="Pd1-8v-TCL" secondAttribute="trailing" constant="15" id="H79-pH-hEa"/>
+                                    <constraint firstItem="Dqo-eh-j3f" firstAttribute="top" secondItem="dUa-js-jdf" secondAttribute="bottom" constant="1" id="SEf-yQ-CIU"/>
+                                    <constraint firstItem="dUa-js-jdf" firstAttribute="top" secondItem="s5i-yY-sgz" secondAttribute="top" constant="2" id="VzG-tr-SNr"/>
+                                    <constraint firstItem="jtg-kn-ctf" firstAttribute="top" secondItem="zDo-XU-uXv" secondAttribute="bottom" constant="1" id="Zj3-kX-jvp"/>
+                                    <constraint firstItem="zfN-C3-hfv" firstAttribute="top" secondItem="waM-ZH-qx7" secondAttribute="bottom" constant="1" id="a8R-5r-Czt"/>
+                                    <constraint firstItem="zDo-XU-uXv" firstAttribute="leading" secondItem="waM-ZH-qx7" secondAttribute="trailing" constant="40" id="dYI-SO-tSd"/>
+                                    <constraint firstItem="zDo-XU-uXv" firstAttribute="centerY" secondItem="dUa-js-jdf" secondAttribute="centerY" id="eet-G9-odU"/>
+                                    <constraint firstAttribute="height" constant="60" id="etT-mm-UaP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ijn-zt-XNr" secondAttribute="bottom" id="gPP-bs-0Vd"/>
+                                    <constraint firstItem="yhQ-Fv-4sk" firstAttribute="centerX" secondItem="Pd1-8v-TCL" secondAttribute="centerX" id="lXW-tw-1pz"/>
+                                    <constraint firstItem="yhQ-Fv-4sk" firstAttribute="top" secondItem="Pd1-8v-TCL" secondAttribute="bottom" constant="1" id="nEW-eI-2yN"/>
+                                    <constraint firstItem="Dqo-eh-j3f" firstAttribute="centerX" secondItem="dUa-js-jdf" secondAttribute="centerX" id="ohz-Kt-MoV"/>
+                                    <constraint firstItem="waM-ZH-qx7" firstAttribute="centerY" secondItem="dUa-js-jdf" secondAttribute="centerY" id="pxY-oh-T2K"/>
+                                    <constraint firstItem="Pd1-8v-TCL" firstAttribute="centerY" secondItem="dUa-js-jdf" secondAttribute="centerY" id="rCB-1c-mL0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KPf-r0-jiD" firstAttribute="top" secondItem="IzI-cm-1U0" secondAttribute="top" constant="44" id="2II-P7-M9x"/>
+                            <constraint firstItem="s5i-yY-sgz" firstAttribute="leading" secondItem="IzI-cm-1U0" secondAttribute="leading" id="3kv-zd-awe"/>
+                            <constraint firstItem="s5i-yY-sgz" firstAttribute="top" secondItem="KPf-r0-jiD" secondAttribute="bottom" constant="24" id="MJU-Xm-7xf"/>
+                            <constraint firstItem="IzI-cm-1U0" firstAttribute="trailing" secondItem="s5i-yY-sgz" secondAttribute="trailing" id="a3V-jw-RVh"/>
+                            <constraint firstItem="KPf-r0-jiD" firstAttribute="centerX" secondItem="iH2-FK-5sk" secondAttribute="centerX" id="phU-Kd-4M6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IzI-cm-1U0"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="239"/>
+                    <connections>
+                        <outlet property="amazingFaceView" destination="zDo-XU-uXv" id="mVc-Ln-89D"/>
+                        <outlet property="enjoyableFaceView" destination="waM-ZH-qx7" id="REk-iw-NP2"/>
+                        <outlet property="notSureFaceView" destination="Pd1-8v-TCL" id="gpP-oB-28K"/>
+                        <outlet property="terribleView" destination="dUa-js-jdf" id="Tlc-LJ-woa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lID-PS-OeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="868"/>
+        </scene>
+        <!--Energizer Rating View Controller-->
+        <scene sceneID="iWs-tF-mL1">
+            <objects>
+                <viewController storyboardIdentifier="EnergizerRatingViewController" id="KwA-1U-cFf" customClass="EnergizerRatingViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5p-J7-Uzt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How effective was this blend at energizing you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO7-Ye-uVU">
+                                <rect key="frame" x="95" y="44" width="185" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="h0R-hj-E3c"/>
+                                    <constraint firstAttribute="width" constant="185" id="nUf-Bo-3wg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NS-Mu-5FO">
+                                <rect key="frame" x="0.0" y="115" width="375" height="60"/>
+                                <subviews>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-FU-Nny" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="245.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.78000000000000003" green="0.17000000000000001" blue="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="p5h-CP-YGn"/>
+                                            <constraint firstAttribute="height" constant="36" id="xf0-Z1-9Ec"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-W8-aYn" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="169.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="plV-oV-z3y"/>
+                                            <constraint firstAttribute="height" constant="36" id="yqV-9z-wki"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJm-IE-YOT" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="93.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="Wcz-fn-vg6"/>
+                                            <constraint firstAttribute="height" constant="36" id="axW-yO-4ZA"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not effective" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-0x-kfj">
+                                        <rect key="frame" x="89.5" y="39" width="44" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not sure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIA-Bg-uRR">
+                                        <rect key="frame" x="173" y="39" width="29" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="feeling refreshed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cc-qB-zwv">
+                                        <rect key="frame" x="232.5" y="39" width="62" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Bt0-0x-kfj" firstAttribute="top" secondItem="CJm-IE-YOT" secondAttribute="bottom" constant="1" id="3nm-x9-eUz"/>
+                                    <constraint firstItem="nZh-W8-aYn" firstAttribute="leading" secondItem="CJm-IE-YOT" secondAttribute="trailing" constant="40" id="4jT-4N-YC3"/>
+                                    <constraint firstItem="nZh-W8-aYn" firstAttribute="centerY" secondItem="CJm-IE-YOT" secondAttribute="centerY" id="4l1-zQ-517"/>
+                                    <constraint firstItem="nZh-W8-aYn" firstAttribute="centerX" secondItem="4NS-Mu-5FO" secondAttribute="centerX" id="BQv-qb-6bb"/>
+                                    <constraint firstItem="VPe-FU-Nny" firstAttribute="leading" secondItem="nZh-W8-aYn" secondAttribute="trailing" constant="40" id="JJs-Qe-hjI"/>
+                                    <constraint firstItem="VPe-FU-Nny" firstAttribute="centerY" secondItem="CJm-IE-YOT" secondAttribute="centerY" id="MbF-OH-S8Y"/>
+                                    <constraint firstItem="8Cc-qB-zwv" firstAttribute="top" secondItem="VPe-FU-Nny" secondAttribute="bottom" constant="1" id="UFJ-5F-qes"/>
+                                    <constraint firstItem="wIA-Bg-uRR" firstAttribute="top" secondItem="nZh-W8-aYn" secondAttribute="bottom" constant="1" id="e2N-JO-ULg"/>
+                                    <constraint firstItem="wIA-Bg-uRR" firstAttribute="centerX" secondItem="nZh-W8-aYn" secondAttribute="centerX" id="faO-LJ-KYh"/>
+                                    <constraint firstItem="8Cc-qB-zwv" firstAttribute="centerX" secondItem="VPe-FU-Nny" secondAttribute="centerX" id="pai-sd-pF7"/>
+                                    <constraint firstItem="CJm-IE-YOT" firstAttribute="top" secondItem="4NS-Mu-5FO" secondAttribute="top" constant="2" id="rXL-i1-3IY"/>
+                                    <constraint firstAttribute="height" constant="60" id="xMr-zA-emP"/>
+                                    <constraint firstItem="Bt0-0x-kfj" firstAttribute="centerX" secondItem="CJm-IE-YOT" secondAttribute="centerX" id="zQj-2U-pZf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mO7-Ye-uVU" firstAttribute="centerX" secondItem="y5p-J7-Uzt" secondAttribute="centerX" id="5dz-Ba-ijy"/>
+                            <constraint firstItem="mO7-Ye-uVU" firstAttribute="top" secondItem="0Qs-f0-L3M" secondAttribute="top" constant="44" id="KbN-Qk-29W"/>
+                            <constraint firstItem="4NS-Mu-5FO" firstAttribute="leading" secondItem="y5p-J7-Uzt" secondAttribute="leading" id="LlK-9B-LVJ"/>
+                            <constraint firstItem="4NS-Mu-5FO" firstAttribute="top" secondItem="mO7-Ye-uVU" secondAttribute="bottom" constant="24" id="VPI-ku-DnV"/>
+                            <constraint firstItem="0Qs-f0-L3M" firstAttribute="trailing" secondItem="4NS-Mu-5FO" secondAttribute="trailing" id="lZV-Jz-ZXO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Qs-f0-L3M"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="239"/>
+                    <connections>
+                        <outlet property="feelingRefreshedFaceView" destination="VPe-FU-Nny" id="vl0-d4-zrj"/>
+                        <outlet property="notEffectiveFaceView" destination="CJm-IE-YOT" id="E8B-3h-0Kl"/>
+                        <outlet property="notSureFaceView" destination="nZh-W8-aYn" id="uAL-aB-KdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqG-hI-o4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="868"/>
+        </scene>
+        <!--Thanks View Controller-->
+        <scene sceneID="PUb-2a-kBV">
+            <objects>
+                <viewController storyboardIdentifier="ThanksViewController" id="eqy-ax-g2i" customClass="ThanksViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zRi-g2-pPV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartWhite" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-tF-qcV">
+                                <rect key="frame" x="31" y="24.5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Gi4-9M-14T"/>
+                                    <constraint firstAttribute="height" constant="32" id="cXv-az-ZPz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks, your feedback helps us create blends made just for you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-m9-iws">
+                                <rect key="frame" x="78.5" y="25" width="228" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="CJB-y5-Of8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dA5-tF-qcV" firstAttribute="centerY" secondItem="zRi-g2-pPV" secondAttribute="centerY" id="8Bp-FW-Evw"/>
+                            <constraint firstItem="rcJ-m9-iws" firstAttribute="centerY" secondItem="zRi-g2-pPV" secondAttribute="centerY" id="FsI-bI-h0Y"/>
+                            <constraint firstItem="rcJ-m9-iws" firstAttribute="leading" secondItem="dA5-tF-qcV" secondAttribute="trailing" constant="15.710000000000001" id="fDn-xE-8WE"/>
+                            <constraint firstItem="dA5-tF-qcV" firstAttribute="centerY" secondItem="zRi-g2-pPV" secondAttribute="centerY" id="mEa-ES-y9b"/>
+                            <constraint firstItem="dA5-tF-qcV" firstAttribute="leading" secondItem="ah4-jH-d3E" secondAttribute="leading" constant="31" id="wpg-Cc-Nft"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ah4-jH-d3E"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="81"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imq-OA-zp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="1109"/>
+        </scene>
+        <!--Repeat Blend Rating View Controller-->
+        <scene sceneID="8mu-Z8-rfs">
+            <objects>
+                <viewController storyboardIdentifier="RepeatBlendRatingViewController" id="b6l-Ry-0vx" customClass="RepeatBlendRatingViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JtM-c5-UP3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you diffuse this blend again?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOx-HD-0Gm">
+                                <rect key="frame" x="95" y="44" width="185" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="MkE-sH-n4Z"/>
+                                    <constraint firstAttribute="width" constant="185" id="X9x-V9-hih"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyQ-0E-5LZ">
+                                <rect key="frame" x="0.0" y="115" width="375" height="60"/>
+                                <subviews>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suL-tc-fSS" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="245.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.78000000000000003" green="0.17000000000000001" blue="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="CRR-4X-dFh"/>
+                                            <constraint firstAttribute="height" constant="36" id="ZCZ-sa-kaM"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGy-3p-Z7Z" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="169.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="aJD-Sk-Fv5"/>
+                                            <constraint firstAttribute="width" constant="36" id="cFZ-qH-CQs"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pb-ox-BqN" customClass="FaceToggleView" customModule="MelloApp" customModuleProvider="target">
+                                        <rect key="frame" x="93.5" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="bue-WA-95K"/>
+                                            <constraint firstAttribute="width" constant="36" id="zo7-ke-Tcg"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVc-9w-Buu">
+                                        <rect key="frame" x="107" y="39" width="9.5" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not sure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-Bb-E9M">
+                                        <rect key="frame" x="173" y="39" width="29" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOE-ih-dJg">
+                                        <rect key="frame" x="257.5" y="39" width="12" height="10"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="suL-tc-fSS" firstAttribute="leading" secondItem="hGy-3p-Z7Z" secondAttribute="trailing" constant="40" id="07g-Ds-o5L"/>
+                                    <constraint firstItem="3pb-ox-BqN" firstAttribute="top" secondItem="tyQ-0E-5LZ" secondAttribute="top" constant="2" id="3e7-9t-My7"/>
+                                    <constraint firstItem="suL-tc-fSS" firstAttribute="centerY" secondItem="3pb-ox-BqN" secondAttribute="centerY" id="9nm-Te-ZP4"/>
+                                    <constraint firstItem="wVc-9w-Buu" firstAttribute="centerX" secondItem="3pb-ox-BqN" secondAttribute="centerX" id="IGO-ex-uPo"/>
+                                    <constraint firstItem="bNy-Bb-E9M" firstAttribute="centerX" secondItem="hGy-3p-Z7Z" secondAttribute="centerX" id="Lpd-nz-6nU"/>
+                                    <constraint firstAttribute="height" constant="60" id="Nfx-Y0-H5I"/>
+                                    <constraint firstItem="hGy-3p-Z7Z" firstAttribute="centerY" secondItem="3pb-ox-BqN" secondAttribute="centerY" id="WPE-pA-7Ys"/>
+                                    <constraint firstItem="hGy-3p-Z7Z" firstAttribute="centerX" secondItem="tyQ-0E-5LZ" secondAttribute="centerX" id="YSQ-qc-mU9"/>
+                                    <constraint firstItem="hGy-3p-Z7Z" firstAttribute="leading" secondItem="3pb-ox-BqN" secondAttribute="trailing" constant="40" id="ZCc-hl-rI0"/>
+                                    <constraint firstItem="bNy-Bb-E9M" firstAttribute="top" secondItem="hGy-3p-Z7Z" secondAttribute="bottom" constant="1" id="dnb-8B-sXv"/>
+                                    <constraint firstItem="QOE-ih-dJg" firstAttribute="top" secondItem="suL-tc-fSS" secondAttribute="bottom" constant="1" id="oUd-w7-AK9"/>
+                                    <constraint firstItem="QOE-ih-dJg" firstAttribute="centerX" secondItem="suL-tc-fSS" secondAttribute="centerX" id="qb7-5p-21e"/>
+                                    <constraint firstItem="wVc-9w-Buu" firstAttribute="top" secondItem="3pb-ox-BqN" secondAttribute="bottom" constant="1" id="wp0-xL-4u4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QOx-HD-0Gm" firstAttribute="top" secondItem="2hA-lD-yej" secondAttribute="top" constant="44" id="0o0-mz-v5X"/>
+                            <constraint firstItem="tyQ-0E-5LZ" firstAttribute="leading" secondItem="2hA-lD-yej" secondAttribute="leading" id="74e-6l-NFo"/>
+                            <constraint firstItem="tyQ-0E-5LZ" firstAttribute="top" secondItem="QOx-HD-0Gm" secondAttribute="bottom" constant="24" id="AyN-Rh-tbv"/>
+                            <constraint firstItem="QOx-HD-0Gm" firstAttribute="centerX" secondItem="JtM-c5-UP3" secondAttribute="centerX" id="dXT-QI-6vd"/>
+                            <constraint firstAttribute="trailing" secondItem="tyQ-0E-5LZ" secondAttribute="trailing" id="eNE-cE-fNy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2hA-lD-yej"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="239"/>
+                    <connections>
+                        <outlet property="noFaceView" destination="3pb-ox-BqN" id="jAH-bc-9eW"/>
+                        <outlet property="notSureFaceView" destination="hGy-3p-Z7Z" id="39o-ov-SsX"/>
+                        <outlet property="yesFaceView" destination="suL-tc-fSS" id="lHA-Qc-sNA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rho-77-f1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="868"/>
+        </scene>
+        <!--Ratings Page View Controller-->
+        <scene sceneID="6Rw-eq-K0G">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Iqg-KD-LLu" customClass="RatingsPageViewController" customModule="MelloApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpL-Kl-nDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="574"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heartWhite" width="19.333333969116211" height="17"/>
+    </resources>
+</document>
