@@ -25,7 +25,7 @@ extension UIColor {
     static let brightPink = UIColor(red: 0.85, green: 0.3, blue: 0.5, alpha: 1)
     static let orange = UIColor.fromRGB(r: 236, g: 163, b: 55)
     static let blueGray = UIColor.fromRGB(r: 93, g: 96, b: 125)
-    
+    static let coolOffWhite = UIColor(red: 0.89, green: 0.93, blue: 1, alpha: 1)
     static let tabBarBackground = UIColor.fromRGB(r: 36, g: 36, b: 71)
     static let disabledText = UIColor.fromRGB(r: 94, g: 97, b: 129)
 }
