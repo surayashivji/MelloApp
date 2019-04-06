@@ -59,6 +59,9 @@
 		84CAC4C4224ACC8A0067EA2A /* ScheduleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC4C3224ACC8A0067EA2A /* ScheduleDataSource.swift */; };
 		84CAC4C6224ACCC30067EA2A /* FavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC4C5224ACCC30067EA2A /* FavoritesDataSource.swift */; };
 		84CAC4C8224ACCEC0067EA2A /* RecommendationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAC4C7224ACCEC0067EA2A /* RecommendationsDataSource.swift */; };
+		84E5450022590CFD00DDB89B /* ScheduleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E544FF22590CFD00DDB89B /* ScheduleItemTableViewCell.swift */; };
+		84E5450222590DDB00DDB89B /* DailyScheduleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5450122590DDB00DDB89B /* DailyScheduleDataSource.swift */; };
+		84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E545032259204B00DDB89B /* InsetCollectionView.swift */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +147,9 @@
 		84CAC4C3224ACC8A0067EA2A /* ScheduleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleDataSource.swift; path = "MelloApp/Controllers/Home CV Data Sources/ScheduleDataSource.swift"; sourceTree = SOURCE_ROOT; };
 		84CAC4C5224ACCC30067EA2A /* FavoritesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSource.swift; sourceTree = "<group>"; };
 		84CAC4C7224ACCEC0067EA2A /* RecommendationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationsDataSource.swift; path = "MelloApp/Controllers/Home CV Data Sources/RecommendationsDataSource.swift"; sourceTree = SOURCE_ROOT; };
+		84E544FF22590CFD00DDB89B /* ScheduleItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleItemTableViewCell.swift; path = MelloApp/Cells/ScheduleItemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		84E5450122590DDB00DDB89B /* DailyScheduleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleDataSource.swift; sourceTree = "<group>"; };
+		84E545032259204B00DDB89B /* InsetCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsetCollectionView.swift; path = "MelloApp/Views/UI components/InsetCollectionView.swift"; sourceTree = "<group>"; };
 		976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.debug.xcconfig"; sourceTree = "<group>"; };
 		992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				840D3B07223741A000004A9D /* MLOOnboardingNavigationController.swift */,
+				84E544FF22590CFD00DDB89B /* ScheduleItemTableViewCell.swift */,
 				840D3B03223611F500004A9D /* MLOOnboardingViewController.swift */,
 				849C7019224AD5C100AE9494 /* HorizontalCollectionView.swift */,
 				6343D05C220827F600B790E0 /* HomeViewController.swift */,
@@ -225,6 +232,7 @@
 		634F6D4421FED0FC00C665A7 = {
 			isa = PBXGroup;
 			children = (
+				84E545032259204B00DDB89B /* InsetCollectionView.swift */,
 				849C7023224B460400AE9494 /* BannerPresenter.swift */,
 				849C7021224AD94E00AE9494 /* UserScentManager.swift */,
 				842D77D22243636100BF557C /* Mello-Bridging-Header.h */,
@@ -353,6 +361,7 @@
 			children = (
 				84CAC4C3224ACC8A0067EA2A /* ScheduleDataSource.swift */,
 				84CAC4C5224ACCC30067EA2A /* FavoritesDataSource.swift */,
+				84E5450122590DDB00DDB89B /* DailyScheduleDataSource.swift */,
 				84CAC4C7224ACCEC0067EA2A /* RecommendationsDataSource.swift */,
 			);
 			path = "Home CV Data Sources";
@@ -609,6 +618,7 @@
 				842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */,
 				842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */,
 				63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */,
+				84E5450222590DDB00DDB89B /* DailyScheduleDataSource.swift in Sources */,
 				634F6D5121FED0FC00C665A7 /* AppDelegate.swift in Sources */,
 				84C2746C222364F20050A011 /* MLOListOptionViewController.swift in Sources */,
 				842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */,
@@ -620,6 +630,7 @@
 				63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */,
 				849C701A224AD5C100AE9494 /* HorizontalCollectionView.swift in Sources */,
 				63F1243F22137AC4009D240D /* ResetPasswordViewController.swift in Sources */,
+				84E5450022590CFD00DDB89B /* ScheduleItemTableViewCell.swift in Sources */,
 				84CAC4C8224ACCEC0067EA2A /* RecommendationsDataSource.swift in Sources */,
 				840D3B022235F8E900004A9D /* MLOGridOptionCollectionViewCell.swift in Sources */,
 				840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */,
@@ -638,6 +649,7 @@
 				840D3B08223741A000004A9D /* MLOOnboardingNavigationController.swift in Sources */,
 				63A8D6DC22098E08009F7196 /* LoginViewController.swift in Sources */,
 				849C7014224AD30800AE9494 /* MLORoundCollectionViewCell.swift in Sources */,
+				84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */,
 				6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */,
 				840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */,
 				849C7022224AD94E00AE9494 /* UserScentManager.swift in Sources */,

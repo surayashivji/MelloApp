@@ -26,6 +26,4 @@ class FavoritesDataSource: NSObject, UICollectionViewDataSource, UICollectionVie
         cell.setup(scent: favorites[indexPath.item])
         return cell
     }
-    
-    
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class HorizontalCollectionView: UICollectionView {
     override func awakeFromNib() {
+        super.awakeFromNib()
         let flowLayout = (collectionViewLayout as? UICollectionViewFlowLayout)
         flowLayout?.scrollDirection = .horizontal
         flowLayout?.minimumInteritemSpacing = 0.0
