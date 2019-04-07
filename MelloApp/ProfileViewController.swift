@@ -100,9 +100,11 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     
     func fetchHistory() {
         manager.getUserBlendHistory { (userHistory) in
-            self.history = userHistory
-            DispatchQueue.main.async {
-                self.historyTableView.reloadData()
+            if let history = userHistory {
+                self.history = history
+                DispatchQueue.main.async {
+                    self.historyTableView.reloadData()
+                }
             }
         }
     }
@@ -113,7 +115,6 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
     }
     
     func didPressDiffuse(_ tag: Int) {
-        print("I have pressed a button with a tag: \(tag)")
         self.alertUserOf(title: "Connect your mello to start diffusing!", message: "Connect your mello to start diffusing", completion: {_ in })
     }
     
@@ -132,14 +133,12 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
         cell.layer.masksToBounds = true
         if let blendID = blend["blend_ID"] {
             manager.getBlendQualities(blendID: blendID as! String) { (name, aromaQuality, benefitQuality) in
-                print("\(aromaQuality)\(benefitQuality).png")
                 cell.iconImageView.image = self.selectIconFor(aroma: aromaQuality, benefit: benefitQuality)
                 cell.blendNameLabel.text = name
             }
         }
         let timestamp = blend["timestamp"] as! Double
         let date = Date(timeIntervalSince1970: timestamp/1000)
-        print(date.asString(style: .medium))
         cell.timeBlendLabel.text = date.asString(style: .medium)
         return cell
     }

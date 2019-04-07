@@ -8,16 +8,27 @@
 import UIKit
 
 class SideMenuViewController: UIViewController {
+    
+    // MARK: Setup
+    let manager = FirebaseManager()
+    
+    // MARK: Outlets
     @IBOutlet weak var devicesAndIntegrationsContainer: UIView!
     @IBOutlet weak var subscriptionMenuContainer: UIView!
     @IBOutlet weak var customerSupportMenuContainer: UIView!
     @IBOutlet weak var settingsMenuContainer: UIView!
+    
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userInitialLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         setupGestureRecognizers()
         setupNotificationObservers()
+        setupUserInfo()
         
     }
     
@@ -65,5 +76,40 @@ class SideMenuViewController: UIViewController {
         thanksVC.viewCornerRadius = 0
         present(thanksVC, animated: true, completion: nil)
     }
+    
+    @objc
+    func setupUserInfo() {
+        manager.getUserInformation { (userInformation) in
+            if let info = userInformation {
+                let name = info["name"] as? String
+                let character = name?.prefix(1).uppercased()
+                self.userNameLabel.text = name
+                self.userInitialLabel.text = character
+            }
+        }
+    }
+    
+    // MARK: IB Actions
+    
+    @IBAction func logOutTapped(_ sender: Any) {
+        if manager.signedIn {
+            manager.signOutUser { [weak self] (result) in
+                if result {
+                    self?.performSegue(withIdentifier: "goBackHome", sender: self)
+                }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goBackHome",
+            let navigationController = segue.destination as? UINavigationController,
+            let vc = navigationController.topViewController as? HomeViewController {
+            vc.view.layoutIfNeeded()
+        }
+    }
+
+    
+    
 }
 

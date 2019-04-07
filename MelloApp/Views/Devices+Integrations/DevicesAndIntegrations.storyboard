@@ -44,9 +44,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let Mello understand when you're in need of a blend to unwind from your busy schedule." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-0M-oNZ">
-                                        <rect key="frame" x="19" y="47" width="194" height="20"/>
-                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let Mello understand when you’re in need of a blend to unwind from your busy schedule. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-0M-oNZ">
+                                        <rect key="frame" x="19" y="35" width="205" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -55,8 +55,8 @@
                                 <constraints>
                                     <constraint firstItem="QbA-0M-oNZ" firstAttribute="leading" secondItem="zXL-tZ-0C0" secondAttribute="leading" constant="19" id="6a6-mY-BWm"/>
                                     <constraint firstAttribute="height" constant="78" id="8Me-ot-XrY"/>
-                                    <constraint firstAttribute="trailing" secondItem="QbA-0M-oNZ" secondAttribute="trailing" constant="107" id="N6L-JE-YSb"/>
-                                    <constraint firstAttribute="bottom" secondItem="QbA-0M-oNZ" secondAttribute="bottom" constant="11" id="RaC-k3-eDN"/>
+                                    <constraint firstAttribute="trailing" secondItem="QbA-0M-oNZ" secondAttribute="trailing" constant="96" id="N6L-JE-YSb"/>
+                                    <constraint firstAttribute="bottom" secondItem="QbA-0M-oNZ" secondAttribute="bottom" constant="13" id="RaC-k3-eDN"/>
                                     <constraint firstAttribute="width" constant="320" id="e0d-SA-IWS"/>
                                     <constraint firstItem="LB4-vX-6Kc" firstAttribute="top" secondItem="zXL-tZ-0C0" secondAttribute="top" constant="13" id="i0B-hq-Ma8"/>
                                     <constraint firstItem="LB4-vX-6Kc" firstAttribute="leading" secondItem="zXL-tZ-0C0" secondAttribute="leading" constant="19" id="smz-NI-e60"/>
@@ -77,9 +77,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let Mello tap into your heart rate patterns to figure out if you need stress blends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9g-EH-2Hb">
-                                        <rect key="frame" x="19" y="47" width="194" height="20"/>
-                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let Mello tap into your heart rate patterns to figure out if you need stress blends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9g-EH-2Hb">
+                                        <rect key="frame" x="19" y="35" width="205" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -87,10 +87,10 @@
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="5cu-dv-Zma"/>
-                                    <constraint firstAttribute="bottom" secondItem="F9g-EH-2Hb" secondAttribute="bottom" constant="11" id="O2Z-o1-kAo"/>
+                                    <constraint firstAttribute="bottom" secondItem="F9g-EH-2Hb" secondAttribute="bottom" constant="13" id="O2Z-o1-kAo"/>
                                     <constraint firstItem="RnU-Sl-jES" firstAttribute="top" secondItem="2by-75-Vxi" secondAttribute="top" constant="13" id="O62-12-3WV"/>
                                     <constraint firstItem="F9g-EH-2Hb" firstAttribute="leading" secondItem="2by-75-Vxi" secondAttribute="leading" constant="19" id="VdN-Ji-V9u"/>
-                                    <constraint firstAttribute="trailing" secondItem="F9g-EH-2Hb" secondAttribute="trailing" constant="107" id="cgs-ln-vBu"/>
+                                    <constraint firstAttribute="trailing" secondItem="F9g-EH-2Hb" secondAttribute="trailing" constant="96" id="cgs-ln-vBu"/>
                                     <constraint firstAttribute="width" constant="320" id="gOX-Al-edF"/>
                                     <constraint firstItem="RnU-Sl-jES" firstAttribute="leading" secondItem="2by-75-Vxi" secondAttribute="leading" constant="19" id="ysk-J6-qbL"/>
                                 </constraints>
@@ -110,9 +110,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let Mello tap into your heart rate patterns to figure out if you need stress blends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-8V-6LM">
-                                        <rect key="frame" x="19" y="47" width="194" height="20"/>
-                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let Mello tap into your heart rate patterns to figure out if you need stress blends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-8V-6LM">
+                                        <rect key="frame" x="19" y="35" width="205" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -123,6 +123,7 @@
                                             <constraint firstAttribute="height" constant="33" id="E1L-dn-cGc"/>
                                             <constraint firstAttribute="width" constant="81.310000000000002" id="HDc-u8-eaK"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                         <state key="normal" title="ADD">
                                             <color key="titleColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -141,11 +142,11 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="uAW-BG-6c6" secondAttribute="trailing" constant="8.6899999999999995" id="6ZB-oX-Koh"/>
                                     <constraint firstItem="3Qr-J9-6md" firstAttribute="leading" secondItem="qg0-B3-wIX" secondAttribute="leading" constant="19" id="ANH-QE-YWk"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fca-8V-6LM" secondAttribute="trailing" constant="107" id="Xy8-5e-nEf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fca-8V-6LM" secondAttribute="trailing" constant="96" id="Xy8-5e-nEf"/>
                                     <constraint firstItem="3Qr-J9-6md" firstAttribute="top" secondItem="qg0-B3-wIX" secondAttribute="top" constant="13" id="c9j-y1-m3s"/>
                                     <constraint firstItem="Fca-8V-6LM" firstAttribute="leading" secondItem="qg0-B3-wIX" secondAttribute="leading" constant="19" id="gSf-xP-1cG"/>
                                     <constraint firstAttribute="height" constant="78" id="kAh-vX-IQ5"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fca-8V-6LM" secondAttribute="bottom" constant="11" id="kR5-id-rmk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fca-8V-6LM" secondAttribute="bottom" constant="13" id="kR5-id-rmk"/>
                                     <constraint firstItem="uAW-BG-6c6" firstAttribute="top" secondItem="qg0-B3-wIX" secondAttribute="top" constant="12" id="xgK-0S-1If"/>
                                     <constraint firstAttribute="width" constant="320" id="ziY-cZ-lO2"/>
                                 </constraints>
