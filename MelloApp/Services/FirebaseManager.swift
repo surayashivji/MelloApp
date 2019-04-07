@@ -56,6 +56,7 @@ class FirebaseManager {
         // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
+
     // Init new user's stats
     func initUserStats(uid: String) {
         let statsRef = reference.child("users").child(uid).child("stats")

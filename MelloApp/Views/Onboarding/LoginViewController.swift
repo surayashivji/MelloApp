@@ -59,8 +59,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         self?.alertUserOf(title: title, message: description, completion: {_ in })
                     })
                 }
-                // Login Success
-                guard let user = user else { return } // FIRUser
                 
                 // Segue to home
                 if let loginHome = MLODrawerController.setupDrawer() {
