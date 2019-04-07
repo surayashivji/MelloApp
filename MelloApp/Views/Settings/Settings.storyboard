@@ -110,6 +110,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bnq-BT-127"/>
+                    <connections>
+                        <outlet property="prefTableView" destination="Zxt-MB-AdP" id="Tgy-qz-AKy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k12-YU-xv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,7 +295,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Leah Mish" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cA3-uW-hvT">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cA3-uW-hvT">
                                                     <rect key="frame" x="15" y="2" width="345" height="40"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -319,7 +322,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="lmish@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-2H-JTL">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-2H-JTL">
                                                     <rect key="frame" x="15" y="2" width="345" height="40"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -337,33 +340,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="PASSWORD" id="wTj-ZL-MYq">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BGh-B3-Uvc">
-                                        <rect key="frame" x="0.0" y="273" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BGh-B3-Uvc" id="I7d-dN-Yva">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="........" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9yN-8u-zuX">
-                                                    <rect key="frame" x="15" y="2" width="345" height="40"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="9yN-8u-zuX" secondAttribute="trailing" constant="15" id="24q-bu-ANj"/>
-                                                <constraint firstItem="9yN-8u-zuX" firstAttribute="leading" secondItem="I7d-dN-Yva" secondAttribute="leading" constant="15" id="4Ui-uV-1M5"/>
-                                                <constraint firstAttribute="bottom" secondItem="9yN-8u-zuX" secondAttribute="bottom" constant="2" id="LB0-LO-69W"/>
-                                                <constraint firstItem="9yN-8u-zuX" firstAttribute="top" secondItem="I7d-dN-Yva" secondAttribute="top" constant="2" id="oN0-bA-aAD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="PdY-i2-oHn" id="zDe-uS-VUu"/>
@@ -373,7 +349,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="6eq-2H-JTL" id="jkR-1n-tgA"/>
                         <outlet property="fullNameTextField" destination="cA3-uW-hvT" id="JHK-np-cFJ"/>
-                        <outlet property="passwordTextField" destination="9yN-8u-zuX" id="r5v-Bu-nUk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQR-1a-9Fx" userLabel="First Responder" sceneMemberID="firstResponder"/>

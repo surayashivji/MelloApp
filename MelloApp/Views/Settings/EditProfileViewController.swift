@@ -9,26 +9,40 @@
 import UIKit
 
 class EditProfileViewController: UITableViewController {
-
+    
+    // MARK: Setup
+    let manager = FirebaseManager()
+    
     var headers: [String] = ["FULL NAME", "EMAIL", "PASSWORD"]
     
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getUserInfo()
     }
     
     @IBAction func goBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    private func getUserInfo() {
+        manager.getUserInformation { (userInformation) in
+            if let info = userInformation {
+                let name = info["name"] as? String
+                let email = info["email"] as? String
+                self.fullNameTextField.text = name
+                self.emailTextField.text = email
+            }
+        }
+    }
+    
+    // MARK: Table View Methods
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 47
     }
     
-    
-
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let label = UILabel()

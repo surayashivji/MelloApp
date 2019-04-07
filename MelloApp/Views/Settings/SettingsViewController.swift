@@ -8,24 +8,49 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
+    
+    // MARK: Setup
+    let manager = FirebaseManager()
 
-    let settingsItems: [[[String: String]]] = [[["setting": "Edit Profile", "subItem": "Leah Misch"],
-            ["setting": "Edit Preferences", "subItem": "Goals"]],
-                                [["setting": "Notifications", "subItem": "All"],
-            ["setting": "Subscription", "subItem": "Auto Renew"]]
+    var settingsItems: [[[String: String]]] = [
+        [
+            ["setting": "Edit Profile", "subItem": ""],
+            ["setting": "Edit Preferences", "subItem": "Goals"]
+        ],
+        [
+            ["setting": "Notifications", "subItem": "All"],
+            ["setting": "Subscription", "subItem": "Auto Renew"]
+        ]
     ]
+    
+    @IBOutlet var prefTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
         tableView.separatorColor = .clear
+        getUserInfo()
     }
     
+    private func getUserInfo() {
+        manager.getUserInformation { (userInformation) in
+            if let info = userInformation {
+                let name = info["name"] as? String
+                self.settingsItems[0][0]["subItem"] = name
+                self.prefTableView.reloadData()
+            }
+        }
+    }
+    
+    
     @IBAction func goBAck(_ sender: UIButton) {
+        print("go back selected")
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Table View Methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCellId", for: indexPath) as? SettingsTableViewCell
         cell?.selectionStyle = .none
