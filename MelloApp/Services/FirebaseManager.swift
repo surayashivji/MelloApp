@@ -56,6 +56,7 @@ class FirebaseManager {
         // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
+
     // Init new user's stats
     func initUserStats(uid: String) {
         let statsRef = reference.child("users").child(uid).child("stats")
@@ -113,12 +114,36 @@ class FirebaseManager {
         }
     }
     
+    // Get user information based on uid
+    func getUserInformation(completion: @escaping ([String:Any]?) -> Void) {
+        var userInfo = [String:Any]()
+        if signedIn {
+            guard let userID = user?.uid else {
+                completion(nil)
+                return
+            }
+            reference.child("users").child(userID).observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if let email = value?["email"],
+                    let name = value?["name"] {
+                    let dict = ["email" : email,
+                                "name" : name]
+                    userInfo = dict
+                    completion(userInfo)
+                }
+            }
+        }
+    }
+    
     // Get user's history of blends
-    func getUserBlendHistory(completion: @escaping ([[String:Any]]) -> Void) {
+    func getUserBlendHistory(completion: @escaping ([[String:Any]]?) -> Void) {
         var blendHistory = [[String:Any]]()
         if signedIn {
-            let userID = user?.uid
-            reference.child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            guard let userID = user?.uid else {
+                completion(nil)
+                return
+            }
+            reference.child("users").child(userID).observeSingleEvent(of: .value) { (snapshot) in
                 let value = snapshot.value as? NSDictionary
                 if let history = value?["history"] as? NSDictionary {
                     for item in history {

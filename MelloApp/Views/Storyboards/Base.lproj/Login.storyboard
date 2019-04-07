@@ -312,7 +312,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1Z-9d-pN4" userLabel="Name Text Field">
                                 <rect key="frame" x="50" y="175" width="275" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1l-8T-onR" userLabel="Name" customClass="CustomTextField" customModule="MelloApp" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1l-8T-onR" userLabel="Name" customClass="CustomTextField" customModule="MelloApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="2" width="275" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -484,7 +484,7 @@
         <image name="homelogo.png" width="138" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="deb-20-ne0"/>
-        <segue reference="oNO-km-ErW"/>
+        <segue reference="crm-ES-BWq"/>
+        <segue reference="H9v-Kx-HdX"/>
     </inferredMetricsTieBreakers>
 </document>
