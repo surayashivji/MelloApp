@@ -97,7 +97,7 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
             }
         }
     }
-    
+        
     func fetchHistory() {
         manager.getUserBlendHistory { (userHistory) in
             if let history = userHistory {

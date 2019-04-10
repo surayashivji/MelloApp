@@ -56,7 +56,7 @@ class FirebaseManager {
         // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
-
+    
     // Init new user's stats
     func initUserStats(uid: String) {
         let statsRef = reference.child("users").child(uid).child("stats")
@@ -176,4 +176,20 @@ class FirebaseManager {
             }
         }
     }
+    
+    // MARK: Discover Categories
+    
+    // Get list of blends for category name
+    func getBlendsForCategory(category: String, completion: @escaping ([String]) -> Void) {
+        var blends = [String]()
+        reference.child("global_recs").child(category).observeSingleEvent(of: .value) { (snapshot) in
+            if let categoryBlends = snapshot.value as? [String:String] {
+                for blend in categoryBlends {
+                    blends.append(blend.value)
+                }
+                completion(blends)
+            }
+        }
+    }
 }
+
