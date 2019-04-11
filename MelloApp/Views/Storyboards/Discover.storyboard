@@ -378,7 +378,7 @@
                         <outlet property="energyCollectionView" destination="uf7-xE-ZZK" id="yu3-LK-ugy"/>
                         <outlet property="relaxCollectionView" destination="h7O-zY-7am" id="tu3-px-76u"/>
                         <outlet property="sleepCollectionView" destination="Qs2-R5-2vL" id="cub-Kc-iEG"/>
-                        <segue destination="GQ7-Hg-LQD" kind="show" identifier="tryDis" id="HOd-UX-CKm"/>
+                        <segue destination="GQ7-Hg-LQD" kind="showDetail" identifier="goToDetails" id="HOd-UX-CKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjI-K2-ciV" userLabel="First Responder" sceneMemberID="firstResponder"/>

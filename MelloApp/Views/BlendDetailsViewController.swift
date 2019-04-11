@@ -10,6 +10,8 @@ import UIKit
 
 class BlendDetailsViewController: UIViewController {
     
+    var currentBlend: ScentBlend?
+    
     @IBOutlet weak var blendNameLabel: UILabel!
     @IBOutlet weak var blendDescriptionLabel: UILabel!
     
@@ -22,6 +24,11 @@ class BlendDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let b = currentBlend {
+            print("jamie")
+            print(b.name)
+        }
+   
     }
     
     // MARK: Actions

@@ -103,6 +103,7 @@
                         <color key="backgroundColor" red="0.090196078431372548" green="0.094117647058823528" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BNe-hn-kvA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="weh-qz-cnG"/>
                     <connections>
                         <outlet property="blendDescriptionLabel" destination="Js5-5m-d6P" id="SQP-EB-y8O"/>
                         <outlet property="blendNameLabel" destination="CWP-tb-Ipj" id="sZq-bb-OL3"/>
@@ -113,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCS-gk-9C0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205.59999999999999" y="-47.226386806596707"/>
+            <point key="canvasLocation" x="733.60000000000002" y="-47.226386806596707"/>
         </scene>
     </scenes>
 </document>

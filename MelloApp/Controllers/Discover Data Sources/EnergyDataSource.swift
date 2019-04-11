@@ -13,6 +13,8 @@ class EnergyDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
     let energyblends = UserScentManager.energyblends()
     let manager = FirebaseManager()
     
+    weak var delegate: DetailsDelegate?
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return energyblends.count
     }
@@ -27,8 +29,11 @@ class EnergyDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath as IndexPath) as? MLOScentCollectionViewCell {
-//           performSegue(withIdentifier: "goToBlendDetails", sender: self)
-            print("here")
+            delegate?.didPressBlend(energyblends[indexPath.row])
         }
     }
+}
+
+protocol DetailsDelegate : class {
+    func didPressBlend(_ blend: ScentBlend)
 }
