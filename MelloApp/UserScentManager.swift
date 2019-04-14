@@ -45,7 +45,15 @@ class UserScentManager {
     }
     
     static func energyblends() -> [ScentBlend] {
-        return [ScentBlend.citrus, ScentBlend.floral, ScentBlend.green]
+        return [ScentBlend.citrus, ScentBlend.citrus, ScentBlend.citrus]
+    }
+    
+    static func sleepblends() -> [ScentBlend] {
+        return [ScentBlend.floral, ScentBlend.floral, ScentBlend.floral]
+    }
+    
+    static func relaxblends() -> [ScentBlend] {
+        return [ScentBlend.green, ScentBlend.green, ScentBlend.green]
     }
     
     static func favorites() -> [ScentBlend] {

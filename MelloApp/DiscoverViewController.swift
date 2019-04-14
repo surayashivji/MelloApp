@@ -15,8 +15,8 @@ class DiscoverViewController: UIViewController, DetailsDelegate {
     @IBOutlet weak var relaxCollectionView: InsetCollectionView!
     
     private lazy var energyDataSource = EnergyDataSource()
-//    private lazy var sleepDataSource = SleepDataSource()
-//    private lazy var relaxDataSource = RelaxDataSource()
+    private lazy var sleepDataSource = SleepDataSource()
+    private lazy var relaxDataSource = RelaxDataSource()
     
     
     override func viewDidLoad() {
@@ -26,9 +26,21 @@ class DiscoverViewController: UIViewController, DetailsDelegate {
         energyCollectionView.dataSource = energyDataSource
         energyCollectionView.delegate = energyDataSource
         
+        sleepCollectionView.dataSource = sleepDataSource
+        sleepCollectionView.delegate = sleepDataSource
+        
+        relaxCollectionView.dataSource = relaxDataSource
+        relaxCollectionView.delegate = relaxDataSource
+        
+        // Make navigation bar transparent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
         energyDataSource.delegate = self
-        // sleepDataSource.delegate = self
-        // relaxDataSource.delegate = self
+        sleepDataSource.delegate = self
+        relaxDataSource.delegate = self
         
     }
     
@@ -44,19 +56,10 @@ class DiscoverViewController: UIViewController, DetailsDelegate {
     }
     
     func didPressBlend(_ blend: ScentBlend) {
-        let destinationVC = BlendDetailsViewController()
+        let storyboard = UIStoryboard(name: "BlendDetails", bundle: nil)
+        let destinationVC = storyboard.instantiateInitialViewController() as! BlendDetailsViewController
         destinationVC.currentBlend = blend
-        self.performSegue(withIdentifier: "goToDetails", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetails" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let controller = segue.destination as! ViewControllerB
-//                controller.selectedName = objects[indexPath.row]
-//            }
-             print("surayaaaA")
-        }
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
 
 }
