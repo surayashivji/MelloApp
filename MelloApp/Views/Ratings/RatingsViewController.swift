@@ -13,7 +13,6 @@ class RatingsViewController: ModalBaseViewController {
     var effectivenessRating: Ratings.BlendEffectRatings? = .unrated
     var wouldUseAgainRating: Ratings.WouldUseAgainRatings? = .unrated
     
-    
     var containerViewController: RatingsPageViewController?
     let containerSegueName = "ratingPagesSegue"
     

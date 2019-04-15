@@ -4,6 +4,7 @@
 target 'MelloApp' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  pod 'Particle-SDK'
   pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Database'

@@ -9,11 +9,15 @@
 import UIKit
 
 class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
+    
+    // MARK: Outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var scentLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var topBar: UIView!
+    
+    weak var delegate: DiffuseButtonDelegate?
     private var scent: ScentBlend?
     
     func setup(scent: ScentBlend) {
@@ -42,6 +46,8 @@ class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
     }
     
     @IBAction func runButtonPressed(_ sender: Any) {
+        print("rub button pressed")
+        delegate?.didPressDiffuse(0)
     }
     
 }

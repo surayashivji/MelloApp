@@ -18,10 +18,10 @@ struct ScentBlend {
                                    image: #imageLiteral(resourceName: "smallFloral"), color: .brightGreen,
                                    isFavorite: true)
     static let green = ScentBlend(name: "Sleepy Green",
-                                   ingredients: "lavender, cinnamon, peppermint",
-                                   image: #imageLiteral(resourceName: "smallGreen"),
-                                   color: .brightPurple,
-                                   isFavorite: false)
+                                  ingredients: "lavender, cinnamon, peppermint",
+                                  image: #imageLiteral(resourceName: "smallGreen"),
+                                  color: .brightPurple,
+                                  isFavorite: false)
     
     var name: String
     var ingredients: String
@@ -37,13 +37,29 @@ struct ScheduledBlend {
 }
 
 class UserScentManager {
+    
+    let manager = FirebaseManager()
+    
     static func recommendations() -> [ScentBlend] {
         return [ScentBlend.citrus, ScentBlend.floral, ScentBlend.green]
+    }
+    
+    static func energyblends() -> [ScentBlend] {
+        return [ScentBlend.citrus, ScentBlend.citrus, ScentBlend.citrus]
+    }
+    
+    static func sleepblends() -> [ScentBlend] {
+        return [ScentBlend.floral, ScentBlend.floral, ScentBlend.floral]
+    }
+    
+    static func relaxblends() -> [ScentBlend] {
+        return [ScentBlend.green, ScentBlend.green, ScentBlend.green]
     }
     
     static func favorites() -> [ScentBlend] {
         return [] //[ScentBlend.citrus, ScentBlend.floral]
     }
+    
     // TODO: this will eventually take in a blend ID but right now it is placeholder for the dummy content
     static func toggleFavoriteScent(scentAdded: String) {
         // banner presenter present
