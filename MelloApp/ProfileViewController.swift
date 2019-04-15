@@ -43,7 +43,7 @@ class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSour
         self.historyTableView.delegate = self
         self.historyTableView.dataSource = self
         self.historyTableView.tableFooterView = UIView()
-        self.historyTableView.backgroundView = nil;
+        self.historyTableView.backgroundView = nil
         self.historyTableView.backgroundColor = UIColor.clear
         
         fetchStats()

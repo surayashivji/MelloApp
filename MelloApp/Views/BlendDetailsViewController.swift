@@ -27,11 +27,6 @@ class BlendDetailsViewController: UIViewController {
         if let blendLoaded = currentBlend {
             setupBlendDetails(blendLoaded)
         }
-        if let b = currentBlend {
-            print("jamie")
-            print(b.name)
-        }
-   
     }
     
     func setupBlendDetails(_ blend: ScentBlend) {

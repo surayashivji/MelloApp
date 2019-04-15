@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Energizing Blends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPv-9w-q68">
-                                <rect key="frame" x="30" y="123" width="189" height="18"/>
+                                <rect key="frame" x="30" y="91" width="189" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="28v-lJ-ZEa"/>
                                     <constraint firstAttribute="height" constant="18" id="4QI-Yc-3I0"/>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get to Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-q0-X1t">
-                                <rect key="frame" x="30" y="321" width="189" height="18"/>
+                                <rect key="frame" x="29" y="276" width="189" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="TBx-kz-kuT"/>
                                     <constraint firstAttribute="height" constant="18" id="Wwn-6k-j67"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relaxation Blends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owt-tg-IWW">
-                                <rect key="frame" x="30" y="519" width="189" height="18"/>
+                                <rect key="frame" x="29" y="459" width="189" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="U48-mu-tPg"/>
                                     <constraint firstAttribute="height" constant="18" id="pY0-GZ-DEK"/>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uf7-xE-ZZK" userLabel="Energy Collection View" customClass="InsetCollectionView" customModule="MelloApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="158" width="375" height="133"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="133"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="133" id="ryP-j0-9fq"/>
@@ -150,7 +150,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qs2-R5-2vL" userLabel="Sleep Collection View" customClass="InsetCollectionView" customModule="MelloApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="356" width="375" height="133"/>
+                                <rect key="frame" x="0.0" y="302" width="375" height="133"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="MK8-ga-Z5N"/>
@@ -251,7 +251,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h7O-zY-7am" userLabel="Relax Collection View" customClass="InsetCollectionView" customModule="MelloApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="554" width="375" height="133"/>
+                                <rect key="frame" x="0.0" y="485" width="375" height="133"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="133" id="84G-D4-3Ia"/>
@@ -355,20 +355,20 @@
                         <color key="backgroundColor" red="0.090196078431372548" green="0.094117647058823528" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MPv-9w-q68" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" constant="30" id="70K-c3-7N3"/>
-                            <constraint firstItem="1pd-q0-X1t" firstAttribute="top" secondItem="uf7-xE-ZZK" secondAttribute="bottom" constant="30" id="BnW-4w-J85"/>
-                            <constraint firstItem="uf7-xE-ZZK" firstAttribute="top" secondItem="MPv-9w-q68" secondAttribute="bottom" constant="17" id="ClD-LR-vra"/>
+                            <constraint firstItem="1pd-q0-X1t" firstAttribute="top" secondItem="uf7-xE-ZZK" secondAttribute="bottom" constant="26" id="BnW-4w-J85"/>
+                            <constraint firstItem="uf7-xE-ZZK" firstAttribute="top" secondItem="MPv-9w-q68" secondAttribute="bottom" constant="8" id="ClD-LR-vra"/>
                             <constraint firstItem="Qs2-R5-2vL" firstAttribute="trailing" secondItem="Poy-Jq-JSy" secondAttribute="trailing" id="DuR-e5-OaE"/>
                             <constraint firstItem="uf7-xE-ZZK" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" id="Dub-XJ-F9s"/>
                             <constraint firstItem="uf7-xE-ZZK" firstAttribute="trailing" secondItem="Poy-Jq-JSy" secondAttribute="trailing" id="Fhc-VM-dsP"/>
-                            <constraint firstItem="MPv-9w-q68" firstAttribute="top" secondItem="Poy-Jq-JSy" secondAttribute="top" constant="59" id="QGh-sM-f1D"/>
+                            <constraint firstItem="MPv-9w-q68" firstAttribute="top" secondItem="Poy-Jq-JSy" secondAttribute="top" constant="27" id="QGh-sM-f1D"/>
                             <constraint firstItem="Qs2-R5-2vL" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" id="bcV-hZ-BN2"/>
-                            <constraint firstItem="h7O-zY-7am" firstAttribute="top" secondItem="Owt-tg-IWW" secondAttribute="bottom" constant="17" id="d8h-Ee-HUJ"/>
+                            <constraint firstItem="h7O-zY-7am" firstAttribute="top" secondItem="Owt-tg-IWW" secondAttribute="bottom" constant="8" id="d8h-Ee-HUJ"/>
                             <constraint firstItem="h7O-zY-7am" firstAttribute="trailing" secondItem="Poy-Jq-JSy" secondAttribute="trailing" id="gKo-TV-tGs"/>
                             <constraint firstItem="h7O-zY-7am" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" id="rBd-uM-cfY"/>
-                            <constraint firstItem="Owt-tg-IWW" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" constant="30" id="uM9-am-L5c"/>
-                            <constraint firstItem="Owt-tg-IWW" firstAttribute="top" secondItem="Qs2-R5-2vL" secondAttribute="bottom" constant="30" id="wsA-0e-gN2"/>
-                            <constraint firstItem="Qs2-R5-2vL" firstAttribute="top" secondItem="1pd-q0-X1t" secondAttribute="bottom" constant="17" id="x9b-nh-xvd"/>
-                            <constraint firstItem="1pd-q0-X1t" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" constant="30" id="xd0-ai-5Rf"/>
+                            <constraint firstItem="Owt-tg-IWW" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" constant="29" id="uM9-am-L5c"/>
+                            <constraint firstItem="Owt-tg-IWW" firstAttribute="top" secondItem="Qs2-R5-2vL" secondAttribute="bottom" constant="24" id="wsA-0e-gN2"/>
+                            <constraint firstItem="Qs2-R5-2vL" firstAttribute="top" secondItem="1pd-q0-X1t" secondAttribute="bottom" constant="8" id="x9b-nh-xvd"/>
+                            <constraint firstItem="1pd-q0-X1t" firstAttribute="leading" secondItem="Poy-Jq-JSy" secondAttribute="leading" constant="29" id="xd0-ai-5Rf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Poy-Jq-JSy"/>
                     </view>

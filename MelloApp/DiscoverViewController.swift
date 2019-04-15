@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController, DetailsDelegate {
+class DiscoverViewController: UIViewController, DetailsDelegate, DiffuseButtonDelegate {
     
     @IBOutlet weak var energyCollectionView: InsetCollectionView!
     @IBOutlet weak var sleepCollectionView: InsetCollectionView!
@@ -38,6 +38,9 @@ class DiscoverViewController: UIViewController, DetailsDelegate {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         
+        // Remove "back" title from navigation bar for next segue
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
         energyDataSource.delegate = self
         sleepDataSource.delegate = self
         relaxDataSource.delegate = self
@@ -60,6 +63,12 @@ class DiscoverViewController: UIViewController, DetailsDelegate {
         let destinationVC = storyboard.instantiateInitialViewController() as! BlendDetailsViewController
         destinationVC.currentBlend = blend
         self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
+    // MARK: Diffuse
+    
+    func didPressDiffuse(_ tag: Int) {
+        self.alertUserOf(title: "Connect your mello to start diffusing!", message: "Connect your mello to start diffusing", completion: {_ in })
     }
 
 }
