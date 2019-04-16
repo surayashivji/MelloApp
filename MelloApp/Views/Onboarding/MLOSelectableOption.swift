@@ -35,7 +35,7 @@ enum MLOOnboardingOptionInputType {
     case list, grid
 }
 
-enum MLOSelectableOptionType {
+enum MLOSelectableOptionType: String {
     case timeOfDay, goal, mindfulness, scents
     
     static var allOptions: [MLOSelectableOptionType] = [.timeOfDay, .goal, .mindfulness, .scents]

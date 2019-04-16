@@ -30,6 +30,7 @@ class MLOGridOptionViewController:
             alert(error: "Select at least 1 option to continue.")
             return
         }
+        saveState()
         performSegue(withIdentifier: "finish", sender: self)
     }
     
@@ -83,5 +84,14 @@ class MLOGridOptionViewController:
             }
         }
         return selectedOptions
+    }
+    
+    private func saveState() {
+        let page = type.rawValue
+        let options = selectedOptions().map({ $0.title })
+        FirebaseManager.instance.setUserPreference(data: [page : options])
+//        FirebaseManager().user?.setValue(options, forKey: page)
+//        FirebaseManager().user?.providerData
+
     }
 }

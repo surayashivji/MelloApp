@@ -40,7 +40,11 @@ class FirebaseManager {
     
     // Logs user in with email
     func loginUser(withEmail email: String, password: String, completion: @escaping(User?, Error?) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
+        let ammended: (User?, Error?) -> Void = { user, error in
+            self.loadOils()
+            completion(user, error)
+        }
+        Auth.auth().signIn(withEmail: email, password: password, completion: ammended)
     }
     
     // MARK: User Database
@@ -56,6 +60,15 @@ class FirebaseManager {
         // TODO: Error Handling if setting value in Firebase doesn't work
     }
     
+    
+    func setUserPreference(data: [String:Any]) {
+        var timestampedData = data
+        let timestamp = Int(Date().timeIntervalSince1970)
+        timestampedData["timestamp"] = timestamp
+        guard let uid = user?.uid else { return }
+        let userRef = reference.child("users").child(uid).child("preferences")
+        userRef.updateChildValues(data)
+    }
 
     // Init new user's stats
     func initUserStats(uid: String) {
@@ -65,6 +78,69 @@ class FirebaseManager {
                                        "time_diffused": 0,
                                        "total_sessions": 0]
         statsRef.setValue(statsData)
+    }
+    var oils: NSDictionary = [:]
+    func loadOils() {
+        reference.child("aromatherapy").child("oils").observe(.value) { (dataSnapshot, string) in
+            guard let oils = dataSnapshot.value as? NSDictionary else {
+                return
+            }
+            self.oils = oils
+            self.loadBlends()
+        }
+    }
+    
+    var blends: NSDictionary = [:]
+    func loadBlends() {
+        reference.child("aromatherapy").child("blends").observe(.value) { (dataSnapshot, string) in
+            guard let blends = dataSnapshot.value as? NSDictionary else {
+                return
+            }
+            self.blends = blends
+            self.getUserRecommendations()
+        }
+    }
+    
+    var userRecommendations: [ScentBlend] = []
+    func getUserRecommendations() {
+        reference.child("global_recs").observe(.value) { (dataSnapshot, string) in
+            guard let value = dataSnapshot.value as? [String : Any] else {
+                return
+            }
+            
+            guard let energizing = value["energizing"] as? NSArray else {
+                return
+            }
+            for val in energizing {
+                guard let i = val as? Int else {
+                    continue
+                }
+                let scent = self.blends["\(i - 1)"] as? NSDictionary
+                guard let ingredientList = scent?["ingredients"] as? NSArray else {
+                    break
+                }
+                
+                let ingredientString = ingredientList.map({ ($0 as? NSDictionary)?["oilID"] })
+                var ingredientValues: [NSDictionary] = []
+                for ingredient in ingredientString {
+                    if let num = Int(ingredient as? String ?? "") {
+                        ingredientValues.append(self.oils["\(num - 1)"] as! NSDictionary)
+                    }
+                }
+                let ingredientStrings = ingredientValues.map({ (($0["common_name"] as! NSString) as String) })
+                    .joined(separator: ", ")
+                
+                self.userRecommendations.append(ScentBlend(name: (scent!["general_name"] as? String) ?? "",
+                                                           ingredients: ingredientStrings,
+                                                           image: #imageLiteral(resourceName: "smallGreen"),
+                                                           color: .brightGreen,
+                                                           isFavorite: false,
+                                                           id: i))
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "recommendationsUpdated"),
+                                                object: self)
+            }
+        }
+        
     }
     
     // Signs user out

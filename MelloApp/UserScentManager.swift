@@ -12,22 +12,26 @@ struct ScentBlend {
     static let citrus = ScentBlend(name: "Balance Out Citrus",
                                    ingredients: "orange, lavendar, mint",
                                    image: #imageLiteral(resourceName: "smallCitrus"), color: .brightPink,
-                                   isFavorite: true)
+                                   isFavorite: true,
+                                   id: 0)
     static let floral = ScentBlend(name: "Focus Floral",
                                    ingredients: "peppermint, majoram",
                                    image: #imageLiteral(resourceName: "smallFloral"), color: .brightGreen,
-                                   isFavorite: true)
+                                   isFavorite: true,
+                                   id: 0)
     static let green = ScentBlend(name: "Sleepy Green",
                                    ingredients: "lavender, cinnamon, peppermint",
                                    image: #imageLiteral(resourceName: "smallGreen"),
                                    color: .brightPurple,
-                                   isFavorite: false)
+                                   isFavorite: false,
+                                   id: 0)
     
     var name: String
     var ingredients: String
     var image: UIImage
     var color: UIColor
     var isFavorite: Bool?
+    var id: Int
 }
 
 struct ScheduledBlend {
