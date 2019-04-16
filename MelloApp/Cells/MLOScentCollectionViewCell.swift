@@ -42,6 +42,7 @@ class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
     }
     
     @IBAction func runButtonPressed(_ sender: Any) {
+        HardwareInterfaceManager.shared.blend(scent)
     }
     
 }

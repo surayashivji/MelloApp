@@ -136,9 +136,9 @@ class FirebaseManager {
                                                            color: .brightGreen,
                                                            isFavorite: false,
                                                            id: i))
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "recommendationsUpdated"),
-                                                object: self)
             }
+            NotificationCenter.default.post(name: NSNotification.Name.onFirebaseInit,
+                                            object: self)
         }
         
     }
@@ -252,4 +252,8 @@ class FirebaseManager {
             }
         }
     }
+}
+
+extension Notification.Name {
+    static let onFirebaseInit = Notification.Name("onFirebaseInit")
 }

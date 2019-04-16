@@ -10,7 +10,7 @@ import UIKit
 class SettingsViewController: UITableViewController {
     
     // MARK: Setup
-    let manager = FirebaseManager()
+    let manager = FirebaseManager.instance
 
     var settingsItems: [[[String: String]]] = [
         [

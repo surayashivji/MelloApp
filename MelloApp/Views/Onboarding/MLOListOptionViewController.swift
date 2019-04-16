@@ -130,7 +130,7 @@ class MLOListOptionViewController:
     private func saveState() {
         guard let page = type?.rawValue else { return }
         let options = selectedOptions().map({ $0.title })
-//        FirebaseManager().user?.setValue(options, forKey: page)
+//        FirebaseManager.instance.user?.setValue(options, forKey: page)
         FirebaseManager.instance.setUserPreference(data: [page : options])
     }
 }

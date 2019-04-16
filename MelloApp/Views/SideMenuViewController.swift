@@ -10,7 +10,7 @@ import UIKit
 class SideMenuViewController: UIViewController {
     
     // MARK: Setup
-    let manager = FirebaseManager()
+    let manager = FirebaseManager.instance
     
     // MARK: Outlets
     @IBOutlet weak var devicesAndIntegrationsContainer: UIView!

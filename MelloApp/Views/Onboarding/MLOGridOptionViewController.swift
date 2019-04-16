@@ -90,8 +90,8 @@ class MLOGridOptionViewController:
         let page = type.rawValue
         let options = selectedOptions().map({ $0.title })
         FirebaseManager.instance.setUserPreference(data: [page : options])
-//        FirebaseManager().user?.setValue(options, forKey: page)
-//        FirebaseManager().user?.providerData
+//        FirebaseManager.instance.user?.setValue(options, forKey: page)
+//        FirebaseManager.instance.user?.providerData
 
     }
 }

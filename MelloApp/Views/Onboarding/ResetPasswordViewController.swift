@@ -11,7 +11,7 @@ import UIKit
 class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Setup
-    let manager = FirebaseManager()
+    let manager = FirebaseManager.instance
     
     // MARK: Outlets
     @IBOutlet weak var emailTextField: CustomTextField!

@@ -42,7 +42,8 @@ struct ScheduledBlend {
 
 class UserScentManager {
     static func recommendations() -> [ScentBlend] {
-        return [ScentBlend.citrus, ScentBlend.floral, ScentBlend.green]
+        return FirebaseManager.instance.userRecommendations
+        //return [ScentBlend.citrus, ScentBlend.floral, ScentBlend.green]
     }
     
     static func favorites() -> [ScentBlend] {
