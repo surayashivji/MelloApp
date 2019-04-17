@@ -35,7 +35,7 @@ class FirebaseManager {
     
     // Creates an account with email
     func createUser(withEmail email: String, password: String, completion: @escaping (User?, Error?) -> Void) {
-//        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+        //        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             completion(result?.user, error)
         }
@@ -72,7 +72,7 @@ class FirebaseManager {
         let userRef = reference.child("users").child(uid).child("preferences")
         userRef.updateChildValues(data)
     }
-  
+    
     // Init new user's stats
     func initUserStats(uid: String) {
         let statsRef = reference.child("users").child(uid).child("stats")
@@ -106,46 +106,86 @@ class FirebaseManager {
     
     var userRecommendations: [ScentBlend] = []
     func getUserRecommendations() {
-        reference.child("global_recs").observe(.value) { (dataSnapshot, string) in
-            guard let value = dataSnapshot.value as? [String : Any] else {
+        guard let uid = user?.uid else { return }
+        let userRef = reference.child("users").child(uid).child("recs")
+        userRef.observe(.value) { (dataSnapshot, string) in
+            guard let blendIds = dataSnapshot.value as? [Int] else {
                 return
             }
             
-            guard let energizing = value["energizing"] as? NSArray else {
-                return
-            }
-            for val in energizing {
-                guard let i = val as? Int else {
-                    continue
-                }
-                let scent = self.blends["\(i - 1)"] as? NSDictionary
-                guard let ingredientList = scent?["ingredients"] as? NSArray else {
-                    break
+            for id in blendIds {
+                let blend = self.blends["\(id)"] as? [String : Any]
+                guard let aroma = blend?["aroma"] as? String,
+                    let benefit = blend?["benefit"] as? String,
+                    let image = UIImage(named: aroma + benefit),
+                    let ingredients = ((((blend?["ingredients"] as? Array<Any>)?.compactMap({ $0 as? NSDictionary }))?.compactMap({ $0["oilID"] }) as? [Int])?.compactMap({ self.oils["\($0)"] }) as? Array<NSDictionary>)?.compactMap({ $0["common_name"] }) as? [String] else {
+                        continue
                 }
                 
-                let ingredientString = ingredientList.map({ ($0 as? NSDictionary)?["oilID"] })
-                var ingredientValues: [NSDictionary] = []
-                for ingredient in ingredientString {
-                    if let num = Int(ingredient as? String ?? "") {
-                        ingredientValues.append(self.oils["\(num - 1)"] as! NSDictionary)
-                    }
-                }
-                let ingredientStrings = ingredientValues.map({ (($0["common_name"] as! NSString) as String) })
-                    //.joined(separator: ", ")
+                self.userRecommendations
+                    .append(ScentBlend(name: blend?["general_name"] as? String ?? "",
+                                       ingredients: ingredients,
+                                       image: image,
+                                       color: self.color(from: benefit),
+                                       isFavorite: false,
+                                       id: id,
+                                       description: blend?["description"] as? String ?? ""))
                 
-                self.userRecommendations.append(ScentBlend(name: (scent!["general_name"] as? String) ?? "",
-                                                           ingredients: ingredientStrings,
-                                                           image: #imageLiteral(resourceName: "smallGreen"),
-                                                           color: .brightGreen,
-                                                           isFavorite: false,
-                                                           id: i,
-                                                           description: ""))
             }
+            
             NotificationCenter.default.post(name: NSNotification.Name.onFirebaseInit,
                                             object: self)
         }
         
     }
+    
+    func color(from benefit: String) -> UIColor {
+        switch benefit {
+        case "Balanced":
+            return .brightPink
+        case "Energize":
+            return .orange
+        case "Focus":
+            return .brightGreen
+        case "Relax":
+            return .brightPurple
+        default:
+            return .mediumPurple
+        }
+    }
+    
+    
+    
+    //            guard let energizing = value["energizing"] as? NSArray else {
+    //                return
+    //            }
+    //            for val in energizing {
+    //                guard let i = val as? Int else {
+    //                    continue
+    //                }
+    //                let scent = self.blends["\(i - 1)"] as? NSDictionary
+    //                guard let ingredientList = scent?["ingredients"] as? NSArray else {
+    //                    break
+    //                }
+    //
+    //                let ingredientString = ingredientList.map({ ($0 as? NSDictionary)?["oilID"] })
+    //                var ingredientValues: [NSDictionary] = []
+    //                for ingredient in ingredientString {
+    //                    if let num = Int(ingredient as? String ?? "") {
+    //                        ingredientValues.append(self.oils["\(num - 1)"] as! NSDictionary)
+    //                    }
+    //                }
+    //                let ingredientStrings = ingredientValues.map({ (($0["common_name"] as! NSString) as String) })
+    //                    //.joined(separator: ", ")
+    //
+    //                self.userRecommendations.append(ScentBlend(name: (scent!["general_name"] as? String) ?? "",
+    //                                                           ingredients: ingredientStrings,
+    //                                                           image: #imageLiteral(resourceName: "smallGreen"),
+    //                                                           color: .brightGreen,
+    //                                                           isFavorite: false,
+    //                                                           id: i,
+    //                                                           description: ""))
+    //            }
     
     // Signs user out
     func signOutUser(completion: @escaping(Bool) -> Void) {
