@@ -11,7 +11,7 @@ import UIKit
 class ProfileViewController: MLOHamburgerMenuViewController, UITableViewDataSource, UITableViewDelegate, DiffuseButtonDelegate {
     
     // MARK: Setup
-    let manager = FirebaseManager()
+    let manager = FirebaseManager.instance
     
     // MARK: Outlets
     @IBOutlet weak var historyTableView: UITableView!

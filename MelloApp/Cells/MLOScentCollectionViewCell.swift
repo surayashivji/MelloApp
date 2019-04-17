@@ -50,8 +50,7 @@ class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
     }
     
     @IBAction func runButtonPressed(_ sender: Any) {
-        print("rub button pressed")
-        delegate?.didPressDiffuse(0)
+        HardwareInterfaceManager.shared.blend(scent)
     }
     
 }

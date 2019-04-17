@@ -72,6 +72,7 @@
 		840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */; };
 		840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */; };
 		840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B05223612A600004A9D /* MLOProgressCircle.swift */; };
+		842870BB22669BF7003CB1D0 /* HardwareInterfaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842870BA22669BF7003CB1D0 /* HardwareInterfaceManager.swift */; };
 		842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C52242D8AA00BF557C /* TabBarController.storyboard */; };
 		842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D02242DE6700BF557C /* MLODrawerController.swift */; };
 		842D77D622440B2500BF557C /* MLOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D522440B2500BF557C /* MLOHomeViewController.swift */; };
@@ -202,6 +203,7 @@
 		840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODatePickerViewController.swift; sourceTree = "<group>"; };
 		840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOGridOptionViewController.swift; sourceTree = "<group>"; };
 		840D3B05223612A600004A9D /* MLOProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOProgressCircle.swift; sourceTree = "<group>"; };
+		842870BA22669BF7003CB1D0 /* HardwareInterfaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareInterfaceManager.swift; sourceTree = "<group>"; };
 		842D77C52242D8AA00BF557C /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		842D77D02242DE6700BF557C /* MLODrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODrawerController.swift; sourceTree = "<group>"; };
 		842D77D22243636100BF557C /* Mello-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mello-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -369,6 +371,8 @@
 				8458EB8B22594EF60077EE95 /* MLOOnboardingNavigationController.swift */,
 				8458EB8C22594EF70077EE95 /* MLOOnboardingViewController.swift */,
 				8458EB8722594EF60077EE95 /* ProfileViewController.swift */,
+				842870BA22669BF7003CB1D0 /* HardwareInterfaceManager.swift */,
+				63B0DFCD2217B6080031BE51 /* homelogo.png */,
 				63B0DFC62217B44D0031BE51 /* blob.gif */,
 				63F1244522169BE3009D240D /* Extensions */,
 				63033555220EBA2700256800 /* Services */,
@@ -885,6 +889,7 @@
 				842D77D822440D3600BF557C /* MLOHamburgerMenuViewController.swift in Sources */,
 				63EE301A22595E8E003A99E3 /* DeviceAndIntegrationsViewController.swift in Sources */,
 				842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */,
+				842870BB22669BF7003CB1D0 /* HardwareInterfaceManager.swift in Sources */,
 				63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */,
 				84E5450222590DDB00DDB89B /* DailyScheduleDataSource.swift in Sources */,
 				8458EB8022594E940077EE95 /* LoginViewController.swift in Sources */,
@@ -1129,7 +1134,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6EN28SU484;
+				DEVELOPMENT_TEAM = 899JT6PKT3;
 				INFOPLIST_FILE = MelloApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;
@@ -1146,7 +1151,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6EN28SU484;
+				DEVELOPMENT_TEAM = 899JT6PKT3;
 				INFOPLIST_FILE = MelloApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surayashivji.MelloApp;

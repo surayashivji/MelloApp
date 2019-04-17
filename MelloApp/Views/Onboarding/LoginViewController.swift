@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Setup
-    let manager = FirebaseManager()
+    let manager = FirebaseManager.instance
     
     // MARK: Outlets
     @IBOutlet weak var passwordTextField: CustomTextField!
@@ -52,18 +52,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: Actions
     @IBAction func loginTapped(_ sender: Any) {
         if let (email, password) = validateLoginText() {
+            
+            let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            let barButton = UIBarButtonItem(customView: activityIndicator)
+            self.navigationItem.setRightBarButton(barButton, animated: true)
+            activityIndicator.startAnimating()
+            
+            NotificationCenter.default
+                .addObserver(forName: NSNotification.Name.onFirebaseInit,
+                             object: nil,
+                             queue: OperationQueue.main) { [weak self] notification in
+                                
+                                // Segue to home
+                                if let loginHome = MLODrawerController.setupDrawer() {
+                                    self?.present(loginHome, animated: true, completion: nil)
+                                }
+                                
+            }
+            
             manager.loginUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
                 if let error = error {
+                    activityIndicator.stopAnimating()
+                    self?.navigationItem.setRightBarButton(nil, animated: true)
                     self?.manager.handle(error: error, completion: { (title, description) in
                         guard let title = title, let description = description else { return }
                         self?.alertUserOf(title: title, message: description, completion: {_ in })
                     })
                 }
                 
-                // Segue to home
-                if let loginHome = MLODrawerController.setupDrawer() {
-                    self?.present(loginHome, animated: true, completion: nil)
-                }
             })
         }
     }

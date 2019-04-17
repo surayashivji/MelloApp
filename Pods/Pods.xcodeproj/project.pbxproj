@@ -700,11 +700,11 @@
 		3335751392464AD5E1D7B251754F7736 /* MMDrawerController */ = {
 			isa = PBXGroup;
 			children = (
-				CC8108B08AEAE89947A1C4865A17FA8D /* Core */,
-				6F322C286369B71C1ACC82BCE545626A /* MMDrawerBarButtonItem */,
-				4B8A02FB1328EFE9DF8BE754FB0AB013 /* MMDrawerVisualStates */,
-				21DDBBADB7B3377D2543B44A3062AD94 /* Subclass */,
-				A8EB0689B2AD3A7DAB002F1839CE3622 /* Support Files */,
+				ABE402B8C3D83AF10A057814B98F56C6 /* MMDrawerController.m */,
+				6244237ED630C5875EFC494F04C4692B /* MMDrawerController+Subclass.h */,
+				9CFD8FD557F5F0B11293EC622352D95D /* MMDrawerController.h */,
+				54115DC182221A5DFBBDE17B28856BAC /* UIViewController+MMDrawerController.h */,
+				CD42816580C009EADA9A6AC9CC5E66E8 /* UIViewController+MMDrawerController.m */,
 			);
 			name = MMDrawerController;
 			path = MMDrawerController;

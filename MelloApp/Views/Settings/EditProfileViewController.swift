@@ -11,7 +11,7 @@ import UIKit
 class EditProfileViewController: UITableViewController {
     
     // MARK: Setup
-    let manager = FirebaseManager()
+    let manager = FirebaseManager.instance
     
     var headers: [String] = ["FULL NAME", "EMAIL", "PASSWORD"]
     

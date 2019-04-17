@@ -12,10 +12,20 @@ struct ScentBlend {
     static let citrus = ScentBlend(name: "Balance Out Citrus",
                                    ingredients: ["lavender", "lavender", "lavender"],
                                    image: #imageLiteral(resourceName: "smallCitrus"), color: .brightPink,
+                                   isFavorite: true,
+                                   id: 0)
                                    isFavorite: true, description: "des 1")
     static let floral = ScentBlend(name: "Focus Floral",
                                    ingredients: ["ginger", "ginger", "ginger"],
                                    image: #imageLiteral(resourceName: "smallFloral"), color: .brightGreen,
+                                   isFavorite: true,
+                                   id: 0)
+    static let green = ScentBlend(name: "Sleepy Green",
+                                   ingredients: "lavender, cinnamon, peppermint",
+                                   image: #imageLiteral(resourceName: "smallGreen"),
+                                   color: .brightPurple,
+                                   isFavorite: false,
+                                   id: 0)
                                    isFavorite: true, description: "des 2")
     static let green = ScentBlend(name: "Sleepy Green",
                                   ingredients: ["lemongrass", "lemongrass", "lemongrass"],
@@ -28,6 +38,7 @@ struct ScentBlend {
     var image: UIImage
     var color: UIColor
     var isFavorite: Bool?
+    var id: Int
     var description: String
 }
 
@@ -42,7 +53,8 @@ class UserScentManager {
     let manager = FirebaseManager()
     
     static func recommendations() -> [ScentBlend] {
-        return [ScentBlend.citrus, ScentBlend.floral, ScentBlend.green]
+        return FirebaseManager.instance.userRecommendations
+        //return [ScentBlend.citrus, ScentBlend.floral, ScentBlend.green]
     }
     
     static func energyblends() -> [ScentBlend] {
