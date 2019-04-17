@@ -24,7 +24,11 @@ class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
         self.scent = scent
         imageView.image = scent.image
         scentLabel.text = scent.name
-        ingredientsLabel.text = scent.ingredients
+        var ingredients = ""
+        for oil in scent.ingredients {
+            ingredients += "\(oil), "
+        }
+        ingredientsLabel.text = String(ingredients.dropLast())
         topBar.backgroundColor = scent.color
         updateFavoriteIcon()
     }
