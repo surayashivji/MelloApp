@@ -59,6 +59,7 @@ class MLOHomeViewController: MLOHamburgerMenuViewController {
         [scheduleCollectionView, favoritesCollectionView, recommendationsCollectionView].forEach({
             scrollToBeginning(collectionView: $0)
         })
+        setBanner(style: .none)
     }
     
     func setBanner(style: HomeBannerStyle?) {
