@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol DiffuseButtonDelegate : class {
-    func didPressDiffuse(_ tag: Int)
-}
-
 class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!

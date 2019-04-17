@@ -20,9 +20,13 @@
 		634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F6D5921FED0FC00C665A7 /* LaunchScreen.storyboard */; };
 		634F6D6621FED0FD00C665A7 /* MelloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D6521FED0FD00C665A7 /* MelloAppTests.swift */; };
 		634F6D7121FED0FD00C665A7 /* MelloAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */; };
+		6353BD242263C81B00A20E6E /* DiffuseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BD232263C81B00A20E6E /* DiffuseProtocol.swift */; };
+		6353BD26226557F400A20E6E /* OilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BD25226557F400A20E6E /* OilCell.swift */; };
 		636468E522454B1000A76A95 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468E422454B1000A76A95 /* CustomTabBar.swift */; };
 		636468E92245C25300A76A95 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468E82245C25300A76A95 /* StatsView.swift */; };
 		636468EE224624D900A76A95 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636468ED224624D900A76A95 /* HistoryTableViewCell.swift */; };
+		63A863FA225F1CD10045E96B /* SleepDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A863F9225F1CD10045E96B /* SleepDataSource.swift */; };
+		63A863FC225F1D360045E96B /* RelaxBlends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A863FB225F1D360045E96B /* RelaxBlends.swift */; };
 		63B0DFC72217B4510031BE51 /* blob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC62217B44D0031BE51 /* blob.gif */; };
 		63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC82217B4690031BE51 /* navlogo.png */; };
 		63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFCD2217B6080031BE51 /* homelogo.png */; };
@@ -58,6 +62,11 @@
 		63EE302D22595E8E003A99E3 /* PreferenceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301722595E8E003A99E3 /* PreferenceButtonView.swift */; };
 		63EE302E22595E8E003A99E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE301822595E8E003A99E3 /* SettingsViewController.swift */; };
 		63EE303022595F1E003A99E3 /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE302F22595F1E003A99E3 /* HomeContainerViewController.swift */; };
+		63EE3039225DC007003A99E3 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE3038225DC007003A99E3 /* Discover.storyboard */; };
+		63EE303B225DC01A003A99E3 /* BlendDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EE303A225DC01A003A99E3 /* BlendDetails.storyboard */; };
+		63EE303E225DC087003A99E3 /* EnergyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE303D225DC087003A99E3 /* EnergyDataSource.swift */; };
+		63EE3040225DC0C1003A99E3 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE303F225DC0C1003A99E3 /* DiscoverViewController.swift */; };
+		63EE3044225DC5D4003A99E3 /* BlendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE3043225DC5D4003A99E3 /* BlendDetailsViewController.swift */; };
 		63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244322167132009D240D /* ViewController+Keyboard.swift */; };
 		63F1244722169C0F009D240D /* Date+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1244622169C0F009D240D /* Date+Conversions.swift */; };
 		840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */; };
@@ -96,7 +105,6 @@
 		84E5450222590DDB00DDB89B /* DailyScheduleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5450122590DDB00DDB89B /* DailyScheduleDataSource.swift */; };
 		84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E545032259204B00DDB89B /* InsetCollectionView.swift */; };
 		84E5450922594DED00DDB89B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450522594DEC00DDB89B /* Home.storyboard */; };
-		84E5450A22594DED00DDB89B /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450622594DEC00DDB89B /* Discover.storyboard */; };
 		84E5450C22594DED00DDB89B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450822594DEC00DDB89B /* Profile.storyboard */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
@@ -140,9 +148,13 @@
 		634F6D6C21FED0FD00C665A7 /* MelloAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelloAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		634F6D7021FED0FD00C665A7 /* MelloAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelloAppUITests.swift; sourceTree = "<group>"; };
 		634F6D7221FED0FD00C665A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6353BD232263C81B00A20E6E /* DiffuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffuseProtocol.swift; sourceTree = "<group>"; };
+		6353BD25226557F400A20E6E /* OilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilCell.swift; sourceTree = "<group>"; };
 		636468E422454B1000A76A95 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		636468E82245C25300A76A95 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		636468ED224624D900A76A95 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		63A863F9225F1CD10045E96B /* SleepDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDataSource.swift; sourceTree = "<group>"; };
+		63A863FB225F1D360045E96B /* RelaxBlends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxBlends.swift; sourceTree = "<group>"; };
 		63B0DFC62217B44D0031BE51 /* blob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blob.gif; sourceTree = "<group>"; };
 		63B0DFC82217B4690031BE51 /* navlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navlogo.png; sourceTree = "<group>"; };
 		63B0DFCD2217B6080031BE51 /* homelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelogo.png; sourceTree = "<group>"; };
@@ -178,6 +190,11 @@
 		63EE301722595E8E003A99E3 /* PreferenceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceButtonView.swift; sourceTree = "<group>"; };
 		63EE301822595E8E003A99E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		63EE302F22595F1E003A99E3 /* HomeContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
+		63EE3038225DC007003A99E3 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		63EE303A225DC01A003A99E3 /* BlendDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlendDetails.storyboard; sourceTree = "<group>"; };
+		63EE303D225DC087003A99E3 /* EnergyDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyDataSource.swift; sourceTree = "<group>"; };
+		63EE303F225DC0C1003A99E3 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		63EE3043225DC5D4003A99E3 /* BlendDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendDetailsViewController.swift; sourceTree = "<group>"; };
 		63F1244322167132009D240D /* ViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		63F1244622169C0F009D240D /* Date+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Conversions.swift"; sourceTree = "<group>"; };
 		67A5C89323A68CE81AE66E1D /* Pods-MelloAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,9 +236,8 @@
 		84E544FF22590CFD00DDB89B /* ScheduleItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleItemTableViewCell.swift; path = MelloApp/Cells/ScheduleItemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		84E5450122590DDB00DDB89B /* DailyScheduleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleDataSource.swift; sourceTree = "<group>"; };
 		84E545032259204B00DDB89B /* InsetCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsetCollectionView.swift; path = "MelloApp/Views/UI components/InsetCollectionView.swift"; sourceTree = "<group>"; };
-		84E5450522594DEC00DDB89B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
-		84E5450622594DEC00DDB89B /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Storyboards/Discover.storyboard; sourceTree = "<group>"; };
-		84E5450822594DEC00DDB89B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboards/Profile.storyboard; sourceTree = "<group>"; };
+		84E5450522594DEC00DDB89B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		84E5450822594DEC00DDB89B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.debug.xcconfig"; sourceTree = "<group>"; };
 		992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +275,7 @@
 		63033555220EBA2700256800 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				63B0DFCD2217B6080031BE51 /* homelogo.png */,
 				63033553220EA5B000256800 /* FirebaseManager.swift */,
 			);
 			path = Services;
@@ -267,6 +284,7 @@
 		6343D05A2208274E00B790E0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63EE303C225DC087003A99E3 /* Discover Data Sources */,
 				84E544FF22590CFD00DDB89B /* ScheduleItemTableViewCell.swift */,
 				84CAC4BF224ACB060067EA2A /* MLODateCollectionViewCell.swift */,
 				84CAC4C1224ACB160067EA2A /* MLOScentCollectionViewCell.swift */,
@@ -289,13 +307,11 @@
 				842D77D02242DE6700BF557C /* MLODrawerController.swift */,
 				842D77D722440D3600BF557C /* MLOHamburgerMenuViewController.swift */,
 				842D77D522440B2500BF557C /* MLOHomeViewController.swift */,
-				63EE2FFC22595DFA003A99E3 /* Menu.storyboard */,
-				84E5450622594DEC00DDB89B /* Discover.storyboard */,
-				84E5450522594DEC00DDB89B /* Home.storyboard */,
-				84E5450822594DEC00DDB89B /* Profile.storyboard */,
 				636468E422454B1000A76A95 /* CustomTabBar.swift */,
 				636468E82245C25300A76A95 /* StatsView.swift */,
 				636468ED224624D900A76A95 /* HistoryTableViewCell.swift */,
+				63EE3043225DC5D4003A99E3 /* BlendDetailsViewController.swift */,
+				6353BD25226557F400A20E6E /* OilCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,6 +354,7 @@
 		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
 			isa = PBXGroup;
 			children = (
+				63EE303F225DC0C1003A99E3 /* DiscoverViewController.swift */,
 				63EE2FF322595C9B003A99E3 /* Custom Modal */,
 				63EE2FEC22595C73003A99E3 /* Custom Controls */,
 				63033551220E998300256800 /* GoogleService-Info.plist */,
@@ -450,9 +467,20 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		63EE303C225DC087003A99E3 /* Discover Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				63EE303D225DC087003A99E3 /* EnergyDataSource.swift */,
+				63A863F9225F1CD10045E96B /* SleepDataSource.swift */,
+				63A863FB225F1D360045E96B /* RelaxBlends.swift */,
+			);
+			path = "Discover Data Sources";
+			sourceTree = "<group>";
+		};
 		63F1244522169BE3009D240D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6353BD232263C81B00A20E6E /* DiffuseProtocol.swift */,
 				63EE2FFA22595CC7003A99E3 /* Notifications.swift */,
 				63033558220F527300256800 /* FirebaseManager+Errors.swift */,
 				6303355A220F540900256800 /* ViewController+Alert.swift */,
@@ -475,9 +503,14 @@
 		849C701B224AD6CA00AE9494 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				63EE303A225DC01A003A99E3 /* BlendDetails.storyboard */,
+				63EE3038225DC007003A99E3 /* Discover.storyboard */,
 				634F6D5421FED0FC00C665A7 /* Login.storyboard */,
 				84C27469222364C40050A011 /* Onboarding.storyboard */,
 				842D77C52242D8AA00BF557C /* TabBarController.storyboard */,
+				63EE2FFC22595DFA003A99E3 /* Menu.storyboard */,
+				84E5450522594DEC00DDB89B /* Home.storyboard */,
+				84E5450822594DEC00DDB89B /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -540,6 +573,7 @@
 				634F6D4A21FED0FC00C665A7 /* Frameworks */,
 				634F6D4B21FED0FC00C665A7 /* Resources */,
 				F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */,
+				151E99A1C48E5FEFA6A8C09F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -558,6 +592,8 @@
 				634F6D5D21FED0FC00C665A7 /* Sources */,
 				634F6D5E21FED0FC00C665A7 /* Frameworks */,
 				634F6D5F21FED0FC00C665A7 /* Resources */,
+				BB073978592EA8977D501A77 /* [CP] Embed Pods Frameworks */,
+				1046FBB366F62CACA1411D2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -577,6 +613,8 @@
 				634F6D6821FED0FD00C665A7 /* Sources */,
 				634F6D6921FED0FD00C665A7 /* Frameworks */,
 				634F6D6A21FED0FD00C665A7 /* Resources */,
+				DC7FBFBC3B61A81FA0D6D05A /* [CP] Embed Pods Frameworks */,
+				85D620B5B87FFC8B7B6AEF29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -642,7 +680,6 @@
 				63EE301D22595E8E003A99E3 /* FaceToggle.xib in Resources */,
 				63EE302B22595E8E003A99E3 /* Settings.storyboard in Resources */,
 				842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */,
-				84E5450A22594DED00DDB89B /* Discover.storyboard in Resources */,
 				63EE302C22595E8E003A99E3 /* PreferenceButton.xib in Resources */,
 				63EE2FFD22595DFA003A99E3 /* Menu.storyboard in Resources */,
 				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
@@ -651,12 +688,14 @@
 				84E5450922594DED00DDB89B /* Home.storyboard in Resources */,
 				63EE301922595E8E003A99E3 /* DevicesAndIntegrations.storyboard in Resources */,
 				63B0DFC72217B4510031BE51 /* blob.gif in Resources */,
+				63EE303B225DC01A003A99E3 /* BlendDetails.storyboard in Resources */,
 				63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */,
 				84E5450C22594DED00DDB89B /* Profile.storyboard in Resources */,
 				634F6D5821FED0FC00C665A7 /* Assets.xcassets in Resources */,
 				63EE301B22595E8E003A99E3 /* Ratings.storyboard in Resources */,
 				634F6D5621FED0FC00C665A7 /* Login.storyboard in Resources */,
 				84C2746A222364C40050A011 /* Onboarding.storyboard in Resources */,
+				63EE3039225DC007003A99E3 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +716,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1046FBB366F62CACA1411D2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		151E99A1C48E5FEFA6A8C09F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2E40596A4E04101A7DF26009 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -693,6 +762,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D620B5B87FFC8B7B6AEF29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD291728C01CA876EAE89532 /* [CP] Check Pods Manifest.lock */ = {
@@ -713,6 +797,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB073978592EA8977D501A77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C6BF2536D59F338249BB1250 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -731,34 +830,53 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DC7FBFBC3B61A81FA0D6D05A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/Particle-SDK/Particle_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Particle_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -785,6 +903,8 @@
 				6303355B220F540900256800 /* ViewController+Alert.swift in Sources */,
 				63EE2FF822595C9B003A99E3 /* ModalPresentationAnimationVC.swift in Sources */,
 				84CAC4C0224ACB060067EA2A /* MLODateCollectionViewCell.swift in Sources */,
+				6353BD26226557F400A20E6E /* OilCell.swift in Sources */,
+				63A863FA225F1CD10045E96B /* SleepDataSource.swift in Sources */,
 				63EE2FF222595C73003A99E3 /* PreferenceButton.swift in Sources */,
 				840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */,
 				636468EE224624D900A76A95 /* HistoryTableViewCell.swift in Sources */,
@@ -809,10 +929,12 @@
 				8458EB8322594E940077EE95 /* MLOGridOptionCollectionViewCell.swift in Sources */,
 				84CAC4C6224ACCC30067EA2A /* FavoritesDataSource.swift in Sources */,
 				63EE2FF922595C9B003A99E3 /* ModalPresentationVC.swift in Sources */,
+				6353BD242263C81B00A20E6E /* DiffuseProtocol.swift in Sources */,
 				63EE302A22595E8E003A99E3 /* PreferenceCollectionViewCell.swift in Sources */,
 				84984F8922416FF10087D8D2 /* MLOOnboardingFinishViewController.swift in Sources */,
 				63EE301E22595E8E003A99E3 /* ThanksViewController.swift in Sources */,
 				63EE302022595E8E003A99E3 /* RatingsViewController.swift in Sources */,
+				63EE303E225DC087003A99E3 /* EnergyDataSource.swift in Sources */,
 				63EE302122595E8E003A99E3 /* RepeatBlendRatingViewController.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
 				636468E522454B1000A76A95 /* CustomTabBar.swift in Sources */,
@@ -826,6 +948,9 @@
 				849C7014224AD30800AE9494 /* MLORoundCollectionViewCell.swift in Sources */,
 				63EE2FFB22595CC7003A99E3 /* Notifications.swift in Sources */,
 				8458EB9122594EF70077EE95 /* MLOOnboardingNavigationController.swift in Sources */,
+				63EE3044225DC5D4003A99E3 /* BlendDetailsViewController.swift in Sources */,
+				63A863FC225F1D360045E96B /* RelaxBlends.swift in Sources */,
+				63EE3040225DC0C1003A99E3 /* DiscoverViewController.swift in Sources */,
 				84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */,
 				6343D06222082B3700B790E0 /* ColorPalette.swift in Sources */,
 				840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */,
@@ -945,7 +1070,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mello-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -994,7 +1121,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mello-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

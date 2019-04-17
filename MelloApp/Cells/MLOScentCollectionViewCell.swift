@@ -9,18 +9,26 @@
 import UIKit
 
 class MLOScentCollectionViewCell: MLORoundCollectionViewCell {
+    
+    // MARK: Outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var scentLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var topBar: UIView!
+    
+    weak var delegate: DiffuseButtonDelegate?
     private var scent: ScentBlend?
     
     func setup(scent: ScentBlend) {
         self.scent = scent
         imageView.image = scent.image
         scentLabel.text = scent.name
-        ingredientsLabel.text = scent.ingredients
+        var ingredients = ""
+        for oil in scent.ingredients {
+            ingredients += "\(oil), "
+        }
+        ingredientsLabel.text = String(ingredients.dropLast())
         topBar.backgroundColor = scent.color
         updateFavoriteIcon()
     }
