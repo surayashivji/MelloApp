@@ -11,12 +11,16 @@ import UIKit
 class MLOHamburgerMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button = UIBarButtonItem(image: #imageLiteral(resourceName: "checkmark"),
-                                     landscapeImagePhone: #imageLiteral(resourceName: "checkmark"),
+        let button = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"),
+                                     landscapeImagePhone: #imageLiteral(resourceName: "menu"),
                                      style: .done,
                                      target: self,
                                      action: #selector(openDrawer))
         navigationItem.setLeftBarButton(button, animated: false)
+        navigationController?.navigationBar.barTintColor = .mediumPurple
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
     
     @objc private func openDrawer() {

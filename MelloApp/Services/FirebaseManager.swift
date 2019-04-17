@@ -35,16 +35,19 @@ class FirebaseManager {
     
     // Creates an account with email
     func createUser(withEmail email: String, password: String, completion: @escaping (User?, Error?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+//        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            completion(result?.user, error)
+        }
+        
     }
     
     // Logs user in with email
     func loginUser(withEmail email: String, password: String, completion: @escaping(User?, Error?) -> Void) {
-        let ammended: (User?, Error?) -> Void = { user, error in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { result, error in
             self.loadOils()
-            completion(user, error)
-        }
-        Auth.auth().signIn(withEmail: email, password: password, completion: ammended)
+            completion(result?.user, error)
+        })
     }
     
     // MARK: User Database
@@ -128,14 +131,15 @@ class FirebaseManager {
                     }
                 }
                 let ingredientStrings = ingredientValues.map({ (($0["common_name"] as! NSString) as String) })
-                    .joined(separator: ", ")
+                    //.joined(separator: ", ")
                 
                 self.userRecommendations.append(ScentBlend(name: (scent!["general_name"] as? String) ?? "",
                                                            ingredients: ingredientStrings,
                                                            image: #imageLiteral(resourceName: "smallGreen"),
                                                            color: .brightGreen,
                                                            isFavorite: false,
-                                                           id: i))
+                                                           id: i,
+                                                           description: ""))
             }
             NotificationCenter.default.post(name: NSNotification.Name.onFirebaseInit,
                                             object: self)

@@ -21,6 +21,7 @@
 #import "ParticleNetwork.h"
 #import "ParticlePricingInfo.h"
 #import "ParticleSession.h"
+#import "ParticleSimInfo.h"
 
 FOUNDATION_EXPORT double Particle_SDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char Particle_SDKVersionString[];

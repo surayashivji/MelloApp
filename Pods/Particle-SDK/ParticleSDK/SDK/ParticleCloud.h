@@ -22,6 +22,7 @@
 #import "ParticleEvent.h"
 #import "ParticleNetwork.h"
 #import "ParticlePricingInfo.h"
+#import "ParticleSimInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,11 +31,10 @@ extern NSString *const kParticleAPIBaseURL;
 
 typedef NS_ENUM(NSInteger, ParticleSimStatus) {
     ParticleSimStatusError=0,
-    ParticleSimStatusOK,
+    ParticleSimStatusInactive,
+    ParticleSimStatusActive,
     ParticleSimStatusNotFound,
     ParticleSimStatusNotOwnedByUser,
-    ParticleSimStatusActivated,
-    ParticleSimStatusActivatedFree
 };
 
 
@@ -414,6 +414,24 @@ typedef NS_ENUM(NSInteger, ParticleUpdateSimAction) {
  *  @return NSURLSessionDataTask task for requested network access
  */
 -(NSURLSessionDataTask *)checkSim:(NSString *)iccid completion:(nullable void(^)(ParticleSimStatus simStatus, NSError * _Nullable))completion;
+
+
+/**
+ *  Add credit card to user account
+ *
+ *  @param stripeTokenId      id of token returned by stripe
+ *  @return NSURLSessionDataTask task for requested network access
+ */
+- (NSURLSessionDataTask *)addCard:(NSString *)stripeTokenId completion:(nullable void (^)(NSError *_Nullable))completion;
+
+/**
+ *  Get ParticleSimInfo object for the SIM card
+ *
+ *  @param iccid      ICCID of the SIM card that was shipped with Particle hardware.
+ *  @return NSURLSessionDataTask task for requested network access
+ */
+-(NSURLSessionDataTask *)getSim:(NSString *)iccid completion:(nullable void(^)(ParticleSimInfo * _Nullable, NSError * _Nullable))completion;
+
 
 
 /**

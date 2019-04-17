@@ -29,7 +29,6 @@
 		63A863FC225F1D360045E96B /* RelaxBlends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A863FB225F1D360045E96B /* RelaxBlends.swift */; };
 		63B0DFC72217B4510031BE51 /* blob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC62217B44D0031BE51 /* blob.gif */; };
 		63B0DFCB2217B46F0031BE51 /* navlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFC82217B4690031BE51 /* navlogo.png */; };
-		63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B0DFCD2217B6080031BE51 /* homelogo.png */; };
 		63EE2FF022595C73003A99E3 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FED22595C73003A99E3 /* CustomSwitch.swift */; };
 		63EE2FF122595C73003A99E3 /* FaceToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FEE22595C73003A99E3 /* FaceToggle.swift */; };
 		63EE2FF222595C73003A99E3 /* PreferenceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2FEF22595C73003A99E3 /* PreferenceButton.swift */; };
@@ -157,7 +156,6 @@
 		63A863FB225F1D360045E96B /* RelaxBlends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxBlends.swift; sourceTree = "<group>"; };
 		63B0DFC62217B44D0031BE51 /* blob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blob.gif; sourceTree = "<group>"; };
 		63B0DFC82217B4690031BE51 /* navlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navlogo.png; sourceTree = "<group>"; };
-		63B0DFCD2217B6080031BE51 /* homelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelogo.png; sourceTree = "<group>"; };
 		63EE2FED22595C73003A99E3 /* CustomSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		63EE2FEE22595C73003A99E3 /* FaceToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceToggle.swift; sourceTree = "<group>"; };
 		63EE2FEF22595C73003A99E3 /* PreferenceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceButton.swift; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 		63033555220EBA2700256800 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				63B0DFCD2217B6080031BE51 /* homelogo.png */,
 				63033553220EA5B000256800 /* FirebaseManager.swift */,
 			);
 			path = Services;
@@ -372,7 +369,6 @@
 				8458EB8C22594EF70077EE95 /* MLOOnboardingViewController.swift */,
 				8458EB8722594EF60077EE95 /* ProfileViewController.swift */,
 				842870BA22669BF7003CB1D0 /* HardwareInterfaceManager.swift */,
-				63B0DFCD2217B6080031BE51 /* homelogo.png */,
 				63B0DFC62217B44D0031BE51 /* blob.gif */,
 				63F1244522169BE3009D240D /* Extensions */,
 				63033555220EBA2700256800 /* Services */,
@@ -573,7 +569,6 @@
 				634F6D4A21FED0FC00C665A7 /* Frameworks */,
 				634F6D4B21FED0FC00C665A7 /* Resources */,
 				F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */,
-				151E99A1C48E5FEFA6A8C09F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -592,8 +587,6 @@
 				634F6D5D21FED0FC00C665A7 /* Sources */,
 				634F6D5E21FED0FC00C665A7 /* Frameworks */,
 				634F6D5F21FED0FC00C665A7 /* Resources */,
-				BB073978592EA8977D501A77 /* [CP] Embed Pods Frameworks */,
-				1046FBB366F62CACA1411D2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -613,8 +606,6 @@
 				634F6D6821FED0FD00C665A7 /* Sources */,
 				634F6D6921FED0FD00C665A7 /* Frameworks */,
 				634F6D6A21FED0FD00C665A7 /* Resources */,
-				DC7FBFBC3B61A81FA0D6D05A /* [CP] Embed Pods Frameworks */,
-				85D620B5B87FFC8B7B6AEF29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -682,7 +673,6 @@
 				842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */,
 				63EE302C22595E8E003A99E3 /* PreferenceButton.xib in Resources */,
 				63EE2FFD22595DFA003A99E3 /* Menu.storyboard in Resources */,
-				63B0DFCE2217B60C0031BE51 /* homelogo.png in Resources */,
 				634F6D5B21FED0FC00C665A7 /* LaunchScreen.storyboard in Resources */,
 				63033552220E9BCB00256800 /* GoogleService-Info.plist in Resources */,
 				84E5450922594DED00DDB89B /* Home.storyboard in Resources */,
@@ -716,36 +706,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1046FBB366F62CACA1411D2D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		151E99A1C48E5FEFA6A8C09F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2E40596A4E04101A7DF26009 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,21 +722,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85D620B5B87FFC8B7B6AEF29 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD291728C01CA876EAE89532 /* [CP] Check Pods Manifest.lock */ = {
@@ -797,21 +742,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BB073978592EA8977D501A77 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppTests/Pods-MelloAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C6BF2536D59F338249BB1250 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -830,36 +760,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC7FBFBC3B61A81FA0D6D05A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F50E427F4201BF434A1A7FCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Particle-SDK/Particle_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -867,16 +783,17 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Particle_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MelloApp/Pods-MelloApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

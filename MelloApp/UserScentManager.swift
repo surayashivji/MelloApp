@@ -11,27 +11,28 @@ import Foundation
 struct ScentBlend {
     static let citrus = ScentBlend(name: "Balance Out Citrus",
                                    ingredients: ["lavender", "lavender", "lavender"],
-                                   image: #imageLiteral(resourceName: "smallCitrus"), color: .brightPink,
+                                   image: #imageLiteral(resourceName: "smallCitrus"),
+                                   color: .brightPink,
                                    isFavorite: true,
-                                   id: 0)
-                                   isFavorite: true, description: "des 1")
+                                   id: 0,
+                                   description: "des 1")
+    
     static let floral = ScentBlend(name: "Focus Floral",
                                    ingredients: ["ginger", "ginger", "ginger"],
-                                   image: #imageLiteral(resourceName: "smallFloral"), color: .brightGreen,
+                                   image: #imageLiteral(resourceName: "smallFloral"),
+                                   color: .brightGreen,
                                    isFavorite: true,
-                                   id: 0)
+                                   id: 0,
+                                   description: "des 2")
+    
     static let green = ScentBlend(name: "Sleepy Green",
-                                   ingredients: "lavender, cinnamon, peppermint",
+                                   ingredients: ["lavender", "cinnamon", "peppermint"],
                                    image: #imageLiteral(resourceName: "smallGreen"),
                                    color: .brightPurple,
                                    isFavorite: false,
-                                   id: 0)
-                                   isFavorite: true, description: "des 2")
-    static let green = ScentBlend(name: "Sleepy Green",
-                                  ingredients: ["lemongrass", "lemongrass", "lemongrass"],
-                                  image: #imageLiteral(resourceName: "smallGreen"),
-                                  color: .brightPurple,
-                                  isFavorite: false, description: "des 3")
+                                   id: 0,
+                                   description: "des3")
+
     
     var name: String
     var ingredients: [String]

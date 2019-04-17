@@ -38,7 +38,7 @@ class MLOHomeViewController: MLOHamburgerMenuViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Home"
         scheduleCollectionView.dataSource = scheduleDataSource
         scheduleCollectionView.delegate = scheduleDataSource
         
