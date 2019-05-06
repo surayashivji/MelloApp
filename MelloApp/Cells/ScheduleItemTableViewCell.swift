@@ -12,8 +12,10 @@ class ScheduleItemTableViewCell: UITableViewCell {
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    var delegate: ScheduleItemTableViewCellDelegate?
     
-    func setup(_ data: ScheduledBlend) {
+    func setup(_ data: ScheduledBlend, delegate: ScheduleItemTableViewCellDelegate) {
+        self.delegate = delegate
         leftImageView.image = data.scent.image
         titleLabel.text = data.scent.name
         subtitleLabel.text = timeRange(data.start, data.end)
@@ -26,5 +28,10 @@ class ScheduleItemTableViewCell: UITableViewCell {
     }
     
     @IBAction func editPressed(_ sender: Any) {
+        delegate?.editSchedule()
     }
+}
+
+protocol ScheduleItemTableViewCellDelegate {
+    func editSchedule()
 }

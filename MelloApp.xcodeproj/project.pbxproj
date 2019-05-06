@@ -71,6 +71,8 @@
 		840D3AFE2234C75A00004A9D /* MLODatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */; };
 		840D3B002235F48D00004A9D /* MLOGridOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */; };
 		840D3B06223612A600004A9D /* MLOProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B05223612A600004A9D /* MLOProgressCircle.swift */; };
+		841619AA227F6CF700C3DB5D /* SchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841619A9227F6CF700C3DB5D /* SchedulerViewController.swift */; };
+		841619AC227F72C500C3DB5D /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841619AB227F72C500C3DB5D /* CircleButton.swift */; };
 		842870BB22669BF7003CB1D0 /* HardwareInterfaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842870BA22669BF7003CB1D0 /* HardwareInterfaceManager.swift */; };
 		842D77C62242D8AA00BF557C /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842D77C52242D8AA00BF557C /* TabBarController.storyboard */; };
 		842D77D12242DE6700BF557C /* MLODrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D77D02242DE6700BF557C /* MLODrawerController.swift */; };
@@ -201,6 +203,8 @@
 		840D3AFD2234C75A00004A9D /* MLODatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODatePickerViewController.swift; sourceTree = "<group>"; };
 		840D3AFF2235F48D00004A9D /* MLOGridOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOGridOptionViewController.swift; sourceTree = "<group>"; };
 		840D3B05223612A600004A9D /* MLOProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLOProgressCircle.swift; sourceTree = "<group>"; };
+		841619A9227F6CF700C3DB5D /* SchedulerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerViewController.swift; sourceTree = "<group>"; };
+		841619AB227F72C500C3DB5D /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		842870BA22669BF7003CB1D0 /* HardwareInterfaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareInterfaceManager.swift; sourceTree = "<group>"; };
 		842D77C52242D8AA00BF557C /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		842D77D02242DE6700BF557C /* MLODrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLODrawerController.swift; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 		634F6D4421FED0FC00C665A7 = {
 			isa = PBXGroup;
 			children = (
+				841619AB227F72C500C3DB5D /* CircleButton.swift */,
+				841619A9227F6CF700C3DB5D /* SchedulerViewController.swift */,
 				84E545032259204B00DDB89B /* InsetCollectionView.swift */,
 				849C7023224B460400AE9494 /* BannerPresenter.swift */,
 				849C7021224AD94E00AE9494 /* UserScentManager.swift */,
@@ -827,6 +833,7 @@
 				636468EE224624D900A76A95 /* HistoryTableViewCell.swift in Sources */,
 				63F1244422167132009D240D /* ViewController+Keyboard.swift in Sources */,
 				63EE302322595E8E003A99E3 /* SmellRatingViewController.swift in Sources */,
+				841619AC227F72C500C3DB5D /* CircleButton.swift in Sources */,
 				84E5450022590CFD00DDB89B /* ScheduleItemTableViewCell.swift in Sources */,
 				63EE2FF122595C73003A99E3 /* FaceToggle.swift in Sources */,
 				63EE303022595F1E003A99E3 /* HomeContainerViewController.swift in Sources */,
@@ -853,6 +860,7 @@
 				63EE302022595E8E003A99E3 /* RatingsViewController.swift in Sources */,
 				63EE303E225DC087003A99E3 /* EnergyDataSource.swift in Sources */,
 				63EE302122595E8E003A99E3 /* RepeatBlendRatingViewController.swift in Sources */,
+				841619AA227F6CF700C3DB5D /* SchedulerViewController.swift in Sources */,
 				6343D06022082B0900B790E0 /* LongButton.swift in Sources */,
 				636468E522454B1000A76A95 /* CustomTabBar.swift in Sources */,
 				63EE302622595E8E003A99E3 /* PreferencesViewController.swift in Sources */,

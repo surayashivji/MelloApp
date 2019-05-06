@@ -19,6 +19,7 @@ class BlendDetailsViewController: UIViewController, UICollectionViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        modalPresentationStyle = .overFullScreen
         
         // Do any additional setup after loading the view.
         if let blendLoaded = currentBlend {
@@ -28,7 +29,7 @@ class BlendDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         oilsCollectionView.delegate = self
         oilsCollectionView.dataSource = self
         
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     func setupBlendDetails(_ blend: ScentBlend) {
@@ -42,6 +43,8 @@ class BlendDetailsViewController: UIViewController, UICollectionViewDelegate, UI
     
     @IBAction func scheduleLaterTapped(_ sender: Any) {
     }
+
+    
     
     // Collection View Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

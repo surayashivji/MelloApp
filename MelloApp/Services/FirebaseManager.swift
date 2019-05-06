@@ -31,7 +31,7 @@ class FirebaseManager {
     
     static let instance = FirebaseManager()
     
-    // MARK: Authentication
+    // MARK: Authenticationl
     
     // Creates an account with email
     func createUser(withEmail email: String, password: String, completion: @escaping (User?, Error?) -> Void) {

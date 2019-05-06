@@ -465,7 +465,6 @@
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="bannerEditPressed:" destination="L1I-QQ-ljP" eventType="touchUpInside" id="KBC-L6-fCV"/>
                                                                 <action selector="editPressed:" destination="sQ6-ga-uC6" eventType="touchUpInside" id="aUj-dQ-642"/>
                                                             </connections>
                                                         </button>
@@ -551,11 +550,20 @@
                         <outlet property="favoritesCollectionView" destination="T7q-qs-tAt" id="sP5-Rn-kOZ"/>
                         <outlet property="recommendationsCollectionView" destination="qUb-f4-mcG" id="pu7-Of-Hj2"/>
                         <outlet property="scheduleCollectionView" destination="YL6-Rg-9uL" id="3Lr-KV-mkc"/>
+                        <segue destination="VJW-iE-2Zv" kind="presentation" identifier="schedule" id="4K2-yy-5Ec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgx-vV-Q19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2202.4000000000001" y="-286.05697151424289"/>
+        </scene>
+        <!--scheduler-->
+        <scene sceneID="X9C-SL-8cw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BlendDetails" referencedIdentifier="scheduler" id="VJW-iE-2Zv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONb-IF-w3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="-465"/>
         </scene>
         <!--Home-->
         <scene sceneID="aSY-Cw-zTp">

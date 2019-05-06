@@ -9,8 +9,13 @@
 import UIKit
 
 class DailyScheduleDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
+    var homeViewController: MLOHomeViewController
     var schedule = UserScentManager.schedule(for: nil)
     var tableView: UITableView?
+    
+    init(homeViewController: MLOHomeViewController) {
+        self.homeViewController = homeViewController
+    }
     
     func setDate(_ date: Date?) {
         schedule = UserScentManager.schedule(for: date)
@@ -29,7 +34,7 @@ class DailyScheduleDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         guard let cell = tableView
             .dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
             as? ScheduleItemTableViewCell else { return UITableViewCell() }
-        cell.setup(schedule[indexPath.row])
+        cell.setup(schedule[indexPath.row], delegate: homeViewController)
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         return cell

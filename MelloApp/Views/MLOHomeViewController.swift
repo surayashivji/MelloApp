@@ -12,7 +12,8 @@ enum HomeBannerStyle {
     case now(String), next(String)
 }
 
-class MLOHomeViewController: MLOHamburgerMenuViewController {
+class MLOHomeViewController: MLOHamburgerMenuViewController, ScheduleItemTableViewCellDelegate {
+    
     @IBOutlet weak var scheduleCollectionView: UICollectionView!
     @IBOutlet weak var recommendationsCollectionView: UICollectionView!
     @IBOutlet weak var favoritesCollectionView: UICollectionView!
@@ -29,7 +30,7 @@ class MLOHomeViewController: MLOHamburgerMenuViewController {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     private let bannerHeight: CGFloat = 95
     
-    private lazy var dailyScheduleDataSource = DailyScheduleDataSource()
+    private lazy var dailyScheduleDataSource = DailyScheduleDataSource(homeViewController: self)
     private lazy var scheduleDataSource = ScheduleDataSource(dailyScheduleDataSource: dailyScheduleDataSource,
                                                              homeViewController: self)
     
@@ -94,4 +95,7 @@ class MLOHomeViewController: MLOHamburgerMenuViewController {
         collectionView.setContentOffset(CGPoint(x: -26, y: 0), animated: false)
     }
     
+    func editSchedule() {
+        performSegue(withIdentifier: "schedule", sender: self)
+    }
 }
