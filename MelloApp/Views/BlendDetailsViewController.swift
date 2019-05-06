@@ -61,4 +61,10 @@ class BlendDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         }
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let destination = segue.destination as? SchedulerViewController else { return }
+        destination.scent = currentBlend
+    }
 }

@@ -832,6 +832,8 @@
                         <outlet property="num7" destination="Y23-ib-VsU" id="40R-d1-VMF"/>
                         <outlet property="pickerContainerView" destination="yyH-RL-Fsv" id="Ayr-iz-bpx"/>
                         <outlet property="saturday" destination="HWH-el-e8J" id="0vA-KG-cgP"/>
+                        <outlet property="scentImageView" destination="eNz-Iq-sAU" id="sYh-Rt-Alc"/>
+                        <outlet property="scentLabel" destination="n4K-gk-FLy" id="Zkm-Dy-TIQ"/>
                         <outlet property="sunday" destination="he5-dH-4Bv" id="RSq-t1-FI7"/>
                         <outlet property="thursday" destination="Cs9-cf-kDH" id="RPe-r9-Nxk"/>
                         <outlet property="timeOfDayLabel" destination="AkZ-o8-kut" id="TFq-X1-Ap3"/>

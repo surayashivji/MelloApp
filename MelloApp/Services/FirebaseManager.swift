@@ -154,38 +154,50 @@ class FirebaseManager {
         }
     }
     
+
+    func schedule(blend: ScentBlend?,
+                  dates: [Date],
+                  time: Date,
+                  duration minutes: Int) {
+        guard let uid = user?.uid, let blend = blend else { return }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        let userRef = reference.child("users").child(uid).child("schedule").child("singular")
+        let scheduleID = UUID().uuidString
+        for date in dates {
+            userRef.child(dateFormatter.string(from: date)).updateChildValues([scheduleID : [
+                "blend" : String(blend.id),
+                "time" : timeFormatter.string(from: time),
+                "duration" : String(minutes)
+                ]])
+        }
+    }
     
+    func schedule(blend: ScentBlend?,
+                  time: Date,
+                  repeats daysOfWeek: [Int],
+                  duration minutes: Int) {
+        guard let uid = user?.uid, let blend = blend else { return }
+        let dayOfWeekFormatter = DateFormatter()
+        dayOfWeekFormatter.dateFormat = "E"
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        let userRef = reference.child("users").child(uid).child("schedule").child("repeating")
+        let scheduleID = UUID().uuidString
+        for day in daysOfWeek {
+            userRef.child("d\(day)").updateChildValues([scheduleID : [
+                "blend" : String(blend.id),
+                "time" : timeFormatter.string(from: time),
+                "duration" : String(minutes)
+                ]])
+        }
+    }
     
-    //            guard let energizing = value["energizing"] as? NSArray else {
-    //                return
-    //            }
-    //            for val in energizing {
-    //                guard let i = val as? Int else {
-    //                    continue
-    //                }
-    //                let scent = self.blends["\(i - 1)"] as? NSDictionary
-    //                guard let ingredientList = scent?["ingredients"] as? NSArray else {
-    //                    break
-    //                }
-    //
-    //                let ingredientString = ingredientList.map({ ($0 as? NSDictionary)?["oilID"] })
-    //                var ingredientValues: [NSDictionary] = []
-    //                for ingredient in ingredientString {
-    //                    if let num = Int(ingredient as? String ?? "") {
-    //                        ingredientValues.append(self.oils["\(num - 1)"] as! NSDictionary)
-    //                    }
-    //                }
-    //                let ingredientStrings = ingredientValues.map({ (($0["common_name"] as! NSString) as String) })
-    //                    //.joined(separator: ", ")
-    //
-    //                self.userRecommendations.append(ScentBlend(name: (scent!["general_name"] as? String) ?? "",
-    //                                                           ingredients: ingredientStrings,
-    //                                                           image: #imageLiteral(resourceName: "smallGreen"),
-    //                                                           color: .brightGreen,
-    //                                                           isFavorite: false,
-    //                                                           id: i,
-    //                                                           description: ""))
-    //            }
     
     // Signs user out
     func signOutUser(completion: @escaping(Bool) -> Void) {

@@ -9,7 +9,7 @@
 import UIKit
 
 class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     @IBOutlet weak var hourPicker: UIPickerView!
     @IBOutlet weak var minutePicker: UIPickerView!
     @IBOutlet weak var cardView: UIView!
@@ -46,20 +46,27 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var friday: CircleButton!
     @IBOutlet weak var saturday: CircleButton!
     
+    @IBOutlet weak var scentLabel: UILabel!
+    @IBOutlet weak var scentImageView: UIImageView!
     @IBOutlet weak var weekLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     
-    private var weeksAhead = 0
-    private let times = hours()
+    var scent: ScentBlend?
     
-    private let durations = ["15", "30", "45", "60"]
+    private var weeksAhead = 0
+    private let timeStrings = createTimeOptionStrings()
+    private let timeOptions = createTimeOptions()
+    
+    private let durations = [15, 30, 45, 60]
     private var selectedDates = Set<Date>()
     private let today = Date()
     private var startDate: Date!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scentLabel.text = scent?.name
+        scentImageView.image = scent?.image
         startDate = today
         backButton.isHidden = true
         setupDays()
@@ -100,7 +107,32 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func scheduleTapped(_ sender: Any) {
-        // TODO: save this shit
+        let duration = durations[minutePicker.selectedRow(inComponent: 0)]
+        let time = timeOptions[hourPicker.selectedRow(inComponent: 0)]
+        
+        var repeatingDaysOfWeek = [Int]()
+        if sunday.isOptionHighlighted { repeatingDaysOfWeek.append(1) }
+        if monday.isOptionHighlighted { repeatingDaysOfWeek.append(2) }
+        if tuesday.isOptionHighlighted { repeatingDaysOfWeek.append(3) }
+        if wednesday.isOptionHighlighted { repeatingDaysOfWeek.append(4) }
+        if thursday.isOptionHighlighted { repeatingDaysOfWeek.append(5) }
+        if friday.isOptionHighlighted { repeatingDaysOfWeek.append(6) }
+        if saturday.isOptionHighlighted { repeatingDaysOfWeek.append(7) }
+        
+        FirebaseManager.instance.schedule(blend: scent,
+                                          time: time,
+                                          repeats: repeatingDaysOfWeek,
+                                          duration: duration)
+        
+        let dayOfWeekFormatter = DateFormatter()
+        dayOfWeekFormatter.dateFormat = "e"
+        let singleInstanceBlends = selectedDates.filter({ repeatingDaysOfWeek
+            .contains(Int(dayOfWeekFormatter.string(from: $0)) ?? 0 )})
+        FirebaseManager.instance.schedule(blend: scent,
+                                          dates: Array(singleInstanceBlends),
+                                          time: time,
+                                          duration: duration)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func toggled(_ sender: CircleButton) {
@@ -113,7 +145,7 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-   
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -123,10 +155,10 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             timeOfDayLabel.text = row < 48 ? "AM" : "PM"
         }
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == hourPicker {
-            return times.count
+            return timeStrings.count
         } else if pickerView == minutePicker {
             return durations.count
         }
@@ -145,11 +177,11 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func duration(for row: Int) -> NSAttributedString {
-        return attributedTitle(durations[row])
+        return attributedTitle(String(durations[row]))
     }
     
     func time(for row: Int) -> NSAttributedString {
-        return attributedTitle(times[row])
+        return attributedTitle(timeStrings[row])
     }
     
     private func setupDays(_ date: Date? = nil) {
@@ -162,23 +194,23 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let numberLabels = [num1, num2, num3, num4, num5, num6, num7]
         for i in 0...6 {
             guard let nextDate = Calendar.current.date(byAdding: DateComponents(calendar: .current,
-                                                                          day: i),
+                                                                                day: i),
                                                        to: date) else { continue }
             numberLabels[i]?.setTitle(dayNumberFormatter.string(from: nextDate), for: .normal)
             numberLabels[i]?.date = nextDate
             numberLabels[i]?.isOptionHighlighted = selectedDates.contains(nextDate)
-        
+            
             daysOfWeekLabels[i]?.text = String(dayOfWeekFormatter.string(from: nextDate).prefix(2))
         }
     }
     
-
+    
     
     private func attributedTitle(_ text: String) -> NSAttributedString {
         return NSAttributedString(string: text,
                                   attributes: [NSAttributedString.Key.foregroundColor : UIColor.white,
                                                NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)])
-
+        
     }
     
     private func weekLabel(weeksAhead: Int) -> String {
@@ -189,8 +221,15 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         default: return ""
         }
     }
-
-    private static func hours() -> [String] {
+    
+    private static func createTimeOptionStrings() -> [String] {
+        let options = createTimeOptions()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm"
+        return options.compactMap({ formatter.string(from: $0) })
+    }
+    
+    private static func createTimeOptions() -> [Date] {
         var options = [Date]()
         var components = DateComponents(calendar: .current, hour: 0, minute: 0)
         
@@ -210,8 +249,6 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
             components = DateComponents(calendar: .current, hour: hours, minute: minutes)
         }
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm"
-        return options.compactMap({ formatter.string(from: $0) })
+        return options
     }
 }
