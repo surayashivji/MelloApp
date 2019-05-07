@@ -29,6 +29,7 @@ class FirebaseManager {
         return Database.database().reference()
     }
     
+    var scheduleDelegate: ScheduleUpdateDelegate?
     static let instance = FirebaseManager()
     
     // MARK: Authenticationl
@@ -167,6 +168,7 @@ class FirebaseManager {
                 return
             }
             self.singularSchedule = singularSchedule
+            self.scheduleDelegate?.scheduleUpdated()
         }
     }
     
@@ -178,6 +180,7 @@ class FirebaseManager {
                 return
             }
             self.repeatingSchedule = repeatingSchedule
+            self.scheduleDelegate?.scheduleUpdated()
         }
     }
     
@@ -230,6 +233,24 @@ class FirebaseManager {
         }
     }
     
+    func unschedule(event: ScheduledBlend) {
+        guard let uid = user?.uid else { return }
+    
+        var userRef: DatabaseReference?
+        if event.isSingularEvent {
+            userRef = reference.child("users").child(uid).child("schedule")
+                .child("singular").child(event.datePath ?? "")
+        } else {
+            userRef = reference.child("users").child(uid).child("schedule")
+                .child("repeating").child("d" + String(event.dayOfWeek ?? 0))
+        }
+        guard let ref = userRef else { return }
+        ref.child(event.scheduleId).removeValue { (error, ref) in
+            self.getSchedule()
+            self.getRepeatingSchedule()
+        }
+       
+    }
     
     // Signs user out
     func signOutUser(completion: @escaping(Bool) -> Void) {
@@ -360,4 +381,8 @@ class FirebaseManager {
 
 extension Notification.Name {
     static let onFirebaseInit = Notification.Name("onFirebaseInit")
+}
+
+protocol ScheduleUpdateDelegate {
+    func scheduleUpdated()
 }

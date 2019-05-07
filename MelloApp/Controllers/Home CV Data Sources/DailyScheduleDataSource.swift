@@ -8,18 +8,28 @@
 
 import UIKit
 
-class DailyScheduleDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
+class DailyScheduleDataSource: NSObject, UITableViewDataSource, UITableViewDelegate, ScheduleUpdateDelegate {
     var homeViewController: MLOHomeViewController
     var schedule = UserScentManager.schedule(for: nil)
     var tableView: UITableView?
-    
+    private var date: Date?
     init(homeViewController: MLOHomeViewController) {
         self.homeViewController = homeViewController
         tableView = homeViewController.dailyScheduleTableView
+        super.init()
+        FirebaseManager.instance.scheduleDelegate = self
+    }
+    
+    func scheduleUpdated() {
+        setDate(date)
     }
     
     func setDate(_ date: Date?) {
+        self.date = date
         schedule = UserScentManager.schedule(for: date)
+        if schedule.count == 0 {
+            homeViewController.setDailyScheduleHidden(true)
+        }
         homeViewController.dailyScheduleHeight = CGFloat(50 * schedule.count)
         tableView?.reloadData()
     }

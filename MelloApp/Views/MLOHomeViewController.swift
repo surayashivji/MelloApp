@@ -37,6 +37,8 @@ class MLOHomeViewController: MLOHamburgerMenuViewController, ScheduleItemTableVi
     private lazy var recommendationsDataSource = RecommendationsDataSource()
     private lazy var favoritesDataSource = FavoritesDataSource()
     
+    private var editingEvent: ScheduledBlend?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
@@ -95,13 +97,15 @@ class MLOHomeViewController: MLOHamburgerMenuViewController, ScheduleItemTableVi
         collectionView.setContentOffset(CGPoint(x: -26, y: 0), animated: false)
     }
     
-    func editSchedule() {
+    func editSchedule(event: ScheduledBlend?) {
+        editingEvent = event
         performSegue(withIdentifier: "schedule", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let edit = segue.destination as? EditScheduleViewController {
             edit.presenter = self
+            edit.event = editingEvent
         }
     }
 }

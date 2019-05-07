@@ -46,10 +46,12 @@ struct ScentBlend {
 struct ScheduledBlend {
     var start: Date
     var end: Date
+    var datePath: String?
     var scentName: String
     var scentImage: UIImage
     var scheduleId: String
     var isSingularEvent: Bool
+    var dayOfWeek: Int?
 }
 
 class UserScentManager {
@@ -112,10 +114,12 @@ class UserScentManager {
                 }
                 schedule.append(ScheduledBlend(start: startTime,
                                                end: endTime,
+                                               datePath: nil,
                                                scentName: blendName,
                                                scentImage: image,
                                                scheduleId: scheduleIds[index],
-                                               isSingularEvent: false))
+                                               isSingularEvent: false,
+                                               dayOfWeek: dayOfWeek))
             }
         }
         
@@ -144,10 +148,12 @@ class UserScentManager {
                 }
                 schedule.append(ScheduledBlend(start: startTime,
                                                end: endTime,
+                                               datePath: dateFormatter.string(from: day),
                                                scentName: blendName,
                                                scentImage: image,
                                                scheduleId: scheduledBlendIds[index],
-                                               isSingularEvent: true))
+                                               isSingularEvent: true,
+                                               dayOfWeek: nil))
             }
             
             

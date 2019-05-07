@@ -954,10 +954,10 @@
                                 </constraints>
                             </view>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVK-Sc-fGJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-Yr-ey1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="dismiss:" destination="5tz-71-LeO" eventType="touchUpInside" id="PMi-Jg-B4Z"/>
@@ -977,7 +977,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="CZP-BH-dOU" secondAttribute="bottom" constant="-20" id="0XJ-44-hNg"/>
                             <constraint firstItem="FVK-Sc-fGJ" firstAttribute="top" secondItem="mJb-Sc-sqa" secondAttribute="top" id="FBe-Gp-q61"/>
-                            <constraint firstItem="CZP-BH-dOU" firstAttribute="top" secondItem="FVK-Sc-fGJ" secondAttribute="bottom" id="UIH-c9-pft"/>
+                            <constraint firstItem="CZP-BH-dOU" firstAttribute="top" secondItem="FVK-Sc-fGJ" secondAttribute="bottom" constant="-30" id="UIH-c9-pft"/>
                             <constraint firstItem="CZP-BH-dOU" firstAttribute="leading" secondItem="ini-SF-Cqf" secondAttribute="leading" id="Wcw-h6-Tzo"/>
                             <constraint firstItem="FVK-Sc-fGJ" firstAttribute="leading" secondItem="ini-SF-Cqf" secondAttribute="leading" id="ZZ8-it-NXO"/>
                             <constraint firstItem="ini-SF-Cqf" firstAttribute="trailing" secondItem="FVK-Sc-fGJ" secondAttribute="trailing" id="fz6-ne-LLC"/>

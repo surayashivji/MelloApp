@@ -11,6 +11,8 @@ import UIKit
 class EditScheduleViewController: UIViewController {
     
     var presenter: UIViewController?
+    var event: ScheduledBlend?
+    
     @IBOutlet weak var cardView: UIView!
     
     override func viewDidLoad() {
@@ -19,12 +21,20 @@ class EditScheduleViewController: UIViewController {
         cardView.layer.masksToBounds = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.bringSubview(toFront: cardView)
+    }
+    
     @IBAction func dismiss(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func unschedule(_ sender: Any) {
-        
+        if let event = event {
+            FirebaseManager.instance.unschedule(event: event)
+        }
+        dismiss(animated: true)
     }
     
     @IBAction func edit(_ sender: Any) {
