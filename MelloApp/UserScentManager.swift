@@ -47,6 +47,7 @@ struct ScheduledBlend {
     var start: Date
     var end: Date
     var datePath: String?
+    var scentId: Int
     var scentName: String
     var scentImage: UIImage
     var scheduleId: String
@@ -115,6 +116,7 @@ class UserScentManager {
                 schedule.append(ScheduledBlend(start: startTime,
                                                end: endTime,
                                                datePath: nil,
+                                               scentId: Int(blendId) ?? 0,
                                                scentName: blendName,
                                                scentImage: image,
                                                scheduleId: scheduleIds[index],
@@ -149,6 +151,7 @@ class UserScentManager {
                 schedule.append(ScheduledBlend(start: startTime,
                                                end: endTime,
                                                datePath: dateFormatter.string(from: day),
+                                               scentId: Int(blendId) ?? 0,
                                                scentName: blendName,
                                                scentImage: image,
                                                scheduleId: scheduledBlendIds[index],

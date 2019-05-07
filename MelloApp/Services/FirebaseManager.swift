@@ -30,6 +30,8 @@ class FirebaseManager {
     }
     
     var scheduleDelegate: ScheduleUpdateDelegate?
+    var bannerDelegate: HomeViewControllerBannerDelegate?
+    
     static let instance = FirebaseManager()
     
     // MARK: Authenticationl
@@ -142,6 +144,24 @@ class FirebaseManager {
         
     }
     
+    func scentBlend(from id: Int) -> ScentBlend? {
+        let blend = self.blends["\(id)"] as? [String : Any]
+        guard let aroma = blend?["aroma"] as? String,
+            let benefit = blend?["benefit"] as? String,
+            let image = UIImage(named: aroma + benefit),
+            let ingredients = ((((blend?["ingredients"] as? Array<Any>)?.compactMap({ $0 as? NSDictionary }))?.compactMap({ $0["oilID"] }) as? [Int])?.compactMap({ self.oils["\($0)"] }) as? Array<NSDictionary>)?.compactMap({ $0["common_name"] }) as? [String] else {
+                return nil
+        }
+        
+        return ScentBlend(name: blend?["general_name"] as? String ?? "",
+                               ingredients: ingredients,
+                               image: image,
+                               color: self.color(from: benefit),
+                               isFavorite: false,
+                               id: id,
+                               description: blend?["description"] as? String ?? "")
+    }
+    
     func color(from benefit: String) -> UIColor {
         switch benefit {
         case "Balanced":
@@ -169,6 +189,7 @@ class FirebaseManager {
             }
             self.singularSchedule = singularSchedule
             self.scheduleDelegate?.scheduleUpdated()
+            self.bannerDelegate?.updateBanner()
         }
     }
     
@@ -181,6 +202,7 @@ class FirebaseManager {
             }
             self.repeatingSchedule = repeatingSchedule
             self.scheduleDelegate?.scheduleUpdated()
+            self.bannerDelegate?.updateBanner()
         }
     }
     

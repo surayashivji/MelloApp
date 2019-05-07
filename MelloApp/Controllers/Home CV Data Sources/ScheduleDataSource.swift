@@ -68,7 +68,7 @@ class ScheduleDataSource: NSObject, UICollectionViewDataSource, UICollectionView
     }
     
     
-    private func deselectContent(cell: MLODateCollectionViewCell?) {
+    func deselectContent(cell: MLODateCollectionViewCell?) {
         cell?.setSelected(false)
         dailyScheduleDataSource?.setDate(nil)
         homeViewController?.setDailyScheduleHidden(true)
