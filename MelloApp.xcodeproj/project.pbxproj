@@ -107,6 +107,7 @@
 		84E545042259204B00DDB89B /* InsetCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E545032259204B00DDB89B /* InsetCollectionView.swift */; };
 		84E5450922594DED00DDB89B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450522594DEC00DDB89B /* Home.storyboard */; };
 		84E5450C22594DED00DDB89B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E5450822594DEC00DDB89B /* Profile.storyboard */; };
+		84EFA968228152DC00807845 /* EditScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFA967228152DC00807845 /* EditScheduleViewController.swift */; };
 		BA1455AA97A30A33132B5FE5 /* Pods_MelloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD409E034804E97A7AA7507 /* Pods_MelloApp.framework */; };
 		F727984B94131D78C47E10E2 /* Pods_MelloAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CC030611815222760D61D /* Pods_MelloAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -240,6 +241,7 @@
 		84E545032259204B00DDB89B /* InsetCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsetCollectionView.swift; path = "MelloApp/Views/UI components/InsetCollectionView.swift"; sourceTree = "<group>"; };
 		84E5450522594DEC00DDB89B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		84E5450822594DEC00DDB89B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		84EFA967228152DC00807845 /* EditScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScheduleViewController.swift; sourceTree = "<group>"; };
 		976B864F35282323BB8366DA /* Pods-MelloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MelloApp/Pods-MelloApp.debug.xcconfig"; sourceTree = "<group>"; };
 		992C65D75A81012ABBDA7531 /* Pods-MelloAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelloAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MelloAppUITests/Pods-MelloAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFFB43605F7FB7A17C359B76 /* Pods_MelloAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MelloAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,6 +359,7 @@
 		634F6D4F21FED0FC00C665A7 /* MelloApp */ = {
 			isa = PBXGroup;
 			children = (
+				84EFA967228152DC00807845 /* EditScheduleViewController.swift */,
 				63EE303F225DC0C1003A99E3 /* DiscoverViewController.swift */,
 				63EE2FF322595C9B003A99E3 /* Custom Modal */,
 				63EE2FEC22595C73003A99E3 /* Custom Controls */,
@@ -835,6 +838,7 @@
 				63EE302322595E8E003A99E3 /* SmellRatingViewController.swift in Sources */,
 				841619AC227F72C500C3DB5D /* CircleButton.swift in Sources */,
 				84E5450022590CFD00DDB89B /* ScheduleItemTableViewCell.swift in Sources */,
+				84EFA968228152DC00807845 /* EditScheduleViewController.swift in Sources */,
 				63EE2FF122595C73003A99E3 /* FaceToggle.swift in Sources */,
 				63EE303022595F1E003A99E3 /* HomeContainerViewController.swift in Sources */,
 				8458EB8622594E9D0077EE95 /* CustomTextField.swift in Sources */,

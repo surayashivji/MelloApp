@@ -20,7 +20,7 @@ class MLOHomeViewController: MLOHamburgerMenuViewController, ScheduleItemTableVi
     
     @IBOutlet weak var dailyScheduleTableView: UITableView!
     @IBOutlet weak var dailyScheduleHeightConstraint: NSLayoutConstraint!
-    private let dailyScheduleHeight: CGFloat = 49
+    var dailyScheduleHeight: CGFloat = 49
     
     @IBOutlet weak var banner: UIView!
     @IBOutlet weak var bannerEditButton: UIButton!
@@ -97,5 +97,11 @@ class MLOHomeViewController: MLOHamburgerMenuViewController, ScheduleItemTableVi
     
     func editSchedule() {
         performSegue(withIdentifier: "schedule", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let edit = segue.destination as? EditScheduleViewController {
+            edit.presenter = self
+        }
     }
 }

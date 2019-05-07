@@ -126,13 +126,24 @@ class SchedulerViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         let dayOfWeekFormatter = DateFormatter()
         dayOfWeekFormatter.dateFormat = "e"
-        let singleInstanceBlends = selectedDates.filter({ repeatingDaysOfWeek
+        let singleInstanceBlends = selectedDates.filter({ !repeatingDaysOfWeek
             .contains(Int(dayOfWeekFormatter.string(from: $0)) ?? 0 )})
         FirebaseManager.instance.schedule(blend: scent,
                                           dates: Array(singleInstanceBlends),
                                           time: time,
                                           duration: duration)
+        
+        if !(singleInstanceBlends.isEmpty && repeatingDaysOfWeek.isEmpty) {
+            alertScheduled()
+        }
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    private func alertScheduled() {
+        let addedMessage = NSAttributedString(string: "Added to your calendar",
+                                              attributes: [.font : UIFont.systemFont(ofSize: 13, weight: .semibold)])
+        BannerPresenter.shared.presentLower(text: addedMessage, icon: #imageLiteral(resourceName: "calendar"))
     }
     
     @IBAction func toggled(_ sender: CircleButton) {

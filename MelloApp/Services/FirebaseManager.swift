@@ -46,6 +46,8 @@ class FirebaseManager {
     func loginUser(withEmail email: String, password: String, completion: @escaping(User?, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { result, error in
             self.loadOils()
+            self.getSchedule()
+            self.getRepeatingSchedule()
             completion(result?.user, error)
         })
     }
@@ -154,6 +156,31 @@ class FirebaseManager {
         }
     }
     
+    var singularSchedule: NSDictionary?
+    var repeatingSchedule: NSDictionary?
+    
+    func getSchedule() {
+        guard let uid = user?.uid else { return }
+        let userRef = reference.child("users").child(uid).child("schedule").child("singular")
+        userRef.observe(.value) { (dataSnapshot, string) in
+            guard let singularSchedule = dataSnapshot.value as? NSDictionary else {
+                return
+            }
+            self.singularSchedule = singularSchedule
+        }
+    }
+    
+    func getRepeatingSchedule() {
+        guard let uid = user?.uid else { return }
+        let userRef = reference.child("users").child(uid).child("schedule").child("repeating")
+        userRef.observe(.value) { (dataSnapshot, string) in
+            guard let repeatingSchedule = dataSnapshot.value as? NSDictionary else {
+                return
+            }
+            self.repeatingSchedule = repeatingSchedule
+        }
+    }
+    
 
     func schedule(blend: ScentBlend?,
                   dates: [Date],
@@ -162,7 +189,6 @@ class FirebaseManager {
         guard let uid = user?.uid, let blend = blend else { return }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.timeZone = TimeZone(identifier: "UTC")
         
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm"
@@ -174,6 +200,9 @@ class FirebaseManager {
                 "time" : timeFormatter.string(from: time),
                 "duration" : String(minutes)
                 ]])
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+             self.getSchedule()
         }
     }
     
@@ -195,6 +224,9 @@ class FirebaseManager {
                 "time" : timeFormatter.string(from: time),
                 "duration" : String(minutes)
                 ]])
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            self.getRepeatingSchedule()
         }
     }
     

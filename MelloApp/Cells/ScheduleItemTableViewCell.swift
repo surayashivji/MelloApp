@@ -16,14 +16,14 @@ class ScheduleItemTableViewCell: UITableViewCell {
     
     func setup(_ data: ScheduledBlend, delegate: ScheduleItemTableViewCellDelegate) {
         self.delegate = delegate
-        leftImageView.image = data.scent.image
-        titleLabel.text = data.scent.name
+        leftImageView.image = data.scentImage
+        titleLabel.text = data.scentName
         subtitleLabel.text = timeRange(data.start, data.end)
     }
     
     private func timeRange(_ date1: Date, _ date2: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "h:m a"
+        formatter.dateFormat = "h:mm a"
         return formatter.string(from: date1) + " - " + formatter.string(from: date2)
     }
     

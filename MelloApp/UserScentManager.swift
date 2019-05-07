@@ -14,7 +14,7 @@ struct ScentBlend {
                                    image: #imageLiteral(resourceName: "smallCitrus"),
                                    color: .brightPink,
                                    isFavorite: true,
-                                   id: 0,
+                                   id: 16,
                                    description: "des 1")
     
     static let floral = ScentBlend(name: "Focus Floral",
@@ -22,17 +22,17 @@ struct ScentBlend {
                                    image: #imageLiteral(resourceName: "smallFloral"),
                                    color: .brightGreen,
                                    isFavorite: true,
-                                   id: 0,
+                                   id: 15,
                                    description: "des 2")
     
     static let green = ScentBlend(name: "Sleepy Green",
-                                   ingredients: ["lavender", "cinnamon", "peppermint"],
-                                   image: #imageLiteral(resourceName: "smallGreen"),
-                                   color: .brightPurple,
-                                   isFavorite: false,
-                                   id: 0,
-                                   description: "des3")
-
+                                  ingredients: ["lavender", "cinnamon", "peppermint"],
+                                  image: #imageLiteral(resourceName: "smallGreen"),
+                                  color: .brightPurple,
+                                  isFavorite: false,
+                                  id: 13,
+                                  description: "des3")
+    
     
     var name: String
     var ingredients: [String]
@@ -46,12 +46,13 @@ struct ScentBlend {
 struct ScheduledBlend {
     var start: Date
     var end: Date
-    var scent: ScentBlend
+    var scentName: String
+    var scentImage: UIImage
+    var scheduleId: String
+    var isSingularEvent: Bool
 }
 
 class UserScentManager {
-    
-    let manager = FirebaseManager()
     
     static func recommendations() -> [ScentBlend] {
         return FirebaseManager.instance.userRecommendations
@@ -80,6 +81,78 @@ class UserScentManager {
     }
     
     static func schedule(for day: Date?) -> [ScheduledBlend] {
-        return [ScheduledBlend(start: Date(), end: Date(), scent: ScentBlend.citrus)]
+        var schedule = [ScheduledBlend]()
+        
+        let dayOfWeekFormatter = DateFormatter()
+        dayOfWeekFormatter.dateFormat = "e"
+        dayOfWeekFormatter.locale = Locale(identifier: "en_US_POSIX")
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        
+        if let repeating = FirebaseManager.instance.repeatingSchedule,
+            let day = day,
+            let dayOfWeek = Int(dayOfWeekFormatter.string(from: day)),
+            let repeatingValues = repeating["d\(dayOfWeek)"] as? NSDictionary,
+            let daily = repeatingValues.allValues as? [NSDictionary],
+            let scheduleIds = repeatingValues.allKeys as? [String] {
+            for (index, item) in daily.enumerated() {
+                guard let blendId = item["blend"] as? String,
+                    let blendDictionary = FirebaseManager.instance.blends[blendId] as? NSDictionary,
+                    let blendName = blendDictionary["general_name"] as? String,
+                    let aroma = blendDictionary["aroma"] as? String,
+                    let benefit = blendDictionary["benefit"] as? String,
+                    let image = UIImage(named: aroma + benefit),
+                    let startTimeString = item["time"] as? String,
+                    let startTime = timeFormatter.date(from: startTimeString),
+                    let durationString = item["duration"] as? String,
+                    let duration = Int(durationString),
+                    let endTime = Calendar.current.date(byAdding: .minute, value: duration, to: startTime) else {
+                        continue
+                }
+                schedule.append(ScheduledBlend(start: startTime,
+                                               end: endTime,
+                                               scentName: blendName,
+                                               scentImage: image,
+                                               scheduleId: scheduleIds[index],
+                                               isSingularEvent: false))
+            }
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        if let singular = FirebaseManager.instance.singularSchedule,
+            let day = day,
+            let scheduled = singular[dateFormatter.string(from: day)] as? NSDictionary,
+            let scheduledBlendIds = scheduled.allKeys as? [String],
+            let scheduledBlends = scheduled.allValues as? [NSDictionary] {
+            
+            for (index, item) in scheduledBlends.enumerated() {
+                guard let blendId = item["blend"] as? String,
+                    let blendDictionary = FirebaseManager.instance.blends[blendId] as? NSDictionary,
+                    let blendName = blendDictionary["general_name"] as? String,
+                    let aroma = blendDictionary["aroma"] as? String,
+                    let benefit = blendDictionary["benefit"] as? String,
+                    let image = UIImage(named: aroma + benefit),
+                    let startTimeString = item["time"] as? String,
+                    let startTime = timeFormatter.date(from: startTimeString),
+                    let durationString = item["duration"] as? String,
+                    let duration = Int(durationString),
+                    let endTime = Calendar.current.date(byAdding: .minute, value: duration, to: startTime) else {
+                        continue
+                }
+                schedule.append(ScheduledBlend(start: startTime,
+                                               end: endTime,
+                                               scentName: blendName,
+                                               scentImage: image,
+                                               scheduleId: scheduledBlendIds[index],
+                                               isSingularEvent: true))
+            }
+            
+            
+        }
+        
+        return schedule.sorted(by: { $0.start < $1.start })
     }
 }
